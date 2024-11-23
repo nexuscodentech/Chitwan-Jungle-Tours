@@ -1,0 +1,16 @@
+.rounded-br-full {
+  padding: 20px 16px; /* Adjust padding as needed */
+  margin: 0 auto; /* Center the content */
+  max-width: 1200px; /* Optional: Set a maximum width */
+  border-bottom-right-radius: 270px;
+}
+
+.overview {
+    font-weight: 700;
+}
+
+.position {
+padding: 20px 16px; /* Adjust padding as needed */
+  margin: 0 auto; /* Center the content */
+  max-width: 1200px; /* Optional: Set a maximum width */
+}

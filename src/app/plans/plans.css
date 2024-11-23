@@ -1,0 +1,146 @@
+.round img {
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.rounded-br-full {
+  padding: 20px 16px;
+  /* Adjust padding as needed */
+  margin: 0 auto;
+  /* Center the content */
+  max-width: 1200px;
+  /* Optional: Set a maximum width */
+  border-bottom-right-radius: 270px;
+}
+
+
+.position {
+  padding: 20px 16px;
+  /* Adjust padding as needed */
+  margin: 0 auto;
+  /* Center the content */
+  max-width: 1200px;
+  /* Optional: Set a maximum width */
+}
+
+@media (min-width: 768px) {
+  .round img {
+    border-bottom-left-radius: 180px;
+    border-top-right-radius: 180px;
+  }
+}
+
+@media (min-width: 640px) {
+  .round img {
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .round img {
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+}
+
+.card .card1 {
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.card .card1 img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card1 {
+  /* border-radius: 1.5rem; */
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.card:hover .card1 img {
+  transform: scale(1.2);
+}
+
+/* pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.pagination-content {
+  display: flex;
+  list-style: none;
+}
+
+.pagination-item {
+  margin: 0 0.5rem;
+}
+
+.pagination-link {
+  font-weight: bolder;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-link:hover,
+.pagination-link.is-active {
+  background-color: #55e6a5;
+  color: #fff;
+  border-color: #55e6a5;
+}
+
+.pagination-previous,
+.pagination-next {
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-previous:hover,
+.pagination-next:hover {
+  background-color: #55e6a5;
+  color: #fff;
+  border-color: #55e6a5;
+}
+
+/* CSS for '[id]' details */
+
+.texture {
+  position: relative;
+  background-color: #401a33;
+}
+
+.texture::before {
+  content: "";
+  background-image: url(../../../public/assets/background-texture-svg.svg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
+  border-top-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.texture-content {
+  position: relative;
+  z-index: 1;
+}
