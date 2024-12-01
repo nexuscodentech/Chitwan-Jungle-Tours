@@ -11,7 +11,7 @@ import img8 from "assets/i8.jpg";
 import img9 from "assets/j9.jpg";
 
 export default function sitemap() {
-    const base_url = "https://chitwan-jungle-tour.com"
+    const base_url = "https://chitwan-jungle-tours.com"
     const plans_sitemap = plans.map(p => ({
         url: `${base_url}/plans/${p.id}`,
         lastModified: new Date()

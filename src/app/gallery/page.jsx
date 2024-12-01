@@ -16,7 +16,7 @@ export default function Itinerary() {
 
 export function generateMetadata() {
     return {
-        metadataBase: new URL('https://chitwan-jungle-tour.com'),
+        metadataBase: new URL('https://chitwan-jungle-tours.vercel.app'),
         title: "Gallery of Captured Photos - Chitwan Jungle Tours",
         description: "Explore our Gallery of Captured Photos featuring stunning wildlife, lush landscapes, and unforgettable moments from Chitwan Jungle Tours. Discover the beauty of Chitwan National Park through vivid images of exotic animals, safari adventures, and scenic views, perfect for nature lovers and adventure seekers.",
         images: [banner, img1, img2, img3, img4, img5, img6, img7, img8, img9].map(i => i.src),
