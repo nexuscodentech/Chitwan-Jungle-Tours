@@ -36,7 +36,7 @@ const cursive = Cedarville_Cursive({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://chitwan-jungle-tours.vercel.app'),
+  metadataBase: new URL('https://chitwan-jungle-tours.com'),
   title: "Chitwan Jungle Tours",
   description: "Discover thrilling Jungle Tours in Sauraha, Chitwan, Nepal, featuring safaris, wildlife encounters, and cultural experiences in Chitwan National Park.",
   keywords: [

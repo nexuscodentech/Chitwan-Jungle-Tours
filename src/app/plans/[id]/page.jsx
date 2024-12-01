@@ -11,7 +11,7 @@ export function generateMetadata({ params: { id } }) {
     };
   }
   return {
-    metadataBase: new URL('https://chitwan-jungle-tours.vercel.app'),
+    metadataBase: new URL('https://chitwan-jungle-tours.com'),
     title: item.title + " - Chitwan Jungle Tours",
     description: item.description,
     images: [item.src],
