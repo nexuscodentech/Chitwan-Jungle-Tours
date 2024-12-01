@@ -9,6 +9,7 @@ import {
 import Footer from "@/components/Footer";
 import Header from "@/components/Header/Top";
 import "./globals.css";
+import homeimage from "assets/home.jpg"
 
 const museo = MuseoModerno({
   subsets: ["latin"],
@@ -77,9 +78,9 @@ export const metadata = {
     siteName: '/sitemap.xml',
     images: [
       {
-        url: '/global/tours.png',
-        width: 1330,
-        height: 1320,
+        url: homeimage.src,
+        width: homeimage.width,
+        height: homeimage.height,
       },
     ]
   }
