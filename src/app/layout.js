@@ -11,6 +11,8 @@ import Header from "@/components/Header/Top";
 import "./globals.css";
 import homeimage from "assets/home.jpg"
 
+import { Analytics } from '@vercel/analytics/next';
+
 const museo = MuseoModerno({
   subsets: ["latin"],
   weight: "400",
@@ -104,6 +106,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
