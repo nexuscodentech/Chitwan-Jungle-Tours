@@ -258,11 +258,11 @@ export default function Itinerary() {
               <br />
               <strong>Contact:</strong> 9866028826
               <br />
-              <strong>WhatsApp:</strong> <a href="https://wa.me/9866028826">9866028826</a>
+              <strong>WhatsApp:</strong> <a href="https://wa.me/9845043367">9845043367</a>
               <br />
               <strong>Email:</strong> <a href="mailto:chaudharyfule@gmail.com">chaudharyfule@gmail.com</a>
               <br />
-              <strong>Facebook Page:</strong> <a href="https://www.facebook.com/uniqueadhikari.007">Fule Chaudhary</a>
+              <strong>Facebook Page:</strong> <a href="https://www.facebook.com/fule.chaudhary">Fule Chaudhary</a>
             </p>
           </div>
         </div>
