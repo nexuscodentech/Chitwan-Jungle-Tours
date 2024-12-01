@@ -25,7 +25,7 @@ export default function () {
         <div className="bg-[#401A33] h-[25rem] lg:text-lg lg:h-[30rem] relative [clip-path:polygon(100%0%,50%10%,0%0%,0%80%,50%100%,100%80%)] lg:[clip-path:polygon(100%0%,50%10%,0%0%,0%85%,50%100%,100%85%)]  -translate-y-[14%] -mt-[1.5px]">
           <div className="grid grid-flow-col-dense items-center gap-2 h-[60%]">
             <div className="hidden lg:block text-white space-y-4 text-center">
-              <a className="text-xl">Useful Links</a>
+              <div className="text-xl">Useful Links</div>
               <div>
                 <div className="text-center">
                   <p>
@@ -41,7 +41,7 @@ export default function () {
               </div>
             </div>
             <div className="text-white space-y-4 text-center">
-              <a className="text-xl">Useful Links</a>
+              <div className="text-xl">Useful Links</div>
               <div className="text-center">
                 <p>
                   <a href="/plans">Plans & Packages</a>

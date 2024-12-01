@@ -304,6 +304,7 @@ export default function Homepage() {
               src={roundedGuide}
               width={120}
               height={120}
+              alt="Guide image"
             />
             <p className="text-sm px-5 pr-16 pb-5">
               With more than a decade of expertise in the tourism industry, I've
@@ -328,6 +329,7 @@ export default function Homepage() {
               src={roundedTourist}
               width={120}
               height={120}
+              alt="Tourist"
             />
             <p
               className="text-sm px-5
