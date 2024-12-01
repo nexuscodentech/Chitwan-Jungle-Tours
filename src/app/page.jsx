@@ -657,7 +657,7 @@ export default function Homepage() {
                 <button
                   className="p-2 bg-green-500 text-white rounded-full w-12"
                   onClick={() =>
-                    window.open("https://wa.me/9866028826", "_blank")
+                    window.open("https://wa.me/9845043367", "_blank")
                   }
                 >
                   <FontAwesomeIcon icon={faWhatsapp} size="lg" />
@@ -670,7 +670,7 @@ export default function Homepage() {
                   className="p-2 bg-blue-500 text-white rounded-full w-12"
                   onClick={() =>
                     window.open(
-                      "https://www.facebook.com/uniqueadhikari.007",
+                      "https://www.facebook.com/fule.chaudhary",
                       "_blank"
                     )
                   }
@@ -685,7 +685,7 @@ export default function Homepage() {
                   className="p-2 bg-pink-500 text-white rounded-full w-12"
                   onClick={() =>
                     window.open(
-                      "https://www.instagram.com/unik.adhikarii/",
+                      "https://www.instagram.com/chitwanjungle01/",
                       "_blank"
                     )
                   }
