@@ -220,9 +220,13 @@ export default function Homepage() {
             </span>
           </div>
           <Image
-            className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2 "
+            className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2"
             src={home}
+            width={1200}
+            height={800}
             alt="Home"
+            rel="preload"
+            priority
           />
         </div>
 
