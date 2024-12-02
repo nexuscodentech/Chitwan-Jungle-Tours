@@ -21,6 +21,7 @@ export default function () {
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d358.3068946006671!2d84.50978807132103!3d27.589969061694507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snp!4v1733057843914!5m2!1sen!2snp"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          title="Sauraha Location"
         ></iframe>
         <div className="bg-[#401A33] h-[25rem] lg:text-lg lg:h-[30rem] relative [clip-path:polygon(100%0%,50%10%,0%0%,0%80%,50%100%,100%80%)] lg:[clip-path:polygon(100%0%,50%10%,0%0%,0%85%,50%100%,100%85%)]  -translate-y-[14%] -mt-[1.5px]">
           <div className="grid grid-flow-col-dense items-center gap-2 h-[60%]">

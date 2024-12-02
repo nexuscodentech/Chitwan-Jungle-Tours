@@ -18,7 +18,7 @@ import guide from "assets/guide.png";
 import guide1 from "assets/guide1.png";
 import tourist from "assets/tourist11.png";
 
-import './page.css'
+import "./page.css";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -344,7 +344,11 @@ export default function Homepage() {
         <div className="lg:block hidden ">
           {/* background, guide photo and texts */}
           <div className="relative text-center container mx-auto">
-            <Image src={boat2} className="w-full h-auto bg-cover rounded-t-xl" alt="Boat" />
+            <Image
+              src={boat2}
+              className="w-full h-auto bg-cover rounded-t-xl"
+              alt="Boat"
+            />
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-4 lg:mx-20">
                 {/* Guide image */}
@@ -388,7 +392,11 @@ export default function Homepage() {
           {/* Best experiences in chitwan */}
 
           <div className="relative text-center container mx-auto bg-cover">
-            <Image src={boat2} className="w-full h-auto rounded-b-xl" alt="Boat" />
+            <Image
+              src={boat2}
+              className="w-full h-auto rounded-b-xl"
+              alt="Boat"
+            />
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-20">
                 <div
@@ -623,7 +631,7 @@ export default function Homepage() {
             gravity={0.1}
             colors={
               String[
-              ("#f44336",
+                ("#f44336",
                 "#e91e63",
                 "#9c27b0",
                 "#673ab7",
@@ -649,8 +657,9 @@ export default function Homepage() {
         {/* Quick buttons */}
         <div
           ref={stickyButtonRef}
-          className={`fixed right-4 flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out z-50 ${isAtBottom ? "bottom-[calc(100vh-5rem)]" : "bottom-4"
-            }`}
+          className={`fixed right-4 flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out z-50 ${
+            isAtBottom ? "bottom-[calc(100vh-5rem)]" : "bottom-4"
+          }`}
         >
           {isExpanded && (
             <div className="flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform">
@@ -701,8 +710,10 @@ export default function Homepage() {
           {/* Main Toggle Button with Icons */}
           <button
             onClick={toggleExpand}
-            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${isExpanded ? "scale-105" : "scale-100"
-              }`}
+            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
+              isExpanded ? "scale-105" : "scale-100"
+            }`}
+            aria-label={isExpanded ? "Close menu" : "Open menu"}
           >
             {isExpanded ? <X size={24} /> : <Menu size={24} />}
           </button>
