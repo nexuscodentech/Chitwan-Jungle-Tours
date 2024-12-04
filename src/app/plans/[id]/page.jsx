@@ -11,7 +11,7 @@ export function generateMetadata({ params: { id } }) {
     };
   }
   return {
-    metadataBase: new URL('https://chitwan-jungle-tour.com'),
+    metadataBase: new URL('https://chitwan-jungle-tours.com'),
     title: item.title + " - Chitwan Jungle Tours",
     description: item.description,
     images: [item.src],
@@ -19,7 +19,7 @@ export function generateMetadata({ params: { id } }) {
     openGraph: {
       title: item.title,
       description: item.description,
-      images: [item.src.src] // btw, src.src isn't typo do not remove it..
+      images: [{url: item.src.src, height:item.src.height, width:item.src.width}]
     },
   }
 }

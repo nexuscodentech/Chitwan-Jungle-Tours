@@ -258,11 +258,11 @@ export default function Itinerary() {
               <br />
               <strong>Contact:</strong> 9866028826
               <br />
-              <strong>WhatsApp:</strong> <a href="https://wa.me/9866028826">9866028826</a>
+              <strong>WhatsApp:</strong> <a href="https://wa.me/9845043367">9845043367</a>
               <br />
               <strong>Email:</strong> <a href="mailto:chaudharyfule@gmail.com">chaudharyfule@gmail.com</a>
               <br />
-              <strong>Facebook Page:</strong> <a href="https://www.facebook.com/uniqueadhikari.007">Fule Chaudhary</a>
+              <strong>Facebook Page:</strong> <a href="https://www.facebook.com/fule.chaudhary">Fule Chaudhary</a>
             </p>
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function Itinerary() {
 
 export function generateMetadata() {
   return {
-    metadataBase: new URL('https://chitwan-jungle-tour.com'),
+    metadataBase: new URL('https://chitwan-jungle-tours.com'),
     title: "Itinerary",
     description: "This is a 12-day itinerary offering a mix of cultural exploration, nature, and wildlife experiences across Nepal.Day 1: Arrival - Airport pickup & hotel transfer. | Day 2: Visit UNESCO World Heritage Sites. | Day 3: Drive to Pokhara; explore lakeside in the evening. | Day 4: Drive to Kande; hike to Australian Camp; overnight stay. | Day 5: Drive to Chitwan; evening river sightseeing & dinner. | Day 6: Canoe ride (40 mins); jungle walk (15 km); overnight at Ghatgain. | Day 7: Full jungle walk with picnic lunch; overnight in Madi Valley (homestay). | Day 8: Jeep safari; picnic lunch; return to Sauraha for dinner. | Day 9: Elephant safari; evening tower night with packed dinner. | Day 10: Drive back to Kathmandu. | Day 11: Leisure day in Kathmandu; local lifestyle observation. | Day 12: Departure - Fly back home.",
 
@@ -332,6 +332,7 @@ export function generateMetadata() {
     openGraph: {
       title: "Itinerary",
       description: "This is a 12-day itinerary offering a mix of cultural exploration, nature, and wildlife experiences across Nepal.Day 1: Arrival - Airport pickup & hotel transfer. | Day 2: Visit UNESCO World Heritage Sites. | Day 3: Drive to Pokhara; explore lakeside in the evening. | Day 4: Drive to Kande; hike to Australian Camp; overnight stay. | Day 5: Drive to Chitwan; evening river sightseeing & dinner. | Day 6: Canoe ride (40 mins); jungle walk (15 km); overnight at Ghatgain. | Day 7: Full jungle walk with picnic lunch; overnight in Madi Valley (homestay). | Day 8: Jeep safari; picnic lunch; return to Sauraha for dinner. | Day 9: Elephant safari; evening tower night with packed dinner. | Day 10: Drive back to Kathmandu. | Day 11: Leisure day in Kathmandu; local lifestyle observation. | Day 12: Departure - Fly back home."
+
     },
   }
 }

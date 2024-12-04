@@ -42,7 +42,9 @@ export default function () {
               className="flex items-center"
             >
               <Facebook />
+              <span className="sr-only">Visit our Facebook page</span>
             </a>
+
             <a
               href="https://twitter.com/yourprofile"
               target="_blank"
@@ -50,22 +52,26 @@ export default function () {
               className="flex items-center"
             >
               <Twitter />
+              <span className="sr-only">Visit our Twitter profile</span>
             </a>
             <a
-              href="https://www.instagram.com/unik.adhikarii/"
+              href="https://www.instagram.com/chitwanjungle01/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"
             >
               <Instagram />
+              <span className="sr-only">Visit our Instagram profile</span>
             </a>
+
             <a
-              href="https://wa.me/9866028826"
+              href="https://wa.me/9845043367"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"
             >
               <Whatsapp />
+              <span className="sr-only">Send a message on WhatsApp</span>
             </a>
           </div>
         </div>
@@ -96,7 +102,7 @@ export default function () {
           <Phone fill={"#fff"} />
           <Phone fill={"#7C992E"} />{" "}
           <span>
-            <a href="tel:+9779876543210">+977 9876543210</a>
+            <a href="tel:+9779845043367">+977 9845043367</a>
           </span>
         </div>
         <Link

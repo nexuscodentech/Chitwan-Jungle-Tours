@@ -220,9 +220,13 @@ export default function Homepage() {
             </span>
           </div>
           <Image
-            className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2 "
+            className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2"
             src={home}
+            width={1200}
+            height={800}
             alt="Home"
+            rel="preload"
+            priority
           />
         </div>
 
@@ -304,6 +308,7 @@ export default function Homepage() {
               src={roundedGuide}
               width={120}
               height={120}
+              alt="Guide image"
             />
             <p className="text-sm px-5 pr-16 pb-5">
               With more than a decade of expertise in the tourism industry, I've
@@ -328,6 +333,7 @@ export default function Homepage() {
               src={roundedTourist}
               width={120}
               height={120}
+              alt="Tourist"
             />
             <p
               className="text-sm px-5
@@ -341,15 +347,8 @@ export default function Homepage() {
 
         <div className="lg:block hidden ">
           {/* background, guide photo and texts */}
-          <div className="relative text-center container mx-auto bg-cover">
-         
-            <Image
-              src={boat2}
-              className="w-full h-auto bg-cover rounded-t-xl"
-              alt="Boat"
-            />
-            <div className="absolute inset-0 bg-black/50 rounded-t-xl"></div>
-            
+          <div className="relative text-center container mx-auto">
+            <Image src={boat2} className="w-full h-auto bg-cover rounded-t-xl" alt="Boat" />
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-4 lg:mx-20">
                 {/* Guide image */}
@@ -394,13 +393,7 @@ export default function Homepage() {
           {/* Best experiences in chitwan */}
 
           <div className="relative text-center container mx-auto bg-cover">
-            <Image
-              src={boat2}
-              className="w-full h-auto bg-cover rounded-b-xl"
-              alt="Boat"
-            />
-            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
-
+            <Image src={boat2} className="w-full h-auto rounded-b-xl" alt="Boat" />
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-20">
                 <div
@@ -680,7 +673,7 @@ export default function Homepage() {
                 <button
                   className="p-2 bg-green-500 text-white rounded-full w-12"
                   onClick={() =>
-                    window.open("https://wa.me/9866028826", "_blank")
+                    window.open("https://wa.me/9845043367", "_blank")
                   }
                 >
                   <FontAwesomeIcon icon={faWhatsapp} size="lg" />
@@ -693,7 +686,7 @@ export default function Homepage() {
                   className="p-2 bg-blue-500 text-white rounded-full w-12"
                   onClick={() =>
                     window.open(
-                      "https://www.facebook.com/uniqueadhikari.007",
+                      "https://www.facebook.com/fule.chaudhary",
                       "_blank"
                     )
                   }
@@ -708,7 +701,7 @@ export default function Homepage() {
                   className="p-2 bg-pink-500 text-white rounded-full w-12"
                   onClick={() =>
                     window.open(
-                      "https://www.instagram.com/unik.adhikarii/",
+                      "https://www.instagram.com/chitwanjungle01/",
                       "_blank"
                     )
                   }
@@ -722,9 +715,8 @@ export default function Homepage() {
           {/* Main Toggle Button with Icons */}
           <button
             onClick={toggleExpand}
-            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
-              isExpanded ? "scale-105" : "scale-100"
-            }`}
+            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${isExpanded ? "scale-105" : "scale-100"
+              }`}
           >
             {isExpanded ? <X size={24} /> : <Menu size={24} />}
           </button>

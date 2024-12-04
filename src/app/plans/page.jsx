@@ -3,7 +3,7 @@ import hotel from "assets/main.jpg";
 
 export function generateMetadata() {
   return {
-    metadataBase: new URL('https://chitwan-jungle-tour.com'),
+    metadataBase: new URL('https://chitwan-jungle-tours.com'),
     title: "Plans & Packages - Chitwan Jungle Tours",
     description: "Explore custom Plans & Packages for Chitwan Jungle Safari. Choose from tailored wildlife tours, jungle safaris, and cultural experiences in Chitwan National Park, Nepal. Book your unforgettable adventure today!",
     images: [hotel.src],
@@ -65,7 +65,7 @@ export function generateMetadata() {
     openGraph: {
       title: "Plans & Packages - Chitwan Jungle Tours",
       description: "Explore custom Plans & Packages for Chitwan Jungle Safari. Choose from tailored wildlife tours, jungle safaris, and cultural experiences in Chitwan National Park, Nepal. Book your unforgettable adventure today!",
-      images: [hotel.src]
+      images: [{ url: hotel.src, height:500, width:1440}]
     },
   }
 }

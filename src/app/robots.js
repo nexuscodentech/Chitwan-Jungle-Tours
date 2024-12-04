@@ -5,6 +5,6 @@ export default function robots() {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://chitwan-jungle-tour.com/sitemap.xml',
+        sitemap: 'https://chitwan-jungle-tours.com/sitemap.xml',
     }
 }

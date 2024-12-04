@@ -9,6 +9,9 @@ import {
 import Footer from "@/components/Footer";
 import Header from "@/components/Header/Top";
 import "./globals.css";
+import homeimage from "assets/home.jpg"
+
+import { Analytics } from '@vercel/analytics/next';
 
 const museo = MuseoModerno({
   subsets: ["latin"],
@@ -33,7 +36,7 @@ const cursive = Cedarville_Cursive({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://chitwan-jungle-tour.com'),
+  metadataBase: new URL('https://chitwan-jungle-tours.com'),
   title: "Chitwan Jungle Tours",
   description: "Discover thrilling Jungle Tours in Sauraha, Chitwan, Nepal, featuring safaris, wildlife encounters, and cultural experiences in Chitwan National Park.",
   keywords: [
@@ -77,9 +80,9 @@ export const metadata = {
     siteName: '/sitemap.xml',
     images: [
       {
-        url: '/global/tours.png',
-        width: 1330,
-        height: 1320,
+        url: homeimage.src,
+        width: homeimage.width,
+        height: homeimage.height,
       },
     ]
   }
@@ -103,6 +106,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
