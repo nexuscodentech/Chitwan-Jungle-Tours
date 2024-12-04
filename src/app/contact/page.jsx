@@ -22,15 +22,16 @@ export default function page() {
       },
       //API KEY IS BEING EXPOSED HERE....
       body: JSON.stringify({
-        access_key: "21b3f499-e542-4103-8662-18c80f642fd6",
+        access_key: "4a7f6b18-f55c-42aa-8d4c-3b08f209ec88",
+        package: e.target.package.value,
         fname: e.target.fname.value,
         lname: e.target.lname.value,
         email: e.target.email.value,
-        phone: e.target.phone.value,
         country: e.target.country.value,
         city: e.target.city.value,
         zip: e.target.zip.value,
         message: e.target.message.value,
+        
       }),
     });
     const result = await response.json();

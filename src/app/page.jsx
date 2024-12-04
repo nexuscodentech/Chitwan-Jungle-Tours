@@ -18,7 +18,7 @@ import guide from "assets/guide.png";
 import guide1 from "assets/guide1.png";
 import tourist from "assets/tourist11.png";
 
-import './page.css'
+import "./page.css";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -341,8 +341,15 @@ export default function Homepage() {
 
         <div className="lg:block hidden ">
           {/* background, guide photo and texts */}
-          <div className="relative text-center container mx-auto">
-            <Image src={boat2} className="w-full h-auto bg-cover rounded-t-xl" alt="Boat" />
+          <div className="relative text-center container mx-auto bg-cover">
+         
+            <Image
+              src={boat2}
+              className="w-full h-auto bg-cover rounded-t-xl"
+              alt="Boat"
+            />
+            <div className="absolute inset-0 bg-black/50 rounded-t-xl"></div>
+            
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-4 lg:mx-20">
                 {/* Guide image */}
@@ -350,33 +357,34 @@ export default function Homepage() {
                   src={guide1}
                   className="relative left-4 inline-block rounded-3xl"
                   alt="Guide"
-                  style={{ width: "450px", height: "500px" }}
+                  style={{ width: "500px", height: "500px" }}
                   sizes="(max-width: 1024px) 200px, 400px"
                 />
 
                 {/* Text content */}
                 <div
-                  className="relative left-4 bg-[#5C2C59] rounded-3xl text-white p-2 text-xs flex justify-center items-center"
+                  className="relative rounded-3xl text-gray-100 p-6 flex flex-col justify-center items-center shadow-md"
                   style={{
-                    width: "750px",
+                    width: "100%",
                     maxWidth: "700px",
-                    height: "400",
+                    height: "auto",
                     minHeight: "350px",
                     backgroundSize: "cover",
-                    backgroundRepeat: "repeat-y",
+                    backgroundRepeat: "no-repeat",
+                    overflow: "hidden",
                   }}
                 >
-                  <div className="font-Poppins text-white text-lg md:text-3xl text-center absolute inset-2 md:inset-8 flex justify-center items-center p-0 -mt-64">
+                  <div className="font-Poppins text-2xl md:text-4xl font-semibold text-center mb-8 text-[#8EE6A1]">
                     My specialization
                   </div>
-                  <p className="mt-10 font-Poppins text-white text-lg md:text-xl text-center absolute inset-2 md:inset-8 flex justify-center items-center p-0">
-                    My name is Fule Chaudhary and I have been a tourist guide
-                    for more then 20 years. I specialize in nature and adventure
-                    tours. Get in touch with me to book your dream trip! With
-                    more than a decade of expertise in the tourism industry,
-                    I've explored a multitude of exotic destinations. Leveraging
-                    this diverse background, I can craft the ideal tour
-                    itinerary tailored just for you.
+                  <p className="font-Poppins text-base md:text-lg text-center leading-relaxed px-20 text-[#cccccc] tracking-wider">
+                    My name is <span className="font-bold text-white">Fule Chaudhary</span>
+                    , and I have been a tourist guide for more then 20 years. I
+                    specialize in nature and adventure tours. Get in touch with
+                    me to book your dream trip! With more than a decade of
+                    expertise in the tourism industry, I've explored a multitude
+                    of exotic destinations. Leveraging this diverse background,
+                    I can craft the ideal tour itinerary tailored just for you.
                   </p>
                 </div>
               </div>
@@ -386,17 +394,29 @@ export default function Homepage() {
           {/* Best experiences in chitwan */}
 
           <div className="relative text-center container mx-auto bg-cover">
-            <Image src={boat2} className="w-full h-auto rounded-b-xl" alt="Boat" />
+            <Image
+              src={boat2}
+              className="w-full h-auto bg-cover rounded-b-xl"
+              alt="Boat"
+            />
+            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
+
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-20">
                 <div
-                  className="relative left-4 bg-[#5C2C59] rounded-3xl text-white p-2 text-xs flex justify-center items-center"
-                  style={{ width: "700px", height: "400px" }}
+                  className="relative rounded-3xl text-gray-100 p-6 text-xs flex flex-col justify-center items-center shadow-md"
+                  style={{width: "100%",
+                    maxWidth: "700px",
+                    height: "auto",
+                    minHeight: "350px",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    overflow: "hidden", }}
                 >
-                  <div className="font-Poppins text-white text-lg md:text-3xl text-center absolute inset-2 md:inset-8 flex justify-center items-center p-0 -mt-64">
-                    About chitwan
+                  <div className="font-Poppins text-[#8EE6A1] text-2xl md:text-4xl font-semibold text-center mb-8">
+                    About Chitwan National Park
                   </div>
-                  <p className="mt-12 font-Poppins text-white text-xl text-center absolute inset-0 flex justify-center items-center p-0 px-4">
+                  <p className="font-Poppins text-base md:text-lg text-center leading-relaxed px-20 text-[#b3b3b3] tracking-wider">
                     Chitwan is renowned for its exceptional experiences centered
                     around its famous national park, home to rare and endangered
                     animals like the one-horned rhino, Asian elephant, Bengal
@@ -412,7 +432,7 @@ export default function Homepage() {
                   src={tourist}
                   className="relative left-4 inline-block rounded-3xl"
                   alt="Tourist"
-                  style={{ width: "450px", height: "500px" }}
+                  style={{ width: "500px", height: "500px" }}
                   sizes="(max-width: 1024px) 200px, 400px"
                 />
               </div>
@@ -528,6 +548,8 @@ export default function Homepage() {
         </div>
       </div> */}
 
+      
+
         <div className="bg-[#5C2C59] rounded pb-8">
           <h2 className="font-MuseoModerno text-white underline text-2xl font-bold text-center mb-5 pt-5">
             Reviews from our clients
@@ -621,7 +643,7 @@ export default function Homepage() {
             gravity={0.1}
             colors={
               String[
-              ("#f44336",
+                ("#f44336",
                 "#e91e63",
                 "#9c27b0",
                 "#673ab7",
@@ -647,8 +669,9 @@ export default function Homepage() {
         {/* Quick buttons */}
         <div
           ref={stickyButtonRef}
-          className={`fixed right-4 flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out z-50 ${isAtBottom ? "bottom-[calc(100vh-5rem)]" : "bottom-4"
-            }`}
+          className={`fixed right-4 flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out z-50 ${
+            isAtBottom ? "bottom-[calc(100vh-5rem)]" : "bottom-4"
+          }`}
         >
           {isExpanded && (
             <div className="flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform">
@@ -699,8 +722,9 @@ export default function Homepage() {
           {/* Main Toggle Button with Icons */}
           <button
             onClick={toggleExpand}
-            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${isExpanded ? "scale-105" : "scale-100"
-              }`}
+            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
+              isExpanded ? "scale-105" : "scale-100"
+            }`}
           >
             {isExpanded ? <X size={24} /> : <Menu size={24} />}
           </button>
