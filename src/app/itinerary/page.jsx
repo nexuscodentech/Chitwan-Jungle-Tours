@@ -254,11 +254,11 @@ export default function Itinerary() {
 
             <h4 className="mt-10 mb-1 font-semibold text-xl">Contact Information:</h4>
             <p className="mb-4">
-              <strong>Name:</strong> Unique Adhikari
+              <strong>Name:</strong> Fule Chaudhary
               <br />
-              <strong>Contact:</strong> 9866028826
+              <strong>Contact:</strong> +977 9845043367
               <br />
-              <strong>WhatsApp:</strong> <a href="https://wa.me/9845043367">9845043367</a>
+              <strong>WhatsApp:</strong> <a href="https://wa.me/9845043367">+977 9845043367</a>
               <br />
               <strong>Email:</strong> <a href="mailto:chaudharyfule@gmail.com">chaudharyfule@gmail.com</a>
               <br />

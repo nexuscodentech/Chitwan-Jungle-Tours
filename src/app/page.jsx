@@ -27,6 +27,7 @@ import img1 from "assets/img1.png";
 import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
 import boat2 from "assets/boat2.png";
+import travel from "assets/home.jpg";
 import review1 from "assets/review1.jpg";
 
 import roundedGuide from "../../public/home/guide.png";
@@ -347,8 +348,14 @@ export default function Homepage() {
 
         <div className="lg:block hidden ">
           {/* background, guide photo and texts */}
-          <div className="relative text-center container mx-auto">
-            <Image src={boat2} className="w-full h-auto bg-cover rounded-t-xl" alt="Boat" />
+          <div className="relative text-center container mx-auto bg-cover">
+            <Image
+              src={boat2}
+              className="w-full h-auto bg-cover rounded-t-xl"
+              alt="Boat"
+            />
+            <div className="absolute inset-0 bg-black/50 rounded-t-xl"></div>
+
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-4 lg:mx-20">
                 {/* Guide image */}
@@ -377,7 +384,8 @@ export default function Homepage() {
                     My specialization
                   </div>
                   <p className="font-Poppins text-base md:text-lg text-center leading-relaxed px-20 text-[#cccccc] tracking-wider">
-                    My name is <span className="font-bold text-white">Fule Chaudhary</span>
+                    My name is{" "}
+                    <span className="font-bold text-white">Fule Chaudhary</span>
                     , and I have been a tourist guide for more then 20 years. I
                     specialize in nature and adventure tours. Get in touch with
                     me to book your dream trip! With more than a decade of
@@ -393,18 +401,26 @@ export default function Homepage() {
           {/* Best experiences in chitwan */}
 
           <div className="relative text-center container mx-auto bg-cover">
-            <Image src={boat2} className="w-full h-auto rounded-b-xl" alt="Boat" />
+            <Image
+              src={boat2}
+              className="w-full h-auto bg-cover rounded-b-xl"
+              alt="Boat"
+            />
+            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
+
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-20">
                 <div
                   className="relative rounded-3xl text-gray-100 p-6 text-xs flex flex-col justify-center items-center shadow-md"
-                  style={{width: "100%",
+                  style={{
+                    width: "100%",
                     maxWidth: "700px",
                     height: "auto",
                     minHeight: "350px",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
-                    overflow: "hidden", }}
+                    overflow: "hidden",
+                  }}
                 >
                   <div className="font-Poppins text-[#8EE6A1] text-2xl md:text-4xl font-semibold text-center mb-8">
                     About Chitwan National Park
@@ -541,7 +557,149 @@ export default function Homepage() {
         </div>
       </div> */}
 
-      
+        <section className="bg-gray-200 py-16 px-6 md:px-10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
+            {/* Image Section */}
+            <div className="relative">
+              <Image
+                className="w-full h-auto bg-cover rounded-xl shadow-lg"
+                style={{ width: "100%", height: "auto" }}
+                src={travel}
+                alt="Why Travel with us"
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <h2 className="text-4xl font-bold text-white">
+                  Why Travel With Us
+                </h2>
+                <div className="bg-green-300 w-1/6 h-2 mt-2 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Content Section */}
+            <div className="space-y-8">
+              {/* Features */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* Feature 1 */}
+                <div className="bg-white p-3 shadow-md rounded-lg transform group">
+                  <div className="flex items-start gap-4">
+                    <div className="circle">
+                      <div className="tick">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          fill="green"
+                          width="28"
+                          height="28"
+                        >
+                          <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                        THE AMAZING TEAM
+                      </h3>
+                      <p className="text-gray-600">
+                        We are your friend in need! We make your adventures
+                        unique and unforgettable, alongside our fun-loving
+                        guides,sharing insights into the authentic local
+                        culture.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature 2 */}
+                <div className="bg-white p-3 rounded-lg shadow-md transform group">
+                <div className="flex items-start gap-4">
+                    <div className="circle">
+                      <div className="tick">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          fill="green"
+                          width="28"
+                          height="28"
+                        >
+                          <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    HEALTH & SAFETY
+                  </h3>
+                  <p className="text-gray-600">
+                    We ensure high level of safety and security during each trip
+                    we operate as it is our prime concern. We have experience
+                    jungle safari guide.
+                  </p>
+                  </div>
+                  </div>
+                </div>
+
+                {/* Feature 3 */}
+                <div className="bg-white p-3 rounded-lg shadow-md transform group">
+                <div className="flex items-start gap-4">
+                    <div className="circle">
+                      <div className="tick">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          fill="green"
+                          width="28"
+                          height="28"
+                        >
+                          <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    EAT LIKE A LOCAL
+                  </h3>
+                  <p className="text-gray-600">
+                    Particular about food? So are we! We handpick restaurants,
+                    including quaint eateries around the corner of the alleys to
+                    give you that immensely local dining experiences.
+                  </p>
+                  </div>
+                  </div>
+                </div>
+
+                {/* Feature 4 */}
+                <div className="bg-white p-3 rounded-lg shadow-md  transform group">
+                <div className="flex items-start gap-4">
+                    <div className="circle">
+                      <div className="tick">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          fill="green"
+                          width="28"
+                          height="28"
+                        >
+                          <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    NO HIDDEN CHARGES
+                  </h3>
+                  <p className="text-gray-600">
+                    We don't add hidden extras cost. All trips include travel
+                    permit, lodging and fooding. There are no surprises with
+                    hidden costs.
+                  </p>
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div className="bg-[#5C2C59] rounded pb-8">
           <h2 className="font-MuseoModerno text-white underline text-2xl font-bold text-center mb-5 pt-5">
@@ -715,8 +873,9 @@ export default function Homepage() {
           {/* Main Toggle Button with Icons */}
           <button
             onClick={toggleExpand}
-            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${isExpanded ? "scale-105" : "scale-100"
-              }`}
+            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
+              isExpanded ? "scale-105" : "scale-100"
+            }`}
           >
             {isExpanded ? <X size={24} /> : <Menu size={24} />}
           </button>

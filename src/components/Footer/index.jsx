@@ -17,7 +17,7 @@ export default function () {
           />
         </div>
         <iframe
-          className="w-full h-[30vh]"
+          className="w-full h-[50vh]"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d358.3068946006671!2d84.50978807132103!3d27.589969061694507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snp!4v1733057843914!5m2!1sen!2snp"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

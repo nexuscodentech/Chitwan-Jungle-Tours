@@ -154,7 +154,7 @@ const RelativeTrips = ({ items }) => (
       {items.map((item) => (
         <div key={item.id} className="bg-[#f4f5f8] shadow-xl rounded-3xl card">
           <div className="relative card1">
-            <Image src={item.src} layout="responsive" />
+            <Image src={item.src} alt="image" layout="responsive" />
           </div>
           <div className="p-5">
             <h4 className="mb-1 mt-1 text-xl">{item.title}</h4>
