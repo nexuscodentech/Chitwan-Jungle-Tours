@@ -14,3 +14,29 @@ padding: 20px 16px; /* Adjust padding as needed */
   margin: 0 auto; /* Center the content */
   max-width: 1200px; /* Optional: Set a maximum width */
 }
+.round img {
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+
+@media (min-width: 768px) {
+  .round img {
+    border-bottom-left-radius: 180px;
+    border-top-right-radius: 180px;
+  }
+}
+
+@media (min-width: 640px) {
+  .round img {
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .round img {
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+}

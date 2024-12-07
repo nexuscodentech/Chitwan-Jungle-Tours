@@ -25,39 +25,55 @@ export default function () {
         ></iframe>
         <div className="bg-[#401A33] h-[25rem] lg:text-lg lg:h-[30rem] relative [clip-path:polygon(100%0%,50%10%,0%0%,0%80%,50%100%,100%80%)] lg:[clip-path:polygon(100%0%,50%10%,0%0%,0%85%,50%100%,100%85%)]  -translate-y-[14%] -mt-[1.5px]">
           <div className="grid grid-flow-col-dense items-center gap-2 h-[60%]">
-            <div className="hidden lg:block text-white space-y-4 text-center">
-              <div className="text-xl">Useful Links</div>
-              <div>
-                <div className="text-center">
-                  <p>
-                    <a href="/gallery">Gallery</a>
-                  </p>
-                  <p>
-                    <a href="itinerary">Itinerary</a>
-                  </p>
-                  <p>
-                    <a href="/plans">Plans & Packages</a>
-                  </p>
-                </div>
+            <div className=" font-heading hidden lg:block text-white space-y-4 text-center">
+              <div className="text-xl font-semibold">Useful Links</div>
+              <div className="text-base space-y-3">
+                <p>
+                  <a href="/gallery" className="hover:underline">
+                    Gallery
+                  </a>
+                </p>
+                <p>
+                  <a href="itinerary" className="hover:underline">
+                    Itinerary
+                  </a>
+                </p>
+                <p>
+                  <a href="/plans" className="hover:underline">
+                    Plans & Packages
+                  </a>
+                </p>
               </div>
             </div>
-            <div className="text-white space-y-4 text-center">
-              <div className="text-xl">Useful Links</div>
-              <div className="text-center">
-                <p>
-                  <a href="/plans">Plans & Packages</a>
-                </p>
-                <p>
-                  <a href="/gallery">Gallery</a>
-                </p>
-                <p>
-                  <a href="itinerary">Itinerary</a>
-                </p>
+            <div className="font-heading hidden lg:block text-white space-y-4 text-center">
+              <div className="text-xl font-semibold">Follow Us</div>
+              <div className="text-base inline-flex gap-4 justify-center">
+                <a
+                  href="https://www.facebook.com/fule.chaudhary"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  Facebook
+                </a>
+                <a
+                  href="https://www.instagram.com/chitwanjungle01/"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  Instagram
+                </a>
+                <a
+                  href="https://wa.me/9845043367"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  WhatsApp
+                </a>
               </div>
             </div>
             <div className="grid grid-flow-row space-y-4 text-white justify-center">
               <Link href="/contact">
-                <button className="bg-white text-black rounded-full w-full h-12 font-MuseoModerno">
+                <button className="bg-white text-black rounded-full w-full h-12 font-semibold text-lg transition hover:bg-gray-200 font-MuseoModerno">
                   Contact Us
                 </button>
               </Link>
@@ -78,7 +94,7 @@ export default function () {
             </div>
           </div>
           <div className="-mt-6 text-white flex flex-col items-center justify-center text-2xl">
-            Associated with
+            Associated with:
             <div className="inline-flex mt-4 gap-4">
               <div className="bg-gradient-to-t relative text-center from-[#990033] to-[#D9D9D9] w-20 h-20 rounded-full">
                 <a
@@ -131,10 +147,13 @@ export default function () {
         </div>
         <div className="flex flex-col items-center justify-center -mt-12">
           <div className="items-center text-center gap-4 mb-1">
-            <p>Copyright  2024.</p>
+            <p>Copyright 2024.</p>
             <p>Chitwan Jungle Tours PVT LTD</p>
             <p>
-              Designed & Developed by <a href="https://www.facebook.com/profile.php?id=61559318382526"><b>NexusCodeNTech</b></a>
+              Designed & Developed by{" "}
+              <a href="https://www.facebook.com/profile.php?id=61559318382526">
+                <b>NexusCodeNTech</b>
+              </a>
             </p>
           </div>
         </div>

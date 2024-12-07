@@ -1,25 +1,25 @@
 import Image from "next/image";
-import rhinoceros from "assets/rhinoceros.png";
+import rhinoceros from "assets/itineryBanner.png";
 import "./itinerary.css";
 
 export default function Itinerary() {
   return (
     <>
       {/* Section Itinerary Hero */}
-      <div className="position rounded-2xl py-36">
-        <section className="Section-ItineraryHero relative flex">
+      
+        <section className="Section-ItineraryHero relative flex round">
           <Image
-            className="w-full bg-cover bg-center rounded-tr-[16rem] rounded-bl-[16rem]"
+            className="position w-full bg-cover bg-center"
             src={rhinoceros}
             alt="Chitwan Jingle Tours rhinoceros image"
           />
-          <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-md:-bottom-2 max-lg:-bottom-1 max-xl:bottom-0 max-2xl:bottom-1">
-            <p className="font-MuseoModerno text-white text-[5rem] font-bold tracking-[2px] max-md:text-[2rem] max-lg:text-[3rem] max-xl:text-[4rem] max-2xl:text-[5rem]">
-              itinerary
+          <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-md:bottom-2 max-lg:bottom-1 max-xl:bottom-0 max-2xl:bottom-1 text-center">
+            <p className="font-MuseoModerno text-white text-[2rem] font-bold tracking-[2px] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[5rem]">
+              Itinerary
             </p>
           </div>
         </section>
-      </div>
+      
 
       {/* Section Overview */}
       <section className="container mx-auto max-md:px-4 py-5">
@@ -27,7 +27,7 @@ export default function Itinerary() {
         <hr className="bg-[#990033] h-1" />
 
 
-        <h2 className="overview text-center text-4xl max-md:text-2xl max-xl:text-4xl max-xl:mb-5">
+        <h2 className="overview text-center text-4xl max-md:text-2xl max-xl:text-4xl max-xl:mb-5 my-2">
           Overview
         </h2>
         <div className="position rounded-2xl rounded-br-full bg-gray-200 py-36">

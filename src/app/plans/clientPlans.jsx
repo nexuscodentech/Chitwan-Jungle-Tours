@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/pagination";
 
 import items from "./items";
-import hotel from "assets/main.jpg";
+import hotel from "assets/plansBanner.jpg";
 import "./plans.css";
 
 const itemsPerPage = 6;

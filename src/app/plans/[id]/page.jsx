@@ -2,7 +2,8 @@ import "../plans.css";
 import items from "../items";
 import ClientPage from "./ClientPage";
 
-export function generateMetadata({ params: { id } }) {
+export function generateMetadata({ params }) {
+  const {id}=params;
   const item = items.find((item) => item.id == id);
   if (!item) {
     return {

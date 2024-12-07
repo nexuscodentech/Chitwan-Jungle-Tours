@@ -3,6 +3,10 @@
   margin: 0 auto;
   max-width: 1200px;
 }
+.round img {
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
 
 .rounded-bl {
   padding: 20px 16px;
@@ -11,9 +15,28 @@
   border-bottom-left-radius: 120px;
 }
 
-.rounded-bl-full {
-  border-bottom-left-radius: 150px;
+
+@media (min-width: 768px) {
+  .round img {
+    border-bottom-left-radius: 180px;
+    border-top-right-radius: 180px;
+  }
 }
+
+@media (min-width: 640px) {
+  .round img {
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .round img {
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+}
+
 
 .overview {
   font-weight: 700;

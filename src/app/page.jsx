@@ -208,16 +208,17 @@ export default function Homepage() {
     <>
       <div className="space-y-14 ">
         <div className="relative lg:h-full w-full">
+        <div className="absolute inset-0 bg-black/50 rounded-tl-[100px]"></div>
           <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
-            <span className="font-MuseoModerno text-2xl lg:text-6xl text-nowrap outline-8 ">
-              EXPLORE THE JUNGLE,
+            <span className="font-MuseoModerno text-2xl lg:text-6xl text-nowrap outline-8">
+              DISCOVER NATURE'S MAJESTRY IN,
             </span>
             <br />
             <span className="font-MuseoModerno text-nowrap text-2xl lg:text-6xl">
-              FEEL THE MAGIC!
+              CHITWAN NATIONAL PARK
             </span>
             <span className="font-MuseoModerno text-[15px] lg:text-3xl block">
-              Discover Sauraha Like Never Before
+              Discover CNP Like Never Before
             </span>
           </div>
           <Image
@@ -296,22 +297,22 @@ export default function Homepage() {
           style={{ backgroundImage: `url("assets/boat2.png")` }}
         >
           <div className="relative rounded-t-xl break-words text-white rounded-tr-[70%] bg-gradient-to-br from-[#802D65] to-60% to-[#5C2C59]">
-            <h1 className="font-semibold text-lg px-5 py-4">
+            <h1 className="font-semibold text-lg px-5 py-3">
               My Specialization
             </h1>
-            <p className="text-sm px-5 pr-20 mt-3">
-              My name is Fule Chaudhary and I have been a tourist guide for more
+            <p className="text-sm px-5 pr-20 mt-2">
+              My name is <span className="font-bold text-white"> Fule Chaudhary</span> and I have been a tourist guide for more
               then 20 years. I specialize in nature and adventure tours. Get in
               touch with me to book your dream trip!
             </p>
             <Image
-              className="float-right p-2  m-6 px-4"
+              className="float-right p-2 m-6 -mt-4 px-4"
               src={roundedGuide}
               width={120}
               height={120}
               alt="Guide image"
             />
-            <p className="text-sm px-5 pr-16 pb-5">
+            <p className="text-sm px-5 pr-16 pb-3">
               With more than a decade of expertise in the tourism industry, I've
               explored a multitude of exotic destinations. Leveraging this
               diverse background, I can craft the ideal tour itinerary tailored
@@ -323,7 +324,7 @@ export default function Homepage() {
             <h1 className="font-semibold text-lg px-5 py-4 ">
               Best Experience in Chitwan
             </h1>
-            <p className="text-sm px-5 pl-20 mt-3">
+            <p className="text-sm px-5 pl-20">
               Chitwan is renowned for its exceptional experiences centered
               around its famous national park, home to rare and endangered
               animals like the one-horned rhino, Asian elephant, Bengal tiger,
@@ -349,12 +350,14 @@ export default function Homepage() {
         <div className="lg:block hidden ">
           {/* background, guide photo and texts */}
           <div className="relative text-center container mx-auto bg-cover">
+          <div className="relative w-full h-auto">
             <Image
               src={boat2}
               className="w-full h-auto bg-cover rounded-t-xl"
               alt="Boat"
             />
             <div className="absolute inset-0 bg-black/50 rounded-t-xl"></div>
+            </div>
 
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-4 lg:mx-20">
@@ -384,8 +387,8 @@ export default function Homepage() {
                     My specialization
                   </div>
                   <p className="font-Poppins text-base md:text-lg text-center leading-relaxed px-20 text-[#cccccc] tracking-wider">
-                    My name is{" "}
-                    <span className="font-bold text-white">Fule Chaudhary</span>
+                    My name is
+                    <span className="font-bold text-white"> Fule Chaudhary</span>
                     , and I have been a tourist guide for more then 20 years. I
                     specialize in nature and adventure tours. Get in touch with
                     me to book your dream trip! With more than a decade of
@@ -401,12 +404,14 @@ export default function Homepage() {
           {/* Best experiences in chitwan */}
 
           <div className="relative text-center container mx-auto bg-cover">
+          <div className="relative w-full h-auto">
             <Image
               src={boat2}
               className="w-full h-auto bg-cover rounded-b-xl"
               alt="Boat"
             />
             <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
+            </div>
 
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-20">
@@ -452,65 +457,70 @@ export default function Homepage() {
         <div className="lg:hidden block">
           {/* OLD CODE MODIFIED A BIT TO HARD CODE RESPONSIVE FOR MOBILE */}
           <div
-            className="-mt-10 flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+            className="relative -mt-12 flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
             style={{ backgroundImage: `url('assets/boat2.png')` }}
           >
-            <div className="grid grid-cols-[1fr_2fr]">
-              <div className="rounded-3xl py-3">
-                <Image src={guide} alt="Guide" />
+            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
+           
+            <div className=" relative grid grid-cols-[1fr_2fr] gap-2 items-center">
+              <div className="rounded-3xl overflow-hidden shadow-lg py-3">
+                <Image className="w-full h-auto" src={guide} alt="Guide" />
               </div>
-              <div className="rounded-md text-white px-5 lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
-                <p className="">Our Services</p>
-                <span className="mt-2 text-[12px] flex justify-center items-center list-none space-x-4">
-                  <ul className="list-disc">
+              <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
+                <p className="text-2xl sm:text-3xl font-semibold mb-4 text-[#8EE6A1]">Our Services</p>
+                {/* <span className="mt-2 text-[12px] flex justify-center items-center list-none space-x-4"> */}
+                  <ul className="list-disc space-y-4 text-left sm:text-lg text-[#e5e7eb]">
                     <li>Comfortable and cozy homestay experience</li>
-                    <br />
+                    
                     <li>Thrilling guided jungle safari tours</li>
-                    <br />
+                    
                     <li>Exciting and serene river canoeing adventures</li>
-                    <br />
+                    
                     <li>Reliable 24/7 support and assistance services</li>
                   </ul>
-                </span>
+                {/* </span> */}
               </div>
             </div>
           </div>
           <div
-            className="flex rounded-b-2xl items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+            className=" relative flex rounded-b-2xl items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
             style={{ backgroundImage: `url('assets/boat22.png')` }}
           >
-            <div className="grid grid-cols-[2fr_1fr]">
-              <div className="rounded-md text-white lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
+            <div className="relative grid grid-cols-[2fr_1fr] items-center">
+              <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
                 <div className="faq-section">
-                  <h2 className="text-center mt-2 mb-2">FAQs</h2>
-                  <div className="faq-item text-[11px]">
+                  <h2 className="text-center -mt-4 mb-2 text-2xl font-semibold text-[#8EE6A1]">FAQs</h2>
+                  <div className="space-y-4 text-left text-[11.5px] sm:text-lg text-[#d1d5db]">
+                  <div className="faq-item">
                     <h3 className="font-semibold">
                       1. What should I pack for a jungle safari?
                     </h3>
                     <p>Neutral clothes, sunscreen, hat, and shoes.</p>
                   </div>
-                  <div className="text-[11px]">
+                  <div className="">
                     <h3 className="font-semibold">
                       2. Is it safe to travel with kids?
                     </h3>
                     <p>Yes, we offer family-friendly activities safely.</p>
                   </div>
-                  <div className="text-[11px]">
+                  <div className="">
                     <h3 className="font-semibold">
                       3. How can I get to Chitwan National Park?
                     </h3>
                     <p>Drive or fly, transfers available for convenience.</p>
                   </div>
-                  <div className="text-[11px]">
+                  <div className="">
                     <h3 className="font-semibold">
                       4. What is the best time to visit?
                     </h3>
                     <p>October to March for wildlife and weather.</p>
                   </div>
+                  </div>
                 </div>
               </div>
-              <div className="rounded-3xl py-3">
-                <Image className="rounded-lg" src={tourist} alt="Guide" />
+              <div className="rounded-3xl overflow-hidden shadow-lg py-3">
+                <Image className="w-full h-auto" src={tourist} alt="Guide" />
               </div>
             </div>
           </div>
@@ -578,7 +588,7 @@ export default function Homepage() {
             {/* Content Section */}
             <div className="space-y-8">
               {/* Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 
                 {/* Feature 1 */}
                 <div className="bg-white p-3 shadow-md rounded-lg transform group">

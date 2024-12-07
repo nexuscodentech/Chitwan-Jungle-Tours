@@ -14,7 +14,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-import banner from "assets/i2.png";
+import banner from "assets/galleryBanner.png";
 import img1 from "assets/j8.jpg";
 import img2 from "assets/j4.jpg";
 import img3 from "assets/i7.jpg";
@@ -49,25 +49,23 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="position rounded-2xl py-36 relative flex">
+      <section className="round relative flex">
         <Image
-          src="/assets/j61.png"
+          src={banner}
           alt="Gallery Banner"
-          width={1920}
-          height={1080}
-          className="w-full bg-cover bg-center rounded-tl-[16rem] rounded-br-[16rem]"
+          className="position w-full bg-cover bg-center"
         />
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 max-md:-bottom-2 max-lg:-bottom-1 max-xl:bottom-0 max-2xl:bottom-1">
-          <p className="font-MuseoModerno text-white text-[5rem] font-bold tracking-[2px] max-md:text-[2rem] max-lg:text-[3rem] max-xl:text-[4rem] max-2xl:text-[5rem]">
+        <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-md:bottom-2 max-lg:bottom-1 max-xl:bottom-0 max-2xl:bottom-1 text-center">
+          <p className="font-MuseoModerno text-white text-[2rem] font-bold tracking-[2px] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[5rem]">
             Gallery
           </p>
         </div>
-      </div>
+      </section>
 
       <div className="position">
         <hr className="bg-[#990033] h-1 " />
 
-        <h2 className="overview text-center text-4xl max-md:text-2xl max-xl:text-4xl">
+        <h2 className="overview text-center text-4xl max-md:text-2xl max-xl:text-4xl mt-2">
           Captured photos
         </h2>
       </div>

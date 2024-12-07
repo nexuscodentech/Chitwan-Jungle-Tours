@@ -1,7 +1,7 @@
 import plans1 from "assets/j6.jpg";
 import plans2 from "assets/JungleWalk.jpg";
 import plans3 from "assets/TowerNight.jpg";
-import plans4 from "assets/JeepSafari.jpg";
+import plans4 from "assets/Birdwatch.jpg";
 import plans5 from "assets/plans2.jpg";
 import plans6 from "assets/Canoing.jpg";
 
@@ -55,7 +55,7 @@ const items = [
       },
     ],
     price: "Price (Tax included): ",
-    cost: "7000 NRS",
+    cost: "7,000 NRS",
   },
 
 
@@ -123,7 +123,7 @@ const items = [
       },
     ],
     price: "Price (Tax included): ",
-    cost: "25000 NRS",
+    cost: "25,000 NRS",
   },
 
   {
@@ -204,13 +204,14 @@ const items = [
       },
     ],
     price: "Price (Tax included): ",
-    cost: "65000 NRS",
+    cost: "65,000 NRS",
   },
 
   {
     id: 847364382643,
     src: plans4,
-    title: "Comming Soon...",
+    title: "Bird Watching",
+    description: "Embark on a serene 1-day bird-watching tour to Phulchowki Hill, the highest point in the Kathmandu Valley, and discover its rich biodiversity. This trip is perfect for nature enthusiasts and bird lovers who wish to explore Nepal’s avian wonders and tranquil forests.",
     keywords: [
       "Chitwan adventure",
       "wildlife safari",
@@ -237,9 +238,28 @@ const items = [
       "local culture",
       "Tharu culture",
     ],
+    activities: [
+      {
+        title: "1. Early Morning Departure (6:30 AM - 7:00 AM):",
+        description: "Start your journey with a drive from Kathmandu to Godavari, the base of Phulchowki Hill (approx. 1 hour).  Enjoy a brief stop at the **Godavari Botanical Garden**, a haven for local and migratory birds."
+      },
+      {
+        title: "2. Bird Watching in Phulchowki Hill (7:30 AM - 1:30 PM):",
+        description: "Hike or drive up the hill, stopping at key bird-watching spots. Look for species such as **Mountain Hawk-Eagle, Rufous-bellied Niltava, Spotted Forktail**, and many more. Explore the lush subtropical and temperate forests, home to diverse flora and fauna."
+      },
+      {
+        title: "3. Packed Lunch Amid Nature (1:30 PM - 2:30 PM):",
+        description: "Relish your packed lunch while enjoying the breathtaking views of the **Himalayas** and surrounding hills."
+      },
+      {
+        title: "4. Return to Kathmandu (3:00 PM - 5:00 PM):",
+        description: "Descend to Godavari and drive back to Kathmandu, concluding your tour. "
+      }
+    ],
     price: "Price (Tax included): ",
-    cost: "Not available",
+    cost: "10,000 NRS", 
   },
+
   {
     id: 647384048329,
     src: plans5,
