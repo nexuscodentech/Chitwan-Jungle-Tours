@@ -210,11 +210,11 @@ export default function Homepage() {
         <div className="relative lg:h-full w-full">
         <div className="absolute inset-0 bg-black/50 rounded-tl-[100px]"></div>
           <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
-            <span className="font-MuseoModerno text-2xl lg:text-6xl text-nowrap outline-8">
+            <span className="font-MuseoModerno text-xl lg:text-6xl text-nowrap">
               DISCOVER NATURE'S MAJESTRY IN,
             </span>
             <br />
-            <span className="font-MuseoModerno text-nowrap text-2xl lg:text-6xl">
+            <span className="font-MuseoModerno text-nowrap text-xl lg:text-6xl">
               CHITWAN NATIONAL PARK
             </span>
             <span className="font-MuseoModerno text-[15px] lg:text-3xl block">
@@ -256,7 +256,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="mx-auto px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
+        <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
           <div className="relative h-52 md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Exploring Homestay
@@ -290,6 +290,42 @@ export default function Homepage() {
             />
           </div>
         </div>
+
+        {/*<div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
+          <div className="relative h-auto">
+            <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
+              Exploring Homestay
+            </h2>
+            <Image
+              src={img1}
+              alt="Image 1"
+              className="w-full md:h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+            />
+          </div>
+
+          <div className="relative h-auto hidden lg:block">
+            <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
+              Tharu Cultural Dance
+            </h2>
+            <Image
+              src={img2}
+              alt="Image 1"
+              className="w-full md:h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+            />
+          </div>
+
+
+          <div className="relative h-auto">
+            <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
+              Canoeing at Rapti
+            </h2>
+            <Image
+              src={img3}
+              alt="Image 1"
+              className="w-full md:h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+            />
+          </div>
+        </div> */}
 
         {/* Curve design FOR SM and MD only*/}
         <div
@@ -457,13 +493,13 @@ export default function Homepage() {
         <div className="lg:hidden block">
           {/* OLD CODE MODIFIED A BIT TO HARD CODE RESPONSIVE FOR MOBILE */}
           <div
-            className="relative -mt-12 flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+            className="relative -mt-12 flex items-center justify-center min-h-[50vh] sm:min-h-[70vh] lg:min-h-screen px-4 bg-cover bg-center"
             style={{ backgroundImage: `url('assets/boat2.png')` }}
           >
             <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
            
             <div className=" relative grid grid-cols-[1fr_2fr] gap-2 items-center">
-              <div className="rounded-3xl overflow-hidden shadow-lg py-3">
+              <div className="rounded-3xl overflow-hidden shadow-lg">
                 <Image className="w-full h-auto" src={guide} alt="Guide" />
               </div>
               <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
@@ -483,7 +519,7 @@ export default function Homepage() {
             </div>
           </div>
           <div
-            className=" relative flex rounded-b-2xl items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+            className=" relative flex rounded-b-2xl items-center justify-center min-h-[50vh] sm:min-h-[70vh] lg:min-h-screen px-4 bg-cover bg-center"
             style={{ backgroundImage: `url('assets/boat22.png')` }}
           >
             <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
@@ -491,7 +527,7 @@ export default function Homepage() {
               <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
                 <div className="faq-section">
                   <h2 className="text-center -mt-4 mb-2 text-2xl font-semibold text-[#8EE6A1]">FAQs</h2>
-                  <div className="space-y-4 text-left text-[11.5px] sm:text-lg text-[#d1d5db]">
+                  <div className="space-y-4 sm:space-y-2 text-left text-[11.5px] sm:text-lg text-[#d1d5db]">
                   <div className="faq-item">
                     <h3 className="font-semibold">
                       1. What should I pack for a jungle safari?

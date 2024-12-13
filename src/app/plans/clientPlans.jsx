@@ -30,7 +30,7 @@ export default function Plans() {
         <div className="">
             <section className="relative flex round">
                 <Image className="position w-full bg-cover bg-center" src={hotel} alt="Hotel" />
-                <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-md:bottom-2 max-lg:bottom-1 max-xl:bottom-0 max-2xl:bottom-1 text-center">
+                <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-sm:-bottom-3 max-md:bottom-2 max-lg:bottom-1 max-xl:bottom-0 max-2xl:bottom-1 text-center">
                     <p className="font-MuseoModerno text-white text-[2rem] font-bold tracking-[2px] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[5rem]">
                         Plans & Package
                     </p>
