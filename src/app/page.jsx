@@ -14,8 +14,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Confetti from "react-confetti";
-import guide from "assets/guide.png";
-import guide1 from "assets/guide1.png";
+import guide from "assets/j8.jpg";
+import fule from "assets/guide.png"
+import guide1 from "assets/faqbanner.jpg";
 import tourist from "assets/tourist11.png";
 
 import "./page.css";
@@ -208,7 +209,7 @@ export default function Homepage() {
     <>
       <div className="space-y-14 ">
         <div className="relative lg:h-full w-full">
-        <div className="absolute inset-0 bg-black/50 rounded-tl-[100px]"></div>
+          <div className="absolute inset-0 bg-black/50 rounded-tl-[100px]"></div>
           <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
             <span className="font-MuseoModerno text-xl lg:text-6xl text-nowrap">
               DISCOVER NATURE'S MAJESTRY IN,
@@ -337,9 +338,11 @@ export default function Homepage() {
               My Specialization
             </h1>
             <p className="text-sm px-5 pr-20 mt-2">
-              My name is <span className="font-bold text-white"> Fule Chaudhary</span> and I have been a tourist guide for more
-              then 20 years. I specialize in nature and adventure tours. Get in
-              touch with me to book your dream trip!
+              My name is{" "}
+              <span className="font-bold text-white"> Fule Chaudhary</span> and
+              I have been a tourist guide for more then 20 years. I specialize
+              in nature and adventure tours. Get in touch with me to book your
+              dream trip!
             </p>
             <Image
               className="float-right p-2 m-6 -mt-4 px-4"
@@ -383,23 +386,26 @@ export default function Homepage() {
           </div>
         </div>
 
+
+       {/* this is for desktop */}
+       
         <div className="lg:block hidden ">
           {/* background, guide photo and texts */}
           <div className="relative text-center container mx-auto bg-cover">
-          <div className="relative w-full h-auto">
-            <Image
-              src={boat2}
-              className="w-full h-auto bg-cover rounded-t-xl"
-              alt="Boat"
-            />
-            <div className="absolute inset-0 bg-black/50 rounded-t-xl"></div>
+            <div className="relative w-full h-auto">
+              <Image
+                src={boat2}
+                className="w-full h-auto bg-cover rounded-t-xl"
+                alt="Boat"
+              />
+              <div className="absolute inset-0 bg-black/50 rounded-t-xl"></div>
             </div>
 
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-4 lg:mx-20">
                 {/* Guide image */}
                 <Image
-                  src={guide1}
+                  src={fule}
                   className="relative left-4 inline-block rounded-3xl"
                   alt="Guide"
                   style={{ width: "500px", height: "500px" }}
@@ -424,7 +430,10 @@ export default function Homepage() {
                   </div>
                   <p className="font-Poppins text-base md:text-lg text-center leading-relaxed px-20 text-[#cccccc] tracking-wider">
                     My name is
-                    <span className="font-bold text-white"> Fule Chaudhary</span>
+                    <span className="font-bold text-white">
+                      {" "}
+                      Fule Chaudhary
+                    </span>
                     , and I have been a tourist guide for more then 20 years. I
                     specialize in nature and adventure tours. Get in touch with
                     me to book your dream trip! With more than a decade of
@@ -440,13 +449,13 @@ export default function Homepage() {
           {/* Best experiences in chitwan */}
 
           <div className="relative text-center container mx-auto bg-cover">
-          <div className="relative w-full h-auto">
-            <Image
-              src={boat2}
-              className="w-full h-auto bg-cover rounded-b-xl"
-              alt="Boat"
-            />
-            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
+            <div className="relative w-full h-auto">
+              <Image
+                src={boat2}
+                className="w-full h-auto bg-cover rounded-b-xl"
+                alt="Boat"
+              />
+              <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
             </div>
 
             <div className="absolute inset-0 flex justify-center items-center">
@@ -490,44 +499,45 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="lg:hidden block">
-          {/* OLD CODE MODIFIED A BIT TO HARD CODE RESPONSIVE FOR MOBILE */}
-          <div
-            className="relative -mt-12 flex items-center justify-center min-h-[50vh] sm:min-h-[70vh] lg:min-h-screen px-4 bg-cover bg-center"
-            style={{ backgroundImage: `url('assets/boat2.png')` }}
-          >
-            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
-           
-            <div className=" relative grid grid-cols-[1fr_2fr] gap-2 items-center">
-              <div className="rounded-3xl overflow-hidden shadow-lg">
-                <Image className="w-full h-auto" src={guide} alt="Guide" />
-              </div>
-              <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
-                <p className="text-2xl sm:text-3xl font-semibold mb-4 text-[#8EE6A1]">Our Services</p>
-                {/* <span className="mt-2 text-[12px] flex justify-center items-center list-none space-x-4"> */}
-                  <ul className="list-disc space-y-4 text-left sm:text-lg text-[#e5e7eb]">
-                    <li>Comfortable and cozy homestay experience</li>
-                    
-                    <li>Thrilling guided jungle safari tours</li>
-                    
-                    <li>Exciting and serene river canoeing adventures</li>
-                    
-                    <li>Reliable 24/7 support and assistance services</li>
-                  </ul>
-                {/* </span> */}
-              </div>
+        <section className=" lg:hidden block bg-gray-200 py-16 px-6 md:px-10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
+            {/* Image Section */}
+            <div className="relative flex md:justify-center">
+              <Image
+                className="bg-cover rounded-xl shadow-lg"
+                src={guide}
+                alt="Our Services"
+              />
+            </div>
+
+            {/* Content Section */}
+            <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
+              <p className="text-2xl sm:text-3xl font-semibold mb-4 text-[#4A8F60]">
+                Our Services
+              </p>
+              
+              <ul className="list-disc space-y-4 text-left sm:text-lg text-black">
+                <li>Comfortable and cozy homestay experience</li>
+
+                <li>Thrilling guided jungle safari tours</li>
+
+                <li>Exciting and serene river canoeing adventures</li>
+
+                <li>Reliable 24/7 support and assistance services</li>
+              </ul>
+             
             </div>
           </div>
-          <div
-            className=" relative flex rounded-b-2xl items-center justify-center min-h-[50vh] sm:min-h-[70vh] lg:min-h-screen px-4 bg-cover bg-center"
-            style={{ backgroundImage: `url('assets/boat22.png')` }}
-          >
-            <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
-            <div className="relative grid grid-cols-[2fr_1fr] items-center">
-              <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
-                <div className="faq-section">
-                  <h2 className="text-center -mt-4 mb-2 text-2xl font-semibold text-[#8EE6A1]">FAQs</h2>
-                  <div className="space-y-4 sm:space-y-2 text-left text-[11.5px] sm:text-lg text-[#d1d5db]">
+        </section>
+        <section className="lg:hidden block bg-gray-200 py-16 px-6 md:px-10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
+            {/* Content Section */}
+            <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
+              <div className="faq-section">
+                <h2 className="text-center -mt-4 mb-2 text-2xl font-semibold text-[#4A8F60]">
+                  FAQs
+                </h2>
+                <div className="space-y-4 sm:space-y-2 text-left text-[11.5px] sm:text-lg text-black">
                   <div className="faq-item">
                     <h3 className="font-semibold">
                       1. What should I pack for a jungle safari?
@@ -552,15 +562,19 @@ export default function Homepage() {
                     </h3>
                     <p>October to March for wildlife and weather.</p>
                   </div>
-                  </div>
                 </div>
               </div>
-              <div className="rounded-3xl overflow-hidden shadow-lg py-3">
-                <Image className="w-full h-auto" src={tourist} alt="Guide" />
-              </div>
+            </div>
+
+            <div className="relative flex md:justify-center">
+              <Image
+                className="bg-cover rounded-xl shadow-lg"
+                src={guide1}
+                alt="Our Services"
+              />
             </div>
           </div>
-        </div>
+        </section>
 
         {/* <div className="lg:hidden block">
         <div
@@ -625,7 +639,6 @@ export default function Homepage() {
             <div className="space-y-8">
               {/* Features */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
                 {/* Feature 1 */}
                 <div className="bg-white p-3 shadow-md rounded-lg transform group">
                   <div className="flex items-start gap-4">
@@ -658,7 +671,7 @@ export default function Homepage() {
 
                 {/* Feature 2 */}
                 <div className="bg-white p-3 rounded-lg shadow-md transform group">
-                <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-4">
                     <div className="circle">
                       <div className="tick">
                         <svg
@@ -673,21 +686,21 @@ export default function Homepage() {
                       </div>
                     </div>
                     <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    HEALTH & SAFETY
-                  </h3>
-                  <p className="text-gray-600">
-                    We ensure high level of safety and security during each trip
-                    we operate as it is our prime concern. We have experience
-                    jungle safari guide.
-                  </p>
-                  </div>
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                        HEALTH & SAFETY
+                      </h3>
+                      <p className="text-gray-600">
+                        We ensure high level of safety and security during each
+                        trip we operate as it is our prime concern. We have
+                        experience jungle safari guide.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
                 {/* Feature 3 */}
                 <div className="bg-white p-3 rounded-lg shadow-md transform group">
-                <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-4">
                     <div className="circle">
                       <div className="tick">
                         <svg
@@ -702,21 +715,22 @@ export default function Homepage() {
                       </div>
                     </div>
                     <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    EAT LIKE A LOCAL
-                  </h3>
-                  <p className="text-gray-600">
-                    Particular about food? So are we! We handpick restaurants,
-                    including quaint eateries around the corner of the alleys to
-                    give you that immensely local dining experiences.
-                  </p>
-                  </div>
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                        EAT LIKE A LOCAL
+                      </h3>
+                      <p className="text-gray-600">
+                        Particular about food? So are we! We handpick
+                        restaurants, including quaint eateries around the corner
+                        of the alleys to give you that immensely local dining
+                        experiences.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
                 {/* Feature 4 */}
                 <div className="bg-white p-3 rounded-lg shadow-md  transform group">
-                <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-4">
                     <div className="circle">
                       <div className="tick">
                         <svg
@@ -731,16 +745,16 @@ export default function Homepage() {
                       </div>
                     </div>
                     <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    NO HIDDEN CHARGES
-                  </h3>
-                  <p className="text-gray-600">
-                    We don't add hidden extras cost. All trips include travel
-                    permit, lodging and fooding. There are no surprises with
-                    hidden costs.
-                  </p>
-                </div>
-                </div>
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                        NO HIDDEN CHARGES
+                      </h3>
+                      <p className="text-gray-600">
+                        We don't add hidden extras cost. All trips include
+                        travel permit, lodging and fooding. There are no
+                        surprises with hidden costs.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

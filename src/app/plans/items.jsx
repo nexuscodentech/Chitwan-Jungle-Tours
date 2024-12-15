@@ -2,7 +2,7 @@ import plans1 from "assets/j6.jpg";
 import plans2 from "assets/JungleWalk.jpg";
 import plans3 from "assets/TowerNight.jpg";
 import plans4 from "assets/Birdwatch.jpg";
-import plans5 from "assets/plans2.jpg";
+import plans5 from "assets/Cycling.jpg";
 import plans6 from "assets/Canoing.jpg";
 
 const items = [
@@ -263,7 +263,8 @@ const items = [
   {
     id: 647384048329,
     src: plans5,
-    title: "Comming Soon...",
+    title: "Cycling & Village Tour",
+    description: "A cycling tour through the scenic streets of Sauraha, along the Rapti River, and a visit to the Chitwan National Park and a typical Tharu village.",
     keywords: [
       "Chitwan adventure",
       "wildlife safari",
@@ -290,8 +291,42 @@ const items = [
       "local culture",
       "Tharu culture",
     ],
+    activities: [
+    {
+      title: "Morning Arrival and Briefing:",
+      description: "Arrive at your hotel or designated meeting point in Sauraha and receive a briefing about the day's activities."
+    },
+    {
+      title: "Cycling Along the Rapti River:",
+      description: "Start your cycling journey along the tranquil Rapti River, soaking in its mesmerizing views and the peaceful natural surroundings."
+    },
+    {
+      title: "Explore Sauraha Streets:",
+      description: "Cycle through the lively streets of Sauraha, where you’ll experience the local atmosphere, colorful markets, and traditional architecture."
+    },
+    {
+      title: "Chitwan National Park Exploration:",
+      description: "Ride through the outskirts of Chitwan National Park, with the chance to spot wildlife like rhinos, deer, and various bird species."
+    },
+    {
+      title: "Tharu Village Cultural Visit:",
+      description: "Cycle to a traditional Tharu village, where you'll experience local culture, architecture, and warm hospitality."
+    },
+    {
+      title: "Lunch Break:",
+      description: "Enjoy a delicious local lunch, savoring Tharu cuisine or other traditional dishes at a local restaurant."
+    },
+    {
+      title: "Wildlife Spotting and Cultural Exploration:",
+      description: "Continue your ride through the region with more opportunities for wildlife spotting and interactions with the local community."
+    },
+    {
+      title: "Evening Departure:",
+      description: "End the day with fond memories of your cycling journey through nature, culture, and wildlife, before heading back to your hotel."
+    }
+  ],
     price: "Price (Tax included): ",
-    cost: "Not available",
+    cost: "5,000 NRS",
   },
   {
     id: 283928374012,
