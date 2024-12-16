@@ -23,7 +23,7 @@ import "./page.css";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import home from "assets/home.jpg";
+import home from "assets/newhome2.jpg";
 import img1 from "assets/img1.png";
 import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
@@ -209,16 +209,16 @@ export default function Homepage() {
     <>
       <div className="space-y-14 ">
         <div className="relative lg:h-full w-full">
-          <div className="absolute inset-0 bg-black/50 rounded-tl-[100px]"></div>
+          <div className="absolute inset-0 bg-black/35 rounded-tl-[100px]"></div>
           <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
-            <span className="font-MuseoModerno text-xl lg:text-6xl text-nowrap">
+            <span className="font-Poppins text-xl lg:text-6xl text-nowrap">
               DISCOVER NATURE'S MAJESTRY IN,
             </span>
             <br />
-            <span className="font-MuseoModerno text-nowrap text-xl lg:text-6xl">
+            <span className="font-Poppins text-nowrap text-xl lg:text-6xl">
               CHITWAN NATIONAL PARK
             </span>
-            <span className="font-MuseoModerno text-[15px] lg:text-3xl block">
+            <span className="font-Poppins text-[15px] lg:text-3xl block">
               Discover CNP Like Never Before
             </span>
           </div>
