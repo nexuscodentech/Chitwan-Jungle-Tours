@@ -24,6 +24,8 @@ import img6 from "assets/i10.jpg";
 import img7 from "assets/j6.jpg";
 import img8 from "assets/i8.jpg";
 import img9 from "assets/j9.jpg";
+import img10 from "assets/v1.png";
+import img11 from "assets/v2.png";
 
 const items = [
   { src: img1, alt: "Image 1", text: ["Beauty of Birds:", "Capture at CNP"] },
@@ -35,6 +37,9 @@ const items = [
   { src: img7, alt: "Image 7", text: ["Beauty of Birds:", "Capture at CNP"] },
   { src: img8, alt: "Image 8", text: ["Beauty of Birds:", "Capture at CNP"] },
   { src: img9, alt: "Image 9", text: ["Beauty of Birds:", "Capture at CNP"] },
+  { src: img10, alt: "Image 10", text: ["Beauty of Birds:", "Capture at CNP"] },
+  { src: img11, alt: "Image 11", text: ["Beauty of Birds:", "Capture at CNP"] },
+  
 ];
 
 export default function Gallery() {

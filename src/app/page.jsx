@@ -15,15 +15,15 @@ import {
 
 import Confetti from "react-confetti";
 import guide from "assets/j8.jpg";
-import fule from "assets/guide.png"
+import fule from "assets/fule.png";
 import guide1 from "assets/faqbanner.jpg";
-import tourist from "assets/tourist11.png";
+import tourist from "assets/aboutcnp.png";
 
 import "./page.css";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import home from "assets/home.jpg";
+import home from "assets/homepage.jpg";
 import img1 from "assets/img1.png";
 import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
@@ -48,87 +48,31 @@ import {
 const reviews = [
   {
     id: 1,
-    name: "Liam O’Sullivan",
-    avatar: "",
+    name: "Liam O'Sullivan",
+    avatar: "/assets/fule.png",
     rating: 5,
     text: "Absolutely amazing experience! Saw so many animals up close, and our guide was fantastic. A must-do adventure!",
   },
   {
     id: 2,
     name: "Sakura Tanaka",
-    avatar: "",
+    avatar: "/assets/img1.png",
     rating: 4,
     text: "Well-organized tour and friendly staff. The jeep safari was a highlight. Would love more stops to capture photos!",
   },
   {
     id: 3,
     name: "Mateo Fernández",
-    avatar: "",
+    avatar: "/assets/img2.png",
     rating: 3,
     text: "Chitwan Jungle Tours exceeded my expectations! Spotted rhinos and beautiful birds. Highly recommended!",
   },
   {
     id: 4,
     name: "Amara Okafor",
-    avatar: "",
+    avatar: "/assets/img3.png",
     rating: 2,
     text: "Great trip! Our guide was knowledgeable, but the tour could be improved with some more restroom breaks.",
-  },
-  {
-    id: 5,
-    name: "Ines Moreau",
-    avatar: "",
-    rating: 3,
-    text: "A fantastic safari experience—saw a tiger! The staff clearly respect the wildlife. Loved every minute.",
-  },
-  {
-    id: 6,
-    name: "Johann Müller",
-    avatar: "",
-    rating: 3,
-    text: "Very well organized with a good mix of sightseeing and education. A bit more time for photos would be nice.",
-  },
-  {
-    id: 7,
-    name: "Fatima Al-Mansouri",
-    avatar: "",
-    rating: 5,
-    text: "Such a memorable safari! Our guide knew the area well and made sure we got the best views. Highly recommend!",
-  },
-  {
-    id: 8,
-    name: "Viktor Ivanov",
-    avatar: "",
-    rating: 4,
-    text: "Loved the jeep safari! A bit bumpy, but that’s part of the adventure. The staff were friendly and knowledgeable.",
-  },
-  {
-    id: 9,
-    name: "Sofia Rossi",
-    avatar: "",
-    rating: 5,
-    text: "Wonderful experience with Chitwan Jungle Tours! Our guide went out of his way to make it special. Worth every penny.",
-  },
-  {
-    id: 10,
-    name: "Chen Wei",
-    avatar: "",
-    rating: 3,
-    text: "Overall, a great tour. Only suggestion: provide binoculars for a clearer view of distant wildlife. Still an amazing day!",
-  },
-  {
-    id: 11,
-    name: "Elsa Lindberg",
-    avatar: "",
-    rating: 4,
-    text: "Top-notch tour company! We felt safe and learned a lot about the animals. Can’t wait to do it again.",
-  },
-  {
-    id: 12,
-    name: "Diego Pereira",
-    avatar: "",
-    rating: 3,
-    text: "An incredible jungle experience! Would be perfect with a few more detailed explanations about the animals.",
   },
 ];
 
@@ -179,54 +123,99 @@ export default function Homepage() {
     return () => clearTimeout(timer);
   }, [dim]);
 
-  const STFU = ({ review }) => (
-    <Card key={review.id}>
-      <CardContent className="flex flex-col items-center p-6">
-        <Avatar className="w-16 h-16 mb-4">
-          <AvatarImage src={review.avatar} alt={review.name} />
-          <AvatarFallback>
-            {review.name
-              .split(" ")
-              .map((n) => n[0])
-              .join("")}
-          </AvatarFallback>
-        </Avatar>
-        <h3 className="text-lg font-semibold mb-2">{review.name}</h3>
-        <div className="flex mb-2">
-          {[...Array(review.rating)].map((_, i) => (
-            <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-          ))}
-          {[...Array(5 - review.rating)].map((_, i) => (
-            <Star key={i} className="w-5 h-5 text-gray-400" />
-          ))}
-        </div>
-        <p className="text-center text-muted-foreground">{review.text}</p>
-      </CardContent>
-    </Card>
+  // const STFU = ({ review}) => (
+  //   <div key={review.id} className="p-4 bg-white rounded-lg shadow-md">
+  //     <div className="flex flex-col items-center">
+  //       <Avatar className="w-16 h-16 mb-4">
+  //         {review.avatar ? (
+  //           <AvatarImage
+  //           src={review.avatar}
+  //           alt={review.name}
+  //           className="rounded-full w-full h-full object-cover"
+  //         />
+  //         ) : (
+  //           <AvatarFallback className="rounded-full flex items-center justify-center bg-gray-300">
+  //             {review.name
+  //               .split(" ")
+  //               .map((n) => n[0])
+  //               .join("")}
+  //           </AvatarFallback>
+  //         )}
+  //       </Avatar>
+
+  //       <h3 className="text-lg font-semibold mb-2">{review.name}</h3>
+
+  //       <div className="flex mb-2">
+  //         {[...Array(review.rating)].map((_, i) => (
+  //           <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+  //         ))}
+  //         {[...Array(5 - review.rating)].map((_, i) => (
+  //           <Star key={i} className="w-5 h-5 text-gray-400" />
+  //         ))}
+  //       </div>
+
+  //       <p className="text-center text-muted-foreground">{review.text}</p>
+
+  //       {review.image && (
+  //         <div className="mt-4">
+  //           <img
+  //             src={review.image}
+  //             alt={review.name}
+  //             className="w-full h-64 object-cover rounded-lg"
+  //           />
+  //         </div>
+  //       )}
+  //     </div>
+  //   </div>
+  // );
+
+  // Review Card
+  const ReviewCard = ({ review }) => (
+    <div key={review.id} className="p-4 bg-white rounded-lg shadow-md text-center">
+      {/* Avatar */}
+      <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4">
+        <img
+          src={review.avatar}
+          alt={review.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* Name */}
+      <h3 className="text-lg font-semibold mb-2">{review.name}</h3>
+      {/* Rating */}
+      <div className="flex justify-center mb-2">
+        {[...Array(review.rating)].map((_, i) => (
+          <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+        ))}
+        {[...Array(5 - review.rating)].map((_, i) => (
+          <Star key={i} className="w-5 h-5 text-gray-300" />
+        ))}
+      </div>
+      {/* Review Text */}
+      <p className="text-gray-600">{review.text}</p>
+    </div>
   );
 
   return (
     <>
       <div className="space-y-14 ">
         <div className="relative lg:h-full w-full">
-          <div className="absolute inset-0 bg-black/50 rounded-tl-[100px]"></div>
+          <div className="absolute inset-0 bg-black/45 rounded-tl-[100px]"></div>
           <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
-            <span className="font-MuseoModerno text-xl lg:text-6xl text-nowrap">
-              DISCOVER NATURE'S MAJESTRY IN,
+            <span className="font-Poppins text-xl lg:text-6xl text-nowrap">
+              DISCOVER NATURE'S MAJESTY IN,
             </span>
             <br />
-            <span className="font-MuseoModerno text-nowrap text-xl lg:text-6xl">
+            <span className="font-Poppins text-nowrap text-xl lg:text-6xl">
               CHITWAN NATIONAL PARK
             </span>
-            <span className="font-MuseoModerno text-[15px] lg:text-3xl block">
+            <span className="font-Popp text-[15px] lg:text-3xl block">
               Discover CNP Like Never Before
             </span>
           </div>
           <Image
             className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2"
             src={home}
-            width={1200}
-            height={800}
             alt="Home"
             rel="preload"
             priority
@@ -258,36 +247,36 @@ export default function Homepage() {
         </div>
 
         <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
-          <div className="relative h-52 md:h-auto">
+          <div className="relative h-auto md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Exploring Homestay
             </h2>
             <Image
               src={img1}
               alt="Image 1"
-              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+              className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
           </div>
 
-          <div className="relative h-52 md:h-auto hidden lg:block">
+          <div className="relative h-auto md:h-auto hidden lg:block">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Tharu Cultural Dance
             </h2>
             <Image
               src={img2}
               alt="Image 1"
-              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+              className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
           </div>
 
-          <div className="relative h-52 md:h-auto">
+          <div className="relative h-auto md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Canoeing at Rapti
             </h2>
             <Image
               src={img3}
               alt="Image 1"
-              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+              className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
           </div>
         </div>
@@ -386,115 +375,68 @@ export default function Homepage() {
           </div>
         </div>
 
+        {/* this is for desktop */}
 
-       {/* this is for desktop */}
-       
-        <div className="lg:block hidden ">
-          {/* background, guide photo and texts */}
-          <div className="relative text-center container mx-auto bg-cover">
-            <div className="relative w-full h-auto">
+        <div className="lg:block hidden">
+          {/* Specialization Section */}
+          <div className="relative text-center container mx-auto py-10 px-6 bg-[#f0f8f0] rounded-t-xl shadow-md">
+            <div className="flex justify-center items-center flex-col lg:flex-row">
+              {/* Guide Image */}
               <Image
-                src={boat2}
-                className="w-full h-auto bg-cover rounded-t-xl"
-                alt="Boat"
+                src={fule}
+                className="rounded-3xl shadow-lg mb-6 lg:mb-0 lg:mr-8"
+                alt="Guide"
+                style={{ width: "350px", height: "350px" }}
+                sizes="(max-width: 1024px) 200px, 400px"
               />
-              <div className="absolute inset-0 bg-black/50 rounded-t-xl"></div>
-            </div>
 
-            <div className="absolute inset-0 flex justify-center items-center">
-              <div className="relative flex items-center mx-4 lg:mx-20">
-                {/* Guide image */}
-                <Image
-                  src={fule}
-                  className="relative left-4 inline-block rounded-3xl"
-                  alt="Guide"
-                  style={{ width: "500px", height: "500px" }}
-                  sizes="(max-width: 1024px) 200px, 400px"
-                />
-
-                {/* Text content */}
-                <div
-                  className="relative rounded-3xl text-gray-100 p-6 flex flex-col justify-center items-center shadow-md"
-                  style={{
-                    width: "100%",
-                    maxWidth: "700px",
-                    height: "auto",
-                    minHeight: "350px",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    overflow: "hidden",
-                  }}
-                >
-                  <div className="font-Poppins text-2xl md:text-4xl font-semibold text-center mb-8 text-[#8EE6A1]">
-                    My specialization
-                  </div>
-                  <p className="font-Poppins text-base md:text-lg text-center leading-relaxed px-20 text-[#cccccc] tracking-wider">
-                    My name is
-                    <span className="font-bold text-white">
-                      {" "}
-                      Fule Chaudhary
-                    </span>
-                    , and I have been a tourist guide for more then 20 years. I
-                    specialize in nature and adventure tours. Get in touch with
-                    me to book your dream trip! With more than a decade of
-                    expertise in the tourism industry, I've explored a multitude
-                    of exotic destinations. Leveraging this diverse background,
-                    I can craft the ideal tour itinerary tailored just for you.
-                  </p>
+              {/* Text Content */}
+              <div className="bg-white rounded-3xl shadow-md p-8 text-gray-700 max-w-3xl">
+                <div className="text-[#2E8B57] text-2xl md:text-4xl font-semibold mb-4">
+                  My Specialization
                 </div>
+                <p className="text-base md:text-lg leading-relaxed font-Poppins">
+                  My name is{" "}
+                  <span className="font-bold text-[#2E8B57]">
+                    Fule Chaudhary
+                  </span>
+                  , and I have been a tourist guide for more than 20 years. I
+                  specialize in nature and adventure tours. Get in touch with me
+                  to book your dream trip! With more than a decade of expertise
+                  in the tourism industry, I've explored a multitude of exotic
+                  destinations. Leveraging this diverse background, I can craft
+                  the ideal tour itinerary tailored just for you.
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* Best experiences in chitwan */}
-
-          <div className="relative text-center container mx-auto bg-cover">
-            <div className="relative w-full h-auto">
-              <Image
-                src={boat2}
-                className="w-full h-auto bg-cover rounded-b-xl"
-                alt="Boat"
-              />
-              <div className="absolute inset-0 bg-black/50 rounded-b-xl"></div>
-            </div>
-
-            <div className="absolute inset-0 flex justify-center items-center">
-              <div className="relative flex items-center mx-20">
-                <div
-                  className="relative rounded-3xl text-gray-100 p-6 text-xs flex flex-col justify-center items-center shadow-md"
-                  style={{
-                    width: "100%",
-                    maxWidth: "700px",
-                    height: "auto",
-                    minHeight: "350px",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    overflow: "hidden",
-                  }}
-                >
-                  <div className="font-Poppins text-[#8EE6A1] text-2xl md:text-4xl font-semibold text-center mb-8">
-                    About Chitwan National Park
-                  </div>
-                  <p className="font-Poppins text-base md:text-lg text-center leading-relaxed px-20 text-[#b3b3b3] tracking-wider">
-                    Chitwan is renowned for its exceptional experiences centered
-                    around its famous national park, home to rare and endangered
-                    animals like the one-horned rhino, Asian elephant, Bengal
-                    tiger, and gharial crocodile. Visitors can go on thrilling
-                    jungle safaris, where spotting these majestic creatures in
-                    their natural habitat is a highlight. The park also offers
-                    serene canoe rides along the Rapti River, allowing guests to
-                    appreciate the rich birdlife and lush scenery that make
-                    Chitwan a true wildlife haven.
-                  </p>
+            <div className="flex justify-center items-center flex-col lg:flex-row">
+              {/* Text Content */}
+              <div className="bg-white rounded-3xl shadow-md p-8 text-gray-700 max-w-3xl mb-6 lg:mb-0 lg:mr-8">
+                <div className="text-[#2E8B57] text-2xl md:text-4xl font-semibold mb-4">
+                  About Chitwan National Park
                 </div>
-                <Image
-                  src={tourist}
-                  className="relative left-4 inline-block rounded-3xl"
-                  alt="Tourist"
-                  style={{ width: "500px", height: "500px" }}
-                  sizes="(max-width: 1024px) 200px, 400px"
-                />
+                <p className="text-base md:text-lg leading-relaxed font-Poppins">
+                  Chitwan is renowned for its exceptional experiences centered
+                  around its famous national park, home to rare and endangered
+                  animals like the one-horned rhino, Asian elephant, Bengal
+                  tiger, and gharial crocodile. Visitors can go on thrilling
+                  jungle safaris, where spotting these majestic creatures in
+                  their natural habitat is a highlight. The park also offers
+                  serene canoe rides along the Rapti River, allowing guests to
+                  appreciate the rich birdlife and lush scenery that make
+                  Chitwan a true wildlife haven.
+                </p>
               </div>
+
+              {/* Tourist Image */}
+              <Image
+                src={tourist}
+                className="rounded-3xl shadow-lg"
+                alt="Tourist"
+                style={{ width: "350px", height: "350px" }}
+                sizes="(max-width: 1024px) 200px, 400px"
+              />
             </div>
           </div>
         </div>
@@ -515,7 +457,7 @@ export default function Homepage() {
               <p className="text-2xl sm:text-3xl font-semibold mb-4 text-[#4A8F60]">
                 Our Services
               </p>
-              
+
               <ul className="list-disc space-y-4 text-left sm:text-lg text-black">
                 <li>Comfortable and cozy homestay experience</li>
 
@@ -525,7 +467,6 @@ export default function Homepage() {
 
                 <li>Reliable 24/7 support and assistance services</li>
               </ul>
-             
             </div>
           </div>
         </section>
@@ -617,7 +558,7 @@ export default function Homepage() {
         </div>
       </div> */}
 
-        <section className="bg-gray-200 py-16 px-6 md:px-10">
+        <section className="elative text-center container mx-auto py-10 px-6 bg-[#f0f8f0] rounded-t-xl shadow-md">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
             {/* Image Section */}
             <div className="relative">
@@ -761,88 +702,117 @@ export default function Homepage() {
           </div>
         </section>
 
-        <div className="bg-[#5C2C59] rounded pb-8">
-          <h2 className="font-MuseoModerno text-white underline text-2xl font-bold text-center mb-5 pt-5">
-            Reviews from our clients
+        {/* Homepage Gallery */}
+        <div className="py-16 bg-[#f0f8f0] container shadow-lg">
+        
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-MuseoModerno text-3xl lg:text-4xl font-bold text-[#2E8B57] mb-12">
+              Explore Our Gallery
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="relative">
+                <video
+                  controls
+                  className="w-full h-60 object-cover rounded-xl shadow-lg z-10"
+                >
+                  <source src="/assets/video/vid1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl z-0 pointer-events-none"></div>
+                <div className="absolute bottom-4 left-4 text-white text-xl font-semibold z-0 pointer-events-none font-Poppins">
+                  <p>Tharu Dance</p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <video
+                  controls
+                  className="w-full h-60 object-cover rounded-xl shadow-lg z-10"
+                >
+                  <source src="/assets/video/vid3.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl z-0 pointer-events-none"></div>
+                <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold z-0 pointer-events-none">
+                  <p>Jungle Safari</p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <img
+                  src="/assets/Cycling.jpg"
+                  alt="Cycline In Sauraha"
+                  className="w-full h-60 object-cover rounded-xl shadow-lg"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl"></div>
+                <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold">
+                  <p>Cycline In Sauraha</p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <img
+                  src="/assets/Birdwatch.jpg"
+                  alt="Birdwatch In Sauraha"
+                  className="w-full h-60 object-cover rounded-xl shadow-lg"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl"></div>
+                <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold">
+                  <p>Bird Watching</p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <img
+                  src="/assets/JungleWalk.jpg"
+                  alt="Junglewalk In Sauraha"
+                  className="w-full h-60 object-cover rounded-xl shadow-lg"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl"></div>
+                <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold">
+                  <p>Nature Friendly</p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <video
+                  controls
+                  className="w-full h-60 object-cover rounded-xl shadow-lg z-10"
+                >
+                  <source src="/assets/video/vid2.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl z-0 pointer-events-none"></div>
+                <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold z-0 pointer-events-none">
+                  <p>Ohh My Deer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="font-MuseoModerno text-3xl font-bold text-center mb-8 text-[#333] underline mt-20">
+          Reviews from our clients
           </h2>
           <div className="flex justify-center">
-            {/* Carousel for large screens */}
-            <Carousel
-              plugins={[plugin.current]}
-              className="w-3/4 hidden lg:block"
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
-            >
-              <CarouselContent>
-                {reviews
-                  .reduce((result, review, index) => {
-                    if (index % 3 === 0) result.push([]);
-                    result[result.length - 1].push(review);
-                    return result;
-                  }, [])
-                  .map((group, i) => (
-                    <CarouselItem key={i}>
-                      <div className="grid grid-cols-3 gap-5 px-1">
-                        {group.map((review, k) => (
-                          <STFU review={review} key={k} />
-                        ))}
-                      </div>
-                    </CarouselItem>
-                  ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-
-            {/* Carousel for small screens */}
-            <Carousel
-              plugins={[plugin.current]}
-              className="w-3/4 md:hidden"
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
-            >
-              <CarouselContent>
-                {reviews.map((review, i) => (
-                  <CarouselItem key={i}>
-                    <div className="grid grid-cols-1 gap-5 px-1">
-                      <STFU review={review} />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-
-            {/* Carousel for medium screens */}
-            <Carousel
-              plugins={[plugin.current]}
-              className="w-3/4 hidden md:block lg:hidden"
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
-            >
-              <CarouselContent>
-                {reviews
-                  .reduce((result, review, index) => {
-                    if (index % 2 === 0) result.push([]);
-                    result[result.length - 1].push(review);
-                    return result;
-                  }, [])
-                  .map((group, i) => (
-                    <CarouselItem key={i}>
-                      <div className="grid grid-cols-2 gap-5 px-1">
-                        {group.map((review, k) => (
-                          <STFU review={review} key={k} />
-                        ))}
-                      </div>
-                    </CarouselItem>
-                  ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
+          {/* Carousel */}
+          <Carousel className="w-11/12 md:w-3/4">
+            <CarouselContent>
+              {reviews.map((review) => (
+                <CarouselItem key={review.id} className="p-4 md:basis-1/2 lg:basis-1/3">
+                  <ReviewCard review={review} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
+      </div>
+      </div>
+        
+        
+           
 
         {/* Confetti */}
         {confetti && (
@@ -940,7 +910,6 @@ export default function Homepage() {
             {isExpanded ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-      </div>
     </>
   );
 }
