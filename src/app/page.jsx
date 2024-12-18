@@ -207,6 +207,7 @@ export default function Homepage() {
             </span>
             <br />
             <span className="font-Poppins text-nowrap text-xl lg:text-6xl">
+            <span className="font-Poppins text-nowrap text-xl lg:text-6xl">
               CHITWAN NATIONAL PARK
             </span>
             <span className="font-Popp text-[15px] lg:text-3xl block">
