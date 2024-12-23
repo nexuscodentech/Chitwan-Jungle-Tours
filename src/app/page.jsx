@@ -27,6 +27,9 @@ import home from "assets/homepage.jpg";
 import img1 from "assets/img1.png";
 import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
+import img4 from "assets/img4.png";
+import img5 from "assets/img5.png";
+import img6 from "assets/img6.png";
 import boat2 from "assets/boat2.png";
 import travel from "assets/home.jpg";
 import review1 from "assets/review1.jpg";
@@ -76,8 +79,11 @@ const reviews = [
   },
 ];
 
+
 export default function Homepage() {
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false })
+  );
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
@@ -171,7 +177,10 @@ export default function Homepage() {
 
   // Review Card
   const ReviewCard = ({ review }) => (
-    <div key={review.id} className="p-4 bg-white rounded-lg shadow-md text-center">
+    <div
+      key={review.id}
+      className="p-4 bg-white rounded-lg shadow-md text-center"
+    >
       {/* Avatar */}
       <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4">
         <img
@@ -196,6 +205,64 @@ export default function Homepage() {
     </div>
   );
 
+  const sliders=[
+    {
+      id: 1,
+      title: "Exploring Homestay",
+      image: img1,
+      text: "Discover cozy homestays with local charm and hospitality",
+    },
+    {
+      id: 2,
+      title: "Tharu Cultural Dance",
+      image: img2,
+      text: "Experience the vibrant Tharu culture through their traditional dance.",
+    },
+    {
+      id: 3,
+      title: "Canoeing at Rapti",
+      image: img3,
+      text: "Paddle through serene waters and enjoy the beauty of Rapti River.",
+    },
+    {
+      id: 4,
+      title: "Exploring Homestay",
+      image: img4,
+      text: "Discover cozy homestays with local charm and hospitality",
+    },
+    {
+      id: 5,
+      title: "Tharu Cultural Dance",
+      image: img5,
+      text: "Experience the vibrant Tharu culture through their traditional dance.",
+    },
+    {
+      id: 6,
+      title: "Canoeing at Rapti",
+      image: img6,
+      text: "Paddle through serene waters and enjoy the beauty of Rapti River.",
+    },
+  ];
+  
+  const Slider=({slider})=>(
+    <div key={slider.id} className="relative h-auto md:h-auto group flex items-center justify-center">
+    <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
+      {slider.title}
+    </h2>
+    <Image
+      src={slider.image}
+      alt={slider.title}
+      className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+    />
+
+    <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-3/4 mx-auto">
+      <p className="font-Poppins text-white text-lg md:text-xl text-center">
+        {slider.text}
+      </p>
+    </div>
+  </div>
+  );
+
   return (
     <>
       <div className="space-y-14 ">
@@ -206,7 +273,7 @@ export default function Homepage() {
               DISCOVER NATURE'S MAJESTY IN,
             </span>
             <br />
-            <span className="font-Poppins text-nowrap text-xl lg:text-6xl">
+
             <span className="font-Poppins text-nowrap text-xl lg:text-6xl">
               CHITWAN NATIONAL PARK
             </span>
@@ -247,8 +314,29 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
-          <div className="relative h-auto md:h-auto">
+        <div className="mx-auto px-4 lg:px-10 lg:flex grid grid-cols-2 gap-2">
+        <div className="flex justify-center">
+            {/* Carousel */}
+            <Carousel plugins={[plugin.current]} loop>
+              <CarouselContent>
+                {sliders.map((slider) => (
+                  <CarouselItem
+                    key={slider.id}
+                    className="md:basis-1/2 lg:basis-1/3"
+                  >
+                    <Slider slider={slider}/>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </div>
+
+        {/* Old section */}
+        {/* <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
+          <div className="relative h-auto md:h-auto group">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Exploring Homestay
             </h2>
@@ -257,9 +345,15 @@ export default function Homepage() {
               alt="Image 1"
               className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
+
+            <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md">
+              <p className="font-Poppins text-white text-lg md:text-xl text-center">
+                Discover cozy homestays with local charm and hospitality.
+              </p>
+            </div>
           </div>
 
-          <div className="relative h-auto md:h-auto hidden lg:block">
+          <div className="relative h-auto md:h-auto hidden lg:block group">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Tharu Cultural Dance
             </h2>
@@ -268,9 +362,15 @@ export default function Homepage() {
               alt="Image 1"
               className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
+
+            <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md">
+              <p className="font-Poppins text-white text-lg md:text-xl text-center">
+              Experience the vibrant Tharu culture through their traditional dance.
+              </p>
+            </div>
           </div>
 
-          <div className="relative h-auto md:h-auto">
+          <div className="relative h-auto md:h-auto group">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Canoeing at Rapti
             </h2>
@@ -279,8 +379,14 @@ export default function Homepage() {
               alt="Image 1"
               className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
+
+            <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md">
+              <p className="font-Poppins text-white text-lg md:text-xl text-center">
+              Paddle through serene waters and enjoy the beauty of Rapti River.
+              </p>
+            </div>
           </div>
-        </div>
+        </div> */}
 
         {/*<div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
           <div className="relative h-auto">
@@ -705,7 +811,6 @@ export default function Homepage() {
 
         {/* Homepage Gallery */}
         <div className="py-16 bg-[#f0f8f0] container shadow-lg">
-        
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-MuseoModerno text-3xl lg:text-4xl font-bold text-[#2E8B57] mb-12">
               Explore Our Gallery
@@ -790,127 +895,136 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
+
+            {/* see more button */}
+            <div className="flex items-center gap-2 mt-4 justify-end">
+              <Link href={`/gallery/`}>
+                <span className="border-2 border-[#55e6a5] px-[2rem] bg-gray-200 transition-all duration-200 py-[0.5rem] text-[15px] font-bold uppercase hover:bg-[#55e6a5] text-black flex items-center justify-center space-x-2 rounded-full button">
+                  <p className="tracking-widest">See More</p>
+                </span>
+              </Link>
+            </div>
           </div>
 
           <h2 className="font-MuseoModerno text-3xl font-bold text-center mb-8 text-[#333] underline mt-20">
-          Reviews from our clients
+            Reviews from our clients
           </h2>
           <div className="flex justify-center">
-          {/* Carousel */}
-          <Carousel className="w-11/12 md:w-3/4">
-            <CarouselContent>
-              {reviews.map((review) => (
-                <CarouselItem key={review.id} className="p-4 md:basis-1/2 lg:basis-1/3">
-                  <ReviewCard review={review} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+            {/* Carousel */}
+            <Carousel className="w-11/12 md:w-3/4">
+              <CarouselContent>
+                {reviews.map((review) => (
+                  <CarouselItem
+                    key={review.id}
+                    className="p-4 md:basis-1/2 lg:basis-1/3"
+                  >
+                    <ReviewCard review={review} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
         </div>
       </div>
-      </div>
-        
-        
-           
 
-        {/* Confetti */}
-        {confetti && (
-          <Confetti
-            width={dim.w}
-            height={dim.h}
-            recycle={false}
-            numberOfPieces={1000}
-            gravity={0.1}
-            colors={
-              String[
-                ("#f44336",
-                "#e91e63",
-                "#9c27b0",
-                "#673ab7",
-                "#3f51b5",
-                "#2196f3",
-                "#03a9f4",
-                "#00bcd4",
-                "#009688",
-                "#4CAF50",
-                "#8BC34A",
-                "#CDDC39",
-                "#FFEB3B",
-                "#FFC107",
-                "#FF9800",
-                "#FF5722",
-                "#795548")
-              ]
-            }
-            wind={0}
-          />
+      {/* Confetti */}
+      {confetti && (
+        <Confetti
+          width={dim.w}
+          height={dim.h}
+          recycle={false}
+          numberOfPieces={1000}
+          gravity={0.1}
+          colors={
+            String[
+              ("#f44336",
+              "#e91e63",
+              "#9c27b0",
+              "#673ab7",
+              "#3f51b5",
+              "#2196f3",
+              "#03a9f4",
+              "#00bcd4",
+              "#009688",
+              "#4CAF50",
+              "#8BC34A",
+              "#CDDC39",
+              "#FFEB3B",
+              "#FFC107",
+              "#FF9800",
+              "#FF5722",
+              "#795548")
+            ]
+          }
+          wind={0}
+        />
+      )}
+
+      {/* Quick buttons */}
+      <div
+        ref={stickyButtonRef}
+        className={`fixed right-4 flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out z-50 ${
+          isAtBottom ? "bottom-[calc(100vh-5rem)]" : "bottom-4"
+        }`}
+      >
+        {isExpanded && (
+          <div className="flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform">
+            {/* WhatsApp Button */}
+            <div className="p-1 bg-gradient-to-r from-green-400 to-white-500 rounded-full">
+              <button
+                className="p-2 bg-green-500 text-white rounded-full w-12"
+                onClick={() =>
+                  window.open("https://wa.me/9845043367", "_blank")
+                }
+              >
+                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+              </button>
+            </div>
+
+            {/* Facebook Button */}
+            <div className="p-1 bg-gradient-to-r from-blue-500 to-white-600 rounded-full">
+              <button
+                className="p-2 bg-blue-500 text-white rounded-full w-12"
+                onClick={() =>
+                  window.open(
+                    "https://www.facebook.com/fule.chaudhary",
+                    "_blank"
+                  )
+                }
+              >
+                <FontAwesomeIcon icon={faFacebookF} size="lg" />
+              </button>
+            </div>
+
+            {/* Instagram Button */}
+            <div className="p-1 bg-gradient-to-r from-pink-500 to-white-500 rounded-full">
+              <button
+                className="p-2 bg-pink-500 text-white rounded-full w-12"
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/chitwanjungle01/",
+                    "_blank"
+                  )
+                }
+              >
+                <FontAwesomeIcon icon={faInstagram} size="lg" />
+              </button>
+            </div>
+          </div>
         )}
 
-        {/* Quick buttons */}
-        <div
-          ref={stickyButtonRef}
-          className={`fixed right-4 flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out z-50 ${
-            isAtBottom ? "bottom-[calc(100vh-5rem)]" : "bottom-4"
+        {/* Main Toggle Button with Icons */}
+        <button
+          onClick={toggleExpand}
+          className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
+            isExpanded ? "scale-105" : "scale-100"
           }`}
         >
-          {isExpanded && (
-            <div className="flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform">
-              {/* WhatsApp Button */}
-              <div className="p-1 bg-gradient-to-r from-green-400 to-white-500 rounded-full">
-                <button
-                  className="p-2 bg-green-500 text-white rounded-full w-12"
-                  onClick={() =>
-                    window.open("https://wa.me/9845043367", "_blank")
-                  }
-                >
-                  <FontAwesomeIcon icon={faWhatsapp} size="lg" />
-                </button>
-              </div>
-
-              {/* Facebook Button */}
-              <div className="p-1 bg-gradient-to-r from-blue-500 to-white-600 rounded-full">
-                <button
-                  className="p-2 bg-blue-500 text-white rounded-full w-12"
-                  onClick={() =>
-                    window.open(
-                      "https://www.facebook.com/fule.chaudhary",
-                      "_blank"
-                    )
-                  }
-                >
-                  <FontAwesomeIcon icon={faFacebookF} size="lg" />
-                </button>
-              </div>
-
-              {/* Instagram Button */}
-              <div className="p-1 bg-gradient-to-r from-pink-500 to-white-500 rounded-full">
-                <button
-                  className="p-2 bg-pink-500 text-white rounded-full w-12"
-                  onClick={() =>
-                    window.open(
-                      "https://www.instagram.com/chitwanjungle01/",
-                      "_blank"
-                    )
-                  }
-                >
-                  <FontAwesomeIcon icon={faInstagram} size="lg" />
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* Main Toggle Button with Icons */}
-          <button
-            onClick={toggleExpand}
-            className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
-              isExpanded ? "scale-105" : "scale-100"
-            }`}
-          >
-            {isExpanded ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+          {isExpanded ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
     </>
   );
 }
