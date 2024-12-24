@@ -273,7 +273,7 @@ export default function Homepage() {
               DISCOVER NATURE'S MAJESTY IN,
             </span>
             <br />
-
+    
             <span className="font-Poppins text-nowrap text-xl lg:text-6xl">
               CHITWAN NATIONAL PARK
             </span>
