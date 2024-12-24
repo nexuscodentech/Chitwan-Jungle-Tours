@@ -77,7 +77,7 @@ export default function () {
         </div>
       </div>
 
-      <div className="max-sm:-ml-5 max-sm:font-bold flex w-full max-sm:gap-2 p-2 font-MuseoModerno h-16 max-md:text-sm  items-center justify-evenly lg:-space-x-14 xl:-space-x-20">
+      <div className="max-sm:-ml-5 max-sm:font-bold flex w-full max-sm:gap-2 p-2 font-Poppins h-16 max-md:text-sm  items-center justify-evenly lg:-space-x-14 xl:-space-x-20">
         <Menu />
         <Link href="/plans" className="sm:hidden">
           Packages
