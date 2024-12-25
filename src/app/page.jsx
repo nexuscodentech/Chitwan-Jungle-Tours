@@ -48,6 +48,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+
 const reviews = [
   {
     id: 1,
@@ -244,7 +245,7 @@ export default function Homepage() {
       text: "Paddle through serene waters and enjoy the beauty of Rapti River.",
     },
   ];
-  <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
+  // <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
   const Slider=({slider})=>(
     <div key={slider.id} className="relative h-auto md:h-auto group flex items-center justify-center">
     <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
@@ -316,7 +317,7 @@ export default function Homepage() {
         </div>
         
 
-        <div className="py-10 mx-auto px-3 lg:px-10 lg:flex container shadow-lg">
+        <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container shadow-lg">
           
             <Carousel plugins={[plugin.current]} loop={true} >   
               <CarouselContent>
@@ -329,8 +330,7 @@ export default function Homepage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              
             </Carousel>
           </div>
         
@@ -913,7 +913,7 @@ export default function Homepage() {
           </h2>
           <div className="flex justify-center">
             {/* Carousel */}
-            <Carousel className="w-11/12 md:w-3/4">
+            <Carousel className="w-10/12 md:w-3/4">
               <CarouselContent>
                 {reviews.map((review) => (
                   <CarouselItem
