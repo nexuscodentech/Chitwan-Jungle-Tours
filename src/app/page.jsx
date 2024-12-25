@@ -47,7 +47,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Pramod from "./carousel";
 
 const reviews = [
   {
