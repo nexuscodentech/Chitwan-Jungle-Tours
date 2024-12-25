@@ -47,6 +47,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Pramod from "./carousel";
 
 const reviews = [
   {
@@ -83,6 +84,7 @@ const reviews = [
 export default function Homepage() {
   const plugin = useRef(
     Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false })
+  
   );
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -243,7 +245,7 @@ export default function Homepage() {
       text: "Paddle through serene waters and enjoy the beauty of Rapti River.",
     },
   ];
-  
+  <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
   const Slider=({slider})=>(
     <div key={slider.id} className="relative h-auto md:h-auto group flex items-center justify-center">
     <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
@@ -313,16 +315,16 @@ export default function Homepage() {
             </Link>
           </div>
         </div>
+        
 
-        <div className="mx-auto px-4 lg:px-10 lg:flex grid grid-cols-2 gap-2">
-        <div className="flex justify-center">
-            {/* Carousel */}
-            <Carousel plugins={[plugin.current]} loop>
+        <div className="py-10 mx-auto px-3 lg:px-10 lg:flex container shadow-lg">
+          
+            <Carousel plugins={[plugin.current]} loop={true} >   
               <CarouselContent>
                 {sliders.map((slider) => (
                   <CarouselItem
                     key={slider.id}
-                    className="md:basis-1/2 lg:basis-1/3"
+                    className="basis-1/2 md:basis-1/3 lg:basis-1/3" 
                   >
                     <Slider slider={slider}/>
                   </CarouselItem>
@@ -332,7 +334,8 @@ export default function Homepage() {
               <CarouselNext />
             </Carousel>
           </div>
-        </div>
+        
+
 
         {/* Old section */}
         {/* <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
