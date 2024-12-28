@@ -28,7 +28,7 @@ import img1 from "assets/img1.png";
 import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
 import img4 from "assets/img4.png";
-import img5 from "assets/img5.png";
+import img5 from "assets/Birdwatch.jpg";
 import img6 from "assets/img6.png";
 // import boat2 from "assets/boat2.png";
 import travel from "assets/home.jpg";
@@ -227,21 +227,21 @@ export default function Homepage() {
     },
     {
       id: 4,
-      title: "Cycling in the villa",
+      title: "Cycling in the Village",
       image: img4,
       text: "Enjoy a scenic cycling ride through the peaceful village, exploring local life and rural landscapes.",
     },
     {
       id: 5,
-      title: "Best sunset `view",
+      title: "Bird Watching",
       image: img5,
-      text: "Experience breathtaking views of the sunset, painting the sky with vibrant colors over the serene landscape.",
+      text: "Experience the vibrant birdlife of CNP, a paradise for bird watchers amidst the serene landscapes of Chitwan.",
     },
     {
       id: 6,
-      title: "Meeting with Rhino",
+      title: "Jungle Safari",
       image: img6,
-      text: "Enjoy a thrilling encounter as you observe the majestic rhinos in their natural jungle habitat, witnessing these incredible creatures up close.",
+      text: "Experience the thrill of venturing into the heart of nature, surrounded by untouched wilderness and diverse wildlife.",
     },
   ];
   // <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
