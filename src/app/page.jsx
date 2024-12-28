@@ -38,7 +38,6 @@ import roundedGuide from "../../public/home/guide.png";
 import roundedTourist from "../../public/home/tourist1.png";
 
 import { Star } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import {
   Carousel,
@@ -228,21 +227,21 @@ export default function Homepage() {
     },
     {
       id: 4,
-      title: "Exploring Homestay",
+      title: "Cycling in the villa",
       image: img4,
-      text: "Discover cozy homestays with local charm and hospitality",
+      text: "Enjoy a scenic cycling ride through the peaceful village, exploring local life and rural landscapes.",
     },
     {
       id: 5,
-      title: "Tharu Cultural Dance",
+      title: "Best sunset `view",
       image: img5,
-      text: "Experience the vibrant Tharu culture through their traditional dance.",
+      text: "Experience breathtaking views of the sunset, painting the sky with vibrant colors over the serene landscape.",
     },
     {
       id: 6,
-      title: "Canoeing at Rapti",
+      title: "Meeting with Rhino",
       image: img6,
-      text: "Paddle through serene waters and enjoy the beauty of Rapti River.",
+      text: "Enjoy a thrilling encounter as you observe the majestic rhinos in their natural jungle habitat, witnessing these incredible creatures up close.",
     },
   ];
   // <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
@@ -257,7 +256,7 @@ export default function Homepage() {
       className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
     />
 
-    <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-3/4 mx-auto">
+    <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-fit mx-auto">
       <p className="font-Poppins text-white text-lg md:text-xl text-center">
         {slider.text}
       </p>
@@ -317,7 +316,7 @@ export default function Homepage() {
         </div>
         
 
-        <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container shadow-lg">
+        <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container">
           
             <Carousel plugins={[plugin.current]} loop={true} >   
               <CarouselContent>
