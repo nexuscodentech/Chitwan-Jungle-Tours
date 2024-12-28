@@ -30,9 +30,9 @@ import img3 from "assets/img3.png";
 import img4 from "assets/img4.png";
 import img5 from "assets/img5.png";
 import img6 from "assets/img6.png";
-import boat2 from "assets/boat2.png";
+// import boat2 from "assets/boat2.png";
 import travel from "assets/home.jpg";
-import review1 from "assets/review1.jpg";
+// import review1 from "assets/review1.jpg";
 
 import roundedGuide from "../../public/home/guide.png";
 import roundedTourist from "../../public/home/tourist1.png";
