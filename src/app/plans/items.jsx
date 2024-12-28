@@ -175,7 +175,8 @@ const items = [
         description: "Evening back to hotel for some dinner and rest.",
       },
       {
-        
+        title: "Day off:",
+        description: "Relax and rest for the night.",
       },
 
       // and this for day 3 (need 3 content)
@@ -329,38 +330,55 @@ const items = [
     cost: "5,000 NRS",
   },
   {
-    id: 283928374012,
+    id: 283928374013,
     src: plans6,
-    title: "Comming Soon...",
-    keywords: [
-      "Chitwan adventure",
+    title: "1 Night Package",
+    description: "1-Night Jungle Adventure with Jeep Safari, Canoe Ride, and Birdwatching",
+    "keywords": [
+      "Jungle adventure",
       "wildlife safari",
-      "jungle tour",
-      "Chitwan exploration",
-      "nature retreat",
-      "adventure travel",
       "Chitwan National Park",
-      "eco-tourism",
-      "Chitwan vacation",
-      "safari adventure",
-      "jungle activities",
-      "Chitwan holiday package",
-      "wildlife exploration",
-      "nature tours",
-      "outdoor adventures",
-      "cultural experience",
-      "Chitwan wildlife tour",
-      "eco-tourism package",
-      "adventure holidays",
+      "Canoe ride",
+      "Rapti River",
+      "birdwatching",
+      "nature retreat",
+      "outdoor activities",
+      "trekking",
+      "community forest",
       "nature immersion",
-      "Chitwan wildlife safari",
-      "jungle adventure",
+      "Chitwan experience",
+      "Chitwan vacation",
+      "jungle tour",
+      "overnight stay",
+      "adventure travel",
+      "eco-tourism",
+      "wildlife exploration",
+      "Chitwan wildlife tour",
+      "stargazing dinner",
       "local culture",
-      "Tharu culture",
+      "eco-tourism package",
+      "Chitwan holiday",
+      "river activities"
     ],
-    price: "Price (Tax included): ",
-    cost: "Not available",
-  },
+    "activities": [
+      {
+        "title": "Morning Breakfast and Jeep Safari",
+        "description": "Start your day with a delicious breakfast at the hotel before setting off on a 2-hour jeep drive through the community forest, exploring the rich wildlife of Chitwan National Park."
+      },
+      {
+        "title": "Canoe Ride and Jungle Trek",
+        "description": "After a satisfying lunch, enjoy a peaceful canoe ride along the serene Rapti River. Later, embark on a trek to the Jungle Tower for an unforgettable overnight stay in the wilderness."
+      },
+      {
+        "title": "Next Day: Birdwatching and Departure",
+        "description": "The next morning, indulge in birdwatching to spot colorful species in the early hours. Afterward, return to the hotel for a hearty breakfast before your departure."
+      }
+    ],
+    "price": "Price (Tax included): ",
+    "cost": "20,000 NRS"
+}
+
+
 ];
 
 export default items;
