@@ -1,0 +1,45 @@
+/* * {
+    outline: 1px solid red;
+  } */
+
+.outline{
+    text-decoration: underline;
+}
+
+.circle{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.tick{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 3.5rem;
+aspect-ratio: 1;
+background-color: #ffffff;
+border-radius: 50%;
+transition: color 0.5s ease-in-out;
+}
+
+@property --fill{
+syntax: "<percentage>";
+inherits: true;
+initial-value: 0%;
+}
+.group:hover .tick{
+color: green;
+--fill: 100%;
+}
+
+.tick::after{
+position: absolute;
+z-index: -1;
+content: "";
+inset: -1.5px;
+border-radius: inherit;
+background: conic-gradient(green var(--fill),#F0F0F0 var(--fill));
+transition: --fill 1s ease-in-out;
+}
