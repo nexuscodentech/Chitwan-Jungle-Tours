@@ -136,9 +136,18 @@ export default function Itinerary() {
           </div>
 
           <div className="container mx-auto max-md:px-4">
-            <h3 className="text-center text-4xl mt-10 font-bold mb-5 max-md:text-2xl max-xl:text-4xl max-xl:mb-5 bg-green-300">
-              Detailed Itinerary
+              
+             <h3 className="text-center text-3xl mt-10 font-bold mb-5 max-md:text-2xl max-xl:text-4xl max-xl:mb-5">
+              <a href="/contact">
+             <button
+                type=""
+                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md"
+              >
+                Click Here to Order
+              </button>
+              </a>
             </h3>
+            {/*
             <h4 className="font-semibold">Day 1:</h4>
             <ul className="list-disc pl-5 mb-4">
               <li>
@@ -229,7 +238,7 @@ export default function Itinerary() {
             <h4 className="font-semibold">Day 12:</h4>
             <ul className="list-disc pl-5 mb-4">
               <li>Fly back home.</li>
-            </ul>
+            </ul> */}
 
             <h4 className="font-semibold">Cost:</h4>
             <p className="mb-4">

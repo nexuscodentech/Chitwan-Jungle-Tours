@@ -28,7 +28,7 @@ import img1 from "assets/img1.png";
 import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
 import img4 from "assets/img4.png";
-import img5 from "assets/Birdwatch.jpg";
+import img5 from "assets/birdwatch.png";
 import img6 from "assets/img6.png";
 // import boat2 from "assets/boat2.png";
 import travel from "assets/home.jpg";
@@ -51,31 +51,38 @@ import {
 const reviews = [
   {
     id: 1,
-    name: "Liam O'Sullivan",
-    avatar: "/assets/fule.png",
+    name: "Jazmin Fabish",
+    avatar: "/assets/jazmin.jpeg",
     rating: 5,
-    text: "Absolutely amazing experience! Saw so many animals up close, and our guide was fantastic. A must-do adventure!",
+    text: "Incredible experience through the Chitwan jungle. Guides are very knowledgeable and experienced. Would highly recommend booking with them. Thank you to our guide Fule for such a wonderful adventure.",
   },
   {
     id: 2,
-    name: "Sakura Tanaka",
-    avatar: "/assets/img1.png",
-    rating: 4,
-    text: "Well-organized tour and friendly staff. The jeep safari was a highlight. Would love more stops to capture photos!",
+    name: "Robby Puzo",
+    avatar: "/assets/robby.jpeg",
+    rating: 5,
+    text: "I had a fabulous day with fule and I totally recommend his tours. Fule was very organised, knowledgeable and fun. We saw lots of different animals, had an amazing lunch provided and the day was very memorable. Definitely check this tour.",
   },
   {
     id: 3,
-    name: "Mateo Fernández",
-    avatar: "/assets/img2.png",
-    rating: 3,
-    text: "Chitwan Jungle Tours exceeded my expectations! Spotted rhinos and beautiful birds. Highly recommended!",
+    name: "Ramjit Mahato",
+    avatar: "/assets/ramjit.jpeg",
+    rating: 4,
+    text: "He(Fule) is local and experienced long time worked in tourism has great knowledge honest and hospitable person i really recommend to him and his agency.",
   },
   {
     id: 4,
-    name: "Amara Okafor",
-    avatar: "/assets/img3.png",
-    rating: 2,
-    text: "Great trip! Our guide was knowledgeable, but the tour could be improved with some more restroom breaks.",
+    name: "Larrisa Kato",
+    avatar: "/assets/larrisa.jpeg",
+    rating: 4,
+    text: "Fule is a very knowledgeable guide who's very kind and accommodating. His extensive knowledge made both my private birding tour as well as my jeep safari in Chitwan really enjoyable! Thank you!",
+  },
+  {
+    id: 5,
+    name: "Lenie Schilt",
+    avatar: "/assets/lenie.jpeg",
+    rating: 5,
+    text: "Chitwan Jungle Tours is not just for Chitwan. In August I made a tour to the west of Nepal with guidance from Chitwan Jungle Tours. I flew from Katmandu to Nepalgunj and from there with a 4-wheel drive to Bardiya NP (walking safari, jeep safari and spotting freshwater dolphins), Jumla, Lumbini and Chitwan (canoe and walking safari). Fule Chaudary had arranged a good driver and nice hotels. He also made sure that we had good and varied meals. So I had a nice and relaxing trip with many new impressions.",
   },
 ];
 
@@ -824,7 +831,6 @@ export default function Homepage() {
                   className="w-full h-60 object-cover rounded-xl shadow-lg z-10"
                 >
                   <source src="/assets/video/vid1.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
                 </video>
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl z-0 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 text-white text-xl font-semibold z-0 pointer-events-none font-Poppins">
@@ -838,7 +844,6 @@ export default function Homepage() {
                   className="w-full h-60 object-cover rounded-xl shadow-lg z-10"
                 >
                   <source src="/assets/video/vid3.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
                 </video>
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl z-0 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold z-0 pointer-events-none">
@@ -888,7 +893,6 @@ export default function Homepage() {
                   className="w-full h-60 object-cover rounded-xl shadow-lg z-10"
                 >
                   <source src="/assets/video/vid2.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
                 </video>
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl z-0 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold z-0 pointer-events-none">

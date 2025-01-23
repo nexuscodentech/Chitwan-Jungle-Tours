@@ -48,7 +48,7 @@ export default function page() {
 
       <div className="main-contact-image relative w-full h-64 md:h-96 lg:h-128">
         <img
-          src="nepal-mountain-shrine 1.svg"
+          src="assets/backgroundImage11.jpg"
           alt="Mountain Shrine"
           className="w-full h-full object-cover"
         />
@@ -200,9 +200,9 @@ export default function page() {
           )}
         </div>
 
-        <div className="image-container w-full md:w-1/2 relative overflow-hidden hidden md:block">
+        <div className="w-full md:w-1/2 relative overflow-hidden hidden md:block">
           <img
-            src="contact-scenery.jpg"
+            src="assets/j4.jpg"
             className="w-full h-full object-cover rounded-lg"
             alt="Contact Scenery"
           />
