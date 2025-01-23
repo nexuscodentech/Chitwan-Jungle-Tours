@@ -16,9 +16,10 @@ export default function () {
             quality={100}
           />
         </div>
+        
         <iframe
           className="w-full h-[50vh]"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d358.3068946006671!2d84.50978807132103!3d27.589969061694507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snp!4v1733057843914!5m2!1sen!2snp"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1696.898961640204!2d84.49389529999999!3d27.576496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994eee38a5fad93%3A0x3b069bdfb22b20e6!2sRoyal%20Park%20Hotel%20P.%20Ltd.!5e1!3m2!1sen!2snp!4v1737172124776!5m2!1sen!2snp"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Sauraha Location"
