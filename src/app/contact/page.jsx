@@ -1,11 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function page() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [agree, setAgree] = useState(false);
+  const [selectedPackage, setSelectedPackage]=useState("");
+
+  const router=useRouter();
+
+  useEffect(()=>{
+    const params=new URLSearchParams(window.location.search);
+    const packageFromQuery=params.get("package");
+    if(packageFromQuery){
+      setSelectedPackage(packageFromQuery);
+    }
+  },[]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -74,12 +86,13 @@ export default function page() {
               Package:{" "}
               <select
                 name="package"
-                className="w-full border-2 rounded-md p-2 mb-4"
+                className="w-full border-2 rounded-md p-2 mb-4" value={selectedPackage} onChange={(e)=> setSelectedPackage(e.target.value)}
               >
                 <option value="">Select your package</option>
                 <option value="1-day">1 Day Jungle Safari (7000 NRS)</option>
                 <option value="2-days-1-night">2 Nights, 3 Days (25000 NRS)</option>
                 <option value="3-days-2-nights">3 Nights, 4 Days (65000 NRS)</option>
+                <option value="11-nights-12-days">11 Nights, 12 Days (1600 USD)</option>
               </select>
             </label>
             </div>

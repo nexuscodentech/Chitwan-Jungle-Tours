@@ -1,6 +1,7 @@
 import Image from "next/image";
 import rhinoceros from "assets/itineryBanner.png";
 import "./itinerary.css";
+import Link from "next/link";
 
 export default function Itinerary() {
   return (
@@ -138,14 +139,11 @@ export default function Itinerary() {
           <div className="container mx-auto max-md:px-4">
               
              <h3 className="text-center text-3xl mt-10 font-bold mb-5 max-md:text-2xl max-xl:text-4xl max-xl:mb-5">
-              <a href="/contact">
              <button
-                type=""
                 className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md"
               >
-                Click Here to Order
+                <Link href="/contact?package=11-nights-12-days">Click Here to Order</Link>
               </button>
-              </a>
             </h3>
             {/*
             <h4 className="font-semibold">Day 1:</h4>

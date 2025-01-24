@@ -1,5 +1,5 @@
 import ClientPlans from "./clientPlans"
-import hotel from "assets/plansBanner.jpg";
+import hotel from "assets/plansBanner.png";
 
 export function generateMetadata() {
   return {

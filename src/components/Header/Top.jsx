@@ -12,16 +12,11 @@ import Whatsapp from "../SVG/whatsapp";
 
 import Image from "next/image";
 import {usePathname} from "next/navigation";
-import {useState} from "react";
 
 export default function () {
   const pathname = usePathname();
   const isActive=(path)=>pathname===path;
 
-  const [isMenuOpen, setIsMenuOpen]=useState(false);
-  const toggleMenu=()=>{
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <>
@@ -90,38 +85,37 @@ export default function () {
         </div>
       </div>
 
-      <div className="sticky top-8 bg-white max-sm:font-bold flex w-full max-sm:gap-2 p-2 font-Poppins h-16 max-md:text-sm items-center justify-between lg:justify-evenly shadow-md z-40">
-      {/* sticky top-8 bg-white max-sm:-ml-5 max-sm:font-bold flex w-full max-sm:gap-2 p-2 font-Poppins h-16 max-md:text-sm items-center justify-evenly lg:-space-x-14 xl:-space-x-20 shadow-md z-40 */}
-        <Link href="/" className="lg:hidden">
-          <Image
-            src={"/global/tours.png"}
-            height={50}
-            width={50}
-            priority={true}
-            alt="Website Icon"
-          />
-        </Link>
-        <button className="lg:hidden p-2 text-gray-600" onClick={toggleMenu} aria-label="Toggle navigation">
-          {isMenuOpen ? <Close /> : <Menu />}
-        </button>
+      <div className="sticky top-8 bg-white max-sm:font-bold flex w-full max-sm:gap-2 p-2 font-Poppins h-16 max-md:text-sm items-center justify-between lg:justify-evenly shadow-md lg:-space-x-14 xl:-space-x-20 z-40">
         
-
-        <div className="hidden lg:flex items-center space-x-12">
           <Link href="/" className={`font-bold hover:text-[#00B300] hover:scale-105 ${isActive("/") ? "text-[#00B300] font-bold scale-105 transform" : ""}`}>
             Home
           </Link>
-          <Link href="/plans" className={`font-bold hover:text-[#00B300] hover:scale-105 ${isActive("/plans") ?"text-[#00B300]" : ""}`}>
+          <Link href="/plans" className={`md:block hidden font-bold hover:text-[#00B300] hover:scale-105 ${isActive("/plans") ?"text-[#00B300]" : ""}`}>
             Packages & Plans
+          </Link>
+          <Link href="/plans" className={`md:hidden font-bold hover:text-[#00B300] hover:scale-105 ${isActive("/plans") ?"text-[#00B300]" : ""}`}>
+            Packages
           </Link>
           <Link href="/gallery" className={`font-bold hover:text-[#00B300] hover:scale-105 ${isActive("/gallery") ? "text-[#00B300]" : ""}`}>
             Gallery
           </Link>
-          <div className="">
+          <div className="md:block hidden">
             <Link href="/">
               <Image
                 src={"/global/tours.png"}
                 height={65}
                 width={65}
+                priority={true}
+                alt="Website Icon"
+              />
+            </Link>
+          </div>
+          <div className="md:hidden">
+            <Link href="/">
+              <Image
+                src={"/global/tours.png"}
+                height={50}
+                width={50}
                 priority={true}
                 alt="Website Icon"
               />
@@ -143,55 +137,7 @@ export default function () {
           >
             Contact
           </Link>
-        </div>
       </div>
-
-      {isMenuOpen &&(
-        <div
-          className="lg:hidden fixed right-0 w-72 h-4/6 bg-slate-200 shadow-md z-50 rounded-l-lg">
-          <nav className="flex flex-col px-8 items-start space-y-6 py-6">
-            <Link href="/" onClick={toggleMenu} className={`font-bold hover:text-[#00B300] ${isActive("/") ? "text-[#00B300]" : ""}`}>
-            Home
-          </Link>
-          <Link
-              href="/plans"
-              onClick={toggleMenu}
-              className={`font-bold hover:text-[#00B300] ${
-                isActive("/plans") ? "text-[#00B300]" : ""
-              }`}
-            >
-              Packages & Plans
-            </Link>
-            <Link
-              href="/gallery"
-              onClick={toggleMenu}
-              className={`font-bold hover:text-[#00B300] ${
-                isActive("/gallery") ? "text-[#00B300]" : ""
-              }`}
-            >
-              Gallery
-            </Link>
-            <Link
-              href="/itinerary"
-              onClick={toggleMenu}
-              className={`font-bold hover:text-[#00B300] ${
-                isActive("/itinerary") ? "text-[#00B300]" : ""
-              }`}
-            >
-              Itinerary
-            </Link>
-            <Link
-              href="/contact"
-              onClick={toggleMenu}
-              className={`border-2 border-[#00B300] h-9 w-24 rounded-full flex items-center justify-center ${
-                isActive("/contact") ? "bg-[#66E066] text-white" : ""
-              }`}
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
-      )}
     </>
   );
 }

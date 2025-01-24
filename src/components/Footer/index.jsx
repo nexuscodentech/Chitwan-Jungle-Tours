@@ -148,7 +148,7 @@ export default function () {
         </div>
         <div className="flex flex-col items-center justify-center -mt-12">
           <div className="items-center text-center gap-4 mb-1">
-            <p>Copyright 2024.</p>
+            <p>Copyright &copy; 2025.</p>
             <p>Chitwan Jungle Tours PVT LTD</p>
             <p>
               Designed & Developed by{" "}
