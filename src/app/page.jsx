@@ -23,7 +23,7 @@ import "./page.css";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import home from "assets/homepage.jpg";
+import home from "assets/newhome.jpg";
 import img1 from "assets/img1.png";
 import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
