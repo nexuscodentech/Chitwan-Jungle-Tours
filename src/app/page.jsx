@@ -32,6 +32,8 @@ import img5 from "assets/birdwatch.png";
 import img6 from "assets/img6.png";
 // import boat2 from "assets/boat2.png";
 import travel from "assets/home.jpg";
+import travel1 from "assets/i8.jpg";
+import travel2 from "assets/gallery/gallery-20.png";
 // import review1 from "assets/review1.jpg";
 
 import roundedGuide from "../../public/home/guide.png";
@@ -47,50 +49,47 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-
 const reviews = [
   {
     id: 1,
-    name: "Jazmin Fabish",
-    avatar: "/assets/jazmin.jpeg",
+    name: "Lenie Schilt",
+    avatar: "/assets/lenie.jpeg",
     rating: 5,
-    text: "Incredible experience through the Chitwan jungle. Guides are very knowledgeable and experienced. Would highly recommend booking with them. Thank you to our guide Fule for such a wonderful adventure.",
+    text: "Chitwan Jungle Tours isn't limited to Chitwan. In August, I traveled to western Nepal with their guidance. I flew from Kathmandu to Nepalgunj, then traveled by 4WD to Bardiya NP (walking safari, jeep safari, and freshwater dolphin spotting), Jumla, Lumbini, and Chitwan (canoe and walking safari). Fule Chaudhary arranged a great driver, comfortable hotels, and varied meals, making for a relaxing and memorable trip.",
   },
   {
     id: 2,
     name: "Robby Puzo",
     avatar: "/assets/robby.jpeg",
     rating: 5,
-    text: "I had a fabulous day with fule and I totally recommend his tours. Fule was very organised, knowledgeable and fun. We saw lots of different animals, had an amazing lunch provided and the day was very memorable. Definitely check this tour.",
+    text: "I had an absolutely fabulous day with Fule and I highly recommend his tours. Fule was incredibly organized, knowledgeable, and fun to be around. He made sure we had a fantastic experience, spotting a wide variety of animals along the way. The lunch provided was delicious and added to the overall enjoyment of the day. It was a truly memorable experience, and I highly suggest you check out this tour!",
   },
   {
     id: 3,
     name: "Ramjit Mahato",
     avatar: "/assets/ramjit.jpeg",
     rating: 4,
-    text: "He(Fule) is local and experienced long time worked in tourism has great knowledge honest and hospitable person i really recommend to him and his agency.",
+    text: "Fule is a local guide with years of experience in the tourism industry, and his deep knowledge of the area is truly impressive. He is not only honest but also incredibly hospitable, always making sure you feel comfortable and well taken care of. I highly recommend him and his agency for anyone looking for a reliable and enriching experience. His passion for sharing the culture and nature shines through in everything he does.",
   },
   {
     id: 4,
     name: "Larrisa Kato",
     avatar: "/assets/larrisa.jpeg",
     rating: 4,
-    text: "Fule is a very knowledgeable guide who's very kind and accommodating. His extensive knowledge made both my private birding tour as well as my jeep safari in Chitwan really enjoyable! Thank you!",
+    text: "Fule is an exceptionally knowledgeable guide who is both kind and accommodating. His extensive expertise made both my private birding tour and jeep safari in Chitwan truly enjoyable. He took the time to share insights about the local wildlife and surroundings, enhancing the experience. I appreciated his attention to detail and his ability to cater to my interests. Thank you, Fule, for making the trip so memorable!",
   },
   {
     id: 5,
-    name: "Lenie Schilt",
-    avatar: "/assets/lenie.jpeg",
+    name: "Jazmin Fabish",
+    avatar: "/assets/jazmin.jpeg",
     rating: 5,
-    text: "Chitwan Jungle Tours is not just for Chitwan. In August I made a tour to the west of Nepal with guidance from Chitwan Jungle Tours. I flew from Katmandu to Nepalgunj and from there with a 4-wheel drive to Bardiya NP (walking safari, jeep safari and spotting freshwater dolphins), Jumla, Lumbini and Chitwan (canoe and walking safari). Fule Chaudary had arranged a good driver and nice hotels. He also made sure that we had good and varied meals. So I had a nice and relaxing trip with many new impressions.",
+    text: "I had an amazing time in the Chitwan jungle. The guides were extremely knowledgeable and skilled. I highly recommend booking with them for an unforgettable experience. Special thanks to our guide, Fule, for his expertise and for making the adventure so memorable and fun. His insights and attention to detail truly enhanced the experience, and I’m grateful for his excellent guidance throughout the trip.",
   },
 ];
-
 
 export default function Homepage() {
   const plugin = useRef(
     Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false })
-  
   );
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -213,7 +212,7 @@ export default function Homepage() {
     </div>
   );
 
-  const sliders=[
+  const sliders = [
     {
       id: 1,
       title: "Exploring Homestay",
@@ -252,23 +251,26 @@ export default function Homepage() {
     },
   ];
   // <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
-  const Slider=({slider})=>(
-    <div key={slider.id} className="relative h-auto md:h-auto group flex items-center justify-center">
-    <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
-      {slider.title}
-    </h2>
-    <Image
-      src={slider.image}
-      alt={slider.title}
-      className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
-    />
+  const Slider = ({ slider }) => (
+    <div
+      key={slider.id}
+      className="relative h-auto md:h-auto group flex items-center justify-center"
+    >
+      <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
+        {slider.title}
+      </h2>
+      <Image
+        src={slider.image}
+        alt={slider.title}
+        className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+      />
 
-    <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-11/12 mx-auto">
-      <p className="font-Poppins text-white text-lg md:text-xl text-center">
-        {slider.text}
-      </p>
+      <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-11/12 mx-auto">
+        <p className="font-Poppins text-white text-lg md:text-xl text-center">
+          {slider.text}
+        </p>
+      </div>
     </div>
-  </div>
   );
 
   return (
@@ -321,26 +323,21 @@ export default function Homepage() {
             </Link>
           </div>
         </div>
-        
 
         <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container">
-          
-            <Carousel plugins={[plugin.current]} loop={true} >   
-              <CarouselContent>
-                {sliders.map((slider) => (
-                  <CarouselItem
-                    key={slider.id}
-                    className="basis-1/2 md:basis-1/3 lg:basis-1/3" 
-                  >
-                    <Slider slider={slider}/>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              
-            </Carousel>
-          </div>
-        
-
+          <Carousel plugins={[plugin.current]} loop={true}>
+            <CarouselContent>
+              {sliders.map((slider) => (
+                <CarouselItem
+                  key={slider.id}
+                  className="basis-1/2 md:basis-1/3 lg:basis-1/3"
+                >
+                  <Slider slider={slider} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
 
         {/* Old section */}
         {/* <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
@@ -556,78 +553,116 @@ export default function Homepage() {
           </div>
         </div>
 
-        <section className=" lg:hidden block bg-gray-200 py-16 px-6 md:px-10">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
+        <section className="lg:hidden block bg-gray-200 py-16 px-6 md:px-10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 items-center">
             {/* Image Section */}
-            <div className="relative flex md:justify-center">
+            <div className="relative flex justify-center">
               <Image
-                className="bg-cover rounded-xl shadow-lg"
+                className="bg-cover rounded-xl shadow-lg w-full h-auto"
                 src={guide}
                 alt="Our Services"
               />
             </div>
 
             {/* Content Section */}
-            <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
-              <p className="text-2xl sm:text-3xl font-semibold mb-4 text-[#4A8F60]">
+            <div className="bg-white rounded-xl shadow-md px-6 py-8 md:px-10 md:py-10 text-gray-700">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-[#4A8F60]">
                 Our Services
-              </p>
-
-              <ul className="list-disc space-y-4 text-left sm:text-lg text-black">
-                <li>Comfortable and cozy homestay experience</li>
-
-                <li>Thrilling guided jungle safari tours</li>
-
-                <li>Exciting and serene river canoeing adventures</li>
-
-                <li>Reliable 24/7 support and assistance services</li>
+              </h2>
+              <ul className="list-disc space-y-4 text-base md:text-lg leading-relaxed font-Poppins text-black pl-6">
+                <li>Comfortable and cozy homestay experience.</li>
+                <li>Thrilling guided jungle safari tours.</li>
+                <li>Reliable 24/7 support and assistance services.</li>
+                <li>Exciting and serene river canoeing adventures.</li>
               </ul>
             </div>
           </div>
         </section>
-        <section className="lg:hidden block bg-gray-200 py-16 px-6 md:px-10">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
-            {/* Content Section */}
-            <div className="rounded-md text-white px-6 py-8 lg:px-10 lg:text-lg h-auto text-sm text-center font-Poppins flex flex-col justify-center items-center shadow-md">
-              <div className="faq-section">
-                <h2 className="text-center -mt-4 mb-2 text-2xl font-semibold text-[#4A8F60]">
-                  FAQs
-                </h2>
-                <div className="space-y-4 sm:space-y-2 text-left text-[11.5px] sm:text-lg text-black">
-                  <div className="faq-item">
-                    <h3 className="font-semibold">
-                      1. What should I pack for a jungle safari?
-                    </h3>
-                    <p>Neutral clothes, sunscreen, hat, and shoes.</p>
-                  </div>
-                  <div className="">
-                    <h3 className="font-semibold">
-                      2. Is it safe to travel with kids?
-                    </h3>
-                    <p>Yes, we offer family-friendly activities safely.</p>
-                  </div>
-                  <div className="">
-                    <h3 className="font-semibold">
-                      3. How can I get to Chitwan National Park?
-                    </h3>
-                    <p>Drive or fly, transfers available for convenience.</p>
-                  </div>
-                  <div className="">
-                    <h3 className="font-semibold">
-                      4. What is the best time to visit?
-                    </h3>
-                    <p>October to March for wildlife and weather.</p>
-                  </div>
+        <section className="bg-[#f0f8f0] py-10 md:py-16 md:px-10">
+          {/* Eco-Friendly Tourism and Insurance Section */}
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Eco-Tourism Image */}
+            <div className="flex justify-center">
+              <Image
+                className="w-full h-auto bg-cover rounded-xl shadow-lg"
+                style={{ width: "100%", height: "auto" }}
+                src={travel}
+                alt="Why Travel with us"
+              />
+            </div>
+
+            {/* Text Content */}
+            <div className="bg-white rounded-3xl shadow-md p-6 md:p-8 text-gray-700">
+              <div className="text-[#2E8B57] text-2xl md:text-4xl font-semibold mt-8 mb-4 text-center lg:text-left">
+                Frequently Asked Questions
+              </div>
+              <div className="faq-section space-y-4">
+                <div className="faq-item">
+                  <h3 className="font-semibold">
+                    1. What should I pack for a jungle safari?
+                  </h3>
+                  <p>Neutral clothes, sunscreen, hat, and shoes.</p>
+                </div>
+                <div className="faq-item">
+                  <h3 className="font-semibold">
+                    2. Is it safe to travel with kids?
+                  </h3>
+                  <p>Yes, we offer family-friendly activities safely.</p>
+                </div>
+                <div className="faq-item">
+                  <h3 className="font-semibold">
+                    3. How can I get to Chitwan National Park?
+                  </h3>
+                  <p>Drive or fly, transfers available for convenience.</p>
+                </div>
+                <div className="faq-item">
+                  <h3 className="font-semibold">
+                    4. What is the best time to visit?
+                  </h3>
+                  <p>October to March for wildlife and weather.</p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="relative flex md:justify-center">
+        <section className="bg-[#f0f8f0] py-10  md:py-16 md:px-10">
+          {/* Eco-Friendly Tourism and Insurance Section */}
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Eco-Tourism Image */}
+            <div className="flex justify-center">
               <Image
-                className="bg-cover rounded-xl shadow-lg"
-                src={guide1}
-                alt="Our Services"
+                className="w-full h-auto bg-cover rounded-xl shadow-lg"
+                style={{ width: "100%", height: "auto" }}
+                src={travel1}
+                alt="Why Travel with us"
               />
+            </div>
+
+            {/* Text Content */}
+            <div className="bg-white rounded-3xl shadow-md p-6 md:p-8 text-gray-700">
+              <div className="text-[#2E8B57] text-2xl md:text-4xl font-semibold mt-8 mb-4 text-center lg:text-left">
+                Your Safety Is Our Priority
+              </div>
+              <p className="text-base md:text-lg leading-relaxed font-Poppins text-center lg:text-left">
+                We understand that safety is a top concern during adventure
+                tours. To provide peace of mind:
+              </p>
+              <ul className="list-disc pl-6 text-base md:text-lg mt-4 space-y-2">
+                <li>
+                  All tours are conducted by licensed guides trained in first
+                  aid.
+                </li>
+                <li>
+                Kindly note that if any guidelines are not followed, guests will be responsible for any unforeseen incidents.
+                </li>
+                <li>
+                  Our vehicles and equipment are regularly inspected for safety.
+                </li>
+                <li>
+                  We provide 24/7 support for any assistance during your trip.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -680,7 +715,7 @@ export default function Homepage() {
               <Image
                 className="w-full h-auto bg-cover rounded-xl shadow-lg"
                 style={{ width: "100%", height: "auto" }}
-                src={travel}
+                src={travel2}
                 alt="Why Travel with us"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -818,7 +853,7 @@ export default function Homepage() {
         </section>
 
         {/* Homepage Gallery */}
-        <div className="py-16 bg-[#f0f8f0] container shadow-lg">
+        <div className="py-10 -mb-10 bg-[#f0f8f0] container shadow-lg">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-MuseoModerno text-3xl lg:text-4xl font-bold text-[#2E8B57] mb-12">
               Explore Our Gallery
@@ -917,7 +952,7 @@ export default function Homepage() {
           <div className="flex justify-center">
             {/* Carousel */}
             <Carousel className="w-10/12 md:w-3/4">
-              <CarouselContent>
+              <CarouselContent className="w-auto">
                 {reviews.map((review) => (
                   <CarouselItem
                     key={review.id}
