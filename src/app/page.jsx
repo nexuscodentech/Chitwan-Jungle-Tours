@@ -36,6 +36,47 @@ import travel1 from "assets/i8.jpg";
 import travel2 from "assets/gallery/gallery-20.png";
 // import review1 from "assets/review1.jpg";
 
+// hotel and food
+import hotel1 from "assets/hotel & food/hotel1.jpg";
+import hotel2 from "assets/hotel & food/hotel2.jpg";
+import hotel3 from "assets/hotel & food/hotel3.jpg";
+import hotel4 from "assets/hotel & food/hotel4.jpg";
+import hotel5 from "assets/hotel & food/hotel5.jpg";
+import hotel6 from "assets/hotel & food/hotel6.png";
+import hotel7 from "assets/hotel & food/hotel7.jpg";
+import hotel8 from "assets/hotel & food/hotel8.jpg";
+import hotel9 from "assets/hotel & food/hotel9.png";
+import hotel10 from "assets/hotel & food/hotel10.png";
+import hotel11 from "assets/hotel & food/hotel11.png";
+import hotel12 from "assets/hotel & food/hotel12.jpg";
+import hotel13 from "assets/hotel & food/hotel13.jpg";
+import hotel14 from "assets/hotel & food/hotel14.png";
+import hotel15 from "assets/hotel & food/hotel15.jpg";
+import hotel16 from "assets/hotel & food/hotel16.png";
+import hotel17 from "assets/hotel & food/hotel17.jpg";
+import hotel18 from "assets/hotel & food/hotel18.png";
+import hotel19 from "assets/hotel & food/hotel19.jpg";
+import hotel20 from "assets/hotel & food/hotel20.png";
+import hotel21 from "assets/hotel & food/hotel21.png";
+import hotel22 from "assets/hotel & food/hotel22.png";
+import hotel23 from "assets/hotel & food/hotel23.jpg";
+import hotel24 from "assets/hotel & food/hotel24.png";
+import hotel25 from "assets/hotel & food/hotel25.png";
+import hotel26 from "assets/hotel & food/hotel26.png";
+import hotel27 from "assets/hotel & food/hotel27.jpg";
+import hotel28 from "assets/hotel & food/hotel28.jpg";
+import hotel29 from "assets/hotel & food/hotel29.png";
+import hotel30 from "assets/hotel & food/hotel30.png";
+import hotel31 from "assets/hotel & food/hotel31.jpg";
+import hotel32 from "assets/hotel & food/hotel32.jpg";
+import hotel33 from "assets/hotel & food/hotel33.png";
+import hotel34 from "assets/hotel & food/hotel34.png";
+import hotel35 from "assets/hotel & food/hotel35.jpg";
+import hotel36 from "assets/hotel & food/hotel36.jpeg";
+import hotel37 from "assets/hotel & food/hotel37.png";
+import hotel38 from "assets/hotel & food/hotel38.jpg";
+import hotel39 from "assets/hotel & food/hotel39.png";
+
 import roundedGuide from "../../public/home/guide.png";
 import roundedTourist from "../../public/home/tourist1.png";
 
@@ -271,6 +312,102 @@ export default function Homepage() {
         </p>
       </div>
     </div>
+  );
+
+    // hotel and food carousel
+    const hotels = [
+      {
+        id: 1,
+        image: hotel16,
+      },
+      {
+        id: 2,
+        image: hotel10,
+      },
+      {
+        id: 3,
+        image: hotel11,
+      },
+      {
+        id: 4,
+        image: hotel37,
+      },
+      {
+        id: 5,
+        image: hotel6,
+      },
+      {
+        id: 6,
+        image: hotel14,
+      },
+      {
+        id: 7,
+        image: hotel34,
+      },
+      {
+        id: 8,
+        image: hotel18,
+      },
+      {
+        id: 9,
+        image: hotel25,
+      },
+      {
+        id: 10,
+        image: hotel22,
+      },
+      {
+        id: 11,
+        image: hotel26,
+      },
+      {
+        id: 12,
+        image: hotel29,
+      },
+      {
+        id: 13,
+        image: hotel21,
+      },
+      {
+        id: 14,
+        image: hotel30,
+      },
+      {
+        id: 15,
+        image: hotel33,
+      },
+      {
+        id: 16,
+        image: hotel20,
+      },
+      {
+        id: 17,
+        image: hotel9,
+      },
+    ];
+
+    // <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
+    const Hotel = ({ hotel }) => (
+      <div
+        key={hotel.id}
+        className="relative h-auto md:h-auto group flex items-center justify-center"
+      >
+        {/* <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
+          {hotel.title}
+        </h2> */}
+        <Image
+          src={hotel.image}
+          alt="hotel & food"
+          // alt={hotel.title}
+          className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+        />
+  
+        {/* <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-11/12 mx-auto">
+          <p className="font-Poppins text-white text-lg md:text-xl text-center">
+            {hotel.text}
+          </p>
+        </div> */}
+      </div>
   );
 
   return (
@@ -625,6 +762,23 @@ export default function Homepage() {
             </div>
           </div>
         </section>
+
+
+        {/* Hotel and food carousel */}
+        <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container">
+          <Carousel plugins={[plugin.current]} loop={true}>
+            <CarouselContent>
+              {hotels.map((hotel) => (
+                <CarouselItem
+                  key={hotel.id}
+                  className="basis-1/2 md:basis-1/3 lg:basis-1/3"
+                >
+                  <Hotel hotel={hotel} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
 
         <section className="bg-[#f0f8f0] py-10  md:py-16 md:px-10">
           {/* Eco-Friendly Tourism and Insurance Section */}

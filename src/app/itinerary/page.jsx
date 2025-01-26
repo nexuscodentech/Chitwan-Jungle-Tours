@@ -1,5 +1,5 @@
 import Image from "next/image";
-import rhinoceros from "assets/itineryBanner.png";
+import rhinoceros from "assets/itineryBanner1.png";
 import "./itinerary.css";
 import Link from "next/link";
 
