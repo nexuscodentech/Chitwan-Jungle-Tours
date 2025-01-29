@@ -56,7 +56,8 @@ import hotel34 from "assets/hotel & food/hotel34.png";
 import hotel37 from "assets/hotel & food/hotel37.png";
 
 import roundedGuide from "../../public/home/guide.png";
-import roundedTourist from "../../public/home/tourist1.png";
+// import roundedTourist from "../../public/home/tourist1.png";
+import roundedTourist from "assets/circle4.png";
 
 import { Star } from "lucide-react";
 
@@ -586,7 +587,7 @@ export default function Homepage() {
               and gharial crocodile.
             </p>
             <Image
-              className="float-left p-2 ml-24 mt-2 px-4"
+              className="float-left p-2 ml-24 mt-2 px-4 rounded-full"
               src={roundedTourist}
               width={120}
               height={120}
