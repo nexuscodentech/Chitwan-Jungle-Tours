@@ -698,7 +698,7 @@ export default function Homepage() {
               {/* Text Content */}
               <div className="bg-white rounded-3xl shadow-md p-8 text-gray-700 max-w-3xl mb-6 lg:mb-0 lg:mr-8">
                 <div className="text-[#2E8B57] text-2xl md:text-4xl font-semibold mb-4">
-                  About Chitwan National Park
+                Best Experience in Chitwan
                 </div>
                 <p className="text-base md:text-lg leading-relaxed font-Poppins">
                   Chitwan is renowned for its exceptional experiences centered
@@ -715,7 +715,7 @@ export default function Homepage() {
 
               {/* Tourist Image */}
               <Image
-                src={tourist}
+                src={roundedTourist}
                 className="rounded-3xl shadow-lg"
                 alt="Tourist"
                 style={{ width: "350px", height: "350px" }}
@@ -1122,7 +1122,7 @@ export default function Homepage() {
                 </video>
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 rounded-xl z-0 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 text-white font-Poppins text-xl font-semibold z-0 pointer-events-none">
-                  <p>Ohh My Deer</p>
+                  <p>Tiger hunting Deer</p>
                 </div>
               </div>
             </div>
