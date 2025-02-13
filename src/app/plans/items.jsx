@@ -6,7 +6,7 @@ import plans5 from "assets/Cycling.jpg";
 import plans6 from "assets/Canoing.jpg";
 import plans7 from "assets/ultima.png";
 import plans8 from "assets/gallery-36.png";
-import plans9 from "assets/adventure.jpg";
+import plans9 from "assets/adventure.jpeg";
 
 const items = [
   {
