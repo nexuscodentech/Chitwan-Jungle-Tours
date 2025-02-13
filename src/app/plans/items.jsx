@@ -13,7 +13,7 @@ const items = [
     id: 245397399213,
     src: plans7,
     title: "Ultimate Nepal Tours (14 Days/13 Nights)",
-    description: "Experience the best of Nepal with this luxury 14-day tour, covering Kathmandu, Nagarkot, Pokhara, Chitwan, Lumbini, and Bardia, along with a scenic Everest flight. ",
+    description: "Experience the best of Nepal with this luxury 14-day tour, covering Kathmandu - Nagarkot - Pokhara - Chitwan - Lumbini - Bardia, along with a scenic Everest flight. ",
     keywords: [
       "14 Day Jungle Safari",
       "jungle adventure",
