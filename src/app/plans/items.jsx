@@ -310,7 +310,7 @@ const items = [
     id: 794432732601,
     src: plans9,
     title: "Adventure Safari Package (5 Days / 4 Nights)",
-    description: "Explore the wild with our 5-day Adventure Safari Package! Visit Chitwan - Bardia - Koshi Tappu for an unforgettable adventure. Experience thrilling activities like jeep safaris, jungle walks, birdwatching, and canoeing, all while staying in luxury jungle resorts.",
+    description: "Explore the wild with our 5-day Adventure Safari Package! Visit Chitwan National Park - Bardia National park - Koshi Tappu wildlife reserve for an unforgettable adventure. Experience thrilling activities like jeep safaris, jungle walks, birdwatching, and canoeing, all while staying in luxury jungle resorts.",
     keywords: [
       "5 Day Jungle Safari",
       "jungle adventure",
