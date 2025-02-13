@@ -4,8 +4,408 @@ import plans3 from "assets/TowerNight.jpg";
 import plans4 from "assets/Birdwatch.jpg";
 import plans5 from "assets/Cycling.jpg";
 import plans6 from "assets/Canoing.jpg";
+import plans7 from "assets/ultima.png";
+import plans8 from "assets/gallery-36.png";
+import plans9 from "assets/adventure.jpg";
 
 const items = [
+  {
+    id: 245397399213,
+    src: plans7,
+    title: "Ultimate Nepal Tours (14 Days/13 Nights)",
+    description: "Experience the best of Nepal with this luxury 14-day tour, covering Kathmandu, Nagarkot, Pokhara, Chitwan, Lumbini, and Bardia, along with a scenic Everest flight. ",
+    keywords: [
+      "14 Day Jungle Safari",
+      "jungle adventure",
+      "wildlife exploration",
+      "guided jungle walk",
+      "canoe ride",
+      "elephant breeding center",
+      "eco-tourism",
+      "Chitwan day tour",
+      "nature trip",
+      "day safari package",
+    ],
+    day1: "Day 1: Arrival in Kathmandu",
+    day2: "Day 2: Bhaktapur & Nagarkot Excursion",
+    day3: "Day 3-4: Pokhara – Adventure & Relaxation",
+    day4: "Day 5-6: Chitwan National Park – Jungle Safari",
+    day5: "Day 7-8: Lumbini – Birthplace of Buddha",
+    day6: "Day 9-10: Bardia National Park – Exclusive Wildlife Adventure",
+    day7: "Day 11-13: Everest Scenic Flight & Optional Trek",
+    day8: "Day 14: Departure from Kathmandu",
+    
+    activities: [
+      {
+        title: "Airport Pickup & Hotel Check-in:",
+        description: "Upon arrival at the airport, you will be greeted and transferred to your hotel for check-in and relaxation.",
+      },
+      {
+        title: "Cultural Sightseeing in Kathmandu:",
+        description: "Explore the sacred Pashupatinath Temple, the grand Boudhanath Stupa, and the iconic Swayambhunath (Monkey Temple), experiencing Nepal’s rich spiritual heritage.",  
+      },
+      {
+        title: "Welcome Dinner with Cultural Dance:",
+        description: "Enjoy a traditional Nepali dinner accompanied by a vibrant cultural dance performance, offering a glimpse into Nepal’s rich heritage."
+      },
+      {},
+
+      // Day 2
+      {
+        title: "Bhaktapur Durbar Square Exploration:",
+        description: "Wander through the historic Bhaktapur Durbar Square, admiring its ancient temples, courtyards, and intricate woodwork that showcase Nepal’s medieval architecture."
+      },
+      
+      {
+        title: "Scenic Drive to Nagarkot:",
+        description: "Journey to Nagarkot, a serene hill station, to witness a breathtaking Himalayan sunset and sunrise over the majestic peaks."
+      },
+      {},
+      // Day 3
+      {
+        title: "Journey to Pokhara:",
+        description: "Travel to Pokhara by either a scenic drive or a short domestic flight, enjoying stunning landscapes along the way."
+      },
+      {
+        title: "Pokhara Sightseeing:",
+        description: "Explore the beauty of Pokhara with visits to Phewa Lake, Davis Falls, Gupteshwor Cave, and the World Peace Pagoda."
+      },
+      {
+        title: "Adventure Activities (Optional):",
+        description: "Experience thrilling adventures such as paragliding, bungee jumping, zip-lining, or a peaceful boating experience on Phewa Lake."
+      },
+
+      // Day 5-6
+      {
+        title: "Jeep Safari Adventure:",
+        description: "Embark on an exciting jeep safari to spot one-horned rhinos, Bengal tigers, elephants, and other exotic wildlife in their natural habitat."
+      },
+      {
+        title: "Canoeing & Bird Watching:",
+        description: "Enjoy a peaceful canoe ride along the river, observing diverse bird species and the serene beauty of the jungle."
+      },
+      {
+        title: "Tharu Cultural Dance Show:",
+        description: "Immerse yourself in the rich culture of the Tharu community with a traditional dance performance in the evening."
+      },
+
+      // Day 7-8
+      {
+        title: "Maya Devi Temple & Monasteries:",
+        description: "Visit the sacred Maya Devi Temple, the birthplace of Lord Buddha, along with nearby monasteries that offer a glimpse into Nepal’s spiritual history."
+      },
+      {
+        title: "Sacred Sites & Meditation Centers:",
+        description: "Explore Lumbini’s serene sacred sites and meditation centers, ideal for reflection and connecting with the spiritual atmosphere of this sacred land."
+      },
+      {},
+
+      // Day 9-10
+      {
+        title: "Bardia National Park Exploration:",
+        description: "Discover the less crowded Bardia National Park, a perfect location for spotting Bengal tigers and other wildlife in a peaceful environment."
+      },
+      {
+        title: "Night Safari & River Rafting:",
+        description: "Embark on an exciting night safari to explore the jungle after dark, followed by an adventurous river rafting experience."
+      },
+      {},
+
+      // Day 11-13
+      {
+        title: "Everest Mountain Flight:",
+        description: "Take a scenic Everest Mountain Flight for breathtaking views of Mount Everest and the surrounding Himalayan peaks."
+      },
+      {
+        title: "Optional Short Trek:",
+        description: "Choose from a variety of short treks such as Poon Hill, Everest View Trek, or Annapurna Base Camp for a closer connection with the mountains."
+      },
+      {},
+
+      // Day 14
+      {
+        title: "Last-Minute Shopping & Relaxation:",
+        description: "Enjoy some free time for last-minute shopping and relaxation before your journey home, picking up souvenirs or simply unwinding."
+      },
+      {
+        title: "Airport Transfer:",
+        description: "You will be transferred to the airport for your departure, concluding your unforgettable Nepal adventure."
+      },
+    ],
+    price: "Price (Tax included): ",
+    cost: "$1,800",
+  },
+  {
+    id: 843973627326,
+    src: plans8,
+    title: "Adventure & Wildlife Tour (10 Days / 9 Nights)",
+    description: "Enjoy jungle safaris, rafting, paragliding, bungee jumping, and cultural exploration, while staying in 4-star hotels and luxury jungle resorts. Travel comfortably with private vehicles and domestic flights for a seamless adventure.",
+    keywords: [
+      "10 Day Jungle Safari",
+      "jungle adventure",
+      "wildlife exploration",
+      "guided jungle walk",
+      "canoe ride",
+      "elephant breeding center",
+      "eco-tourism",
+      "Chitwan day tour",
+      "nature trip",
+      "day safari package",
+    ],
+    day1: "Day 1: Arrival in Kathmandu & Cultural Tour",
+    day2: "Day 2: Kathmandu to Pokhara – The City of Adventure",
+    day3: "Day 3: Adventure Activities in Pokhara",
+    day4: "Day 4: Pokhara to Chitwan – Wildlife & Jungle Safari Begins",
+    day5: "Day 5: Chitwan National Park – Jungle Safari & Wildlife Exploration",
+    day6: "Day 6: Chitwan to Lumbini – Birthplace of Buddha",
+    day7: "Day 7: Lumbini to Bardia National Park – The Tiger’s Den",
+    day8: "Day 8: Full-Day Jungle Safari in Bardia",
+    day9: "Day 9: Return to Kathmandu",
+    day10: "Day 10: Departure from Nepal",
+    
+    activities: [
+      {
+        title: "Meet & Greet at Tribhuvan International Airport:",
+        description: "Upon arrival at TIA, receive a warm welcome and transfer to your hotel, where you will be served a refreshing welcome drink."
+      },
+      {
+        title: "Cultural Sightseeing in Kathmandu:",
+        description: "Visit the sacred Pashupatinath Temple, the grand Boudhanath Stupa, and the iconic Swayambhunath (Monkey Temple) while enjoying panoramic views of Kathmandu."
+      },
+      {
+        title: "Traditional Welcome Dinner:",
+        description: "Experience an authentic Nepali welcome dinner with a cultural dance performance, immersing yourself in Nepal’s vibrant traditions."
+      },
+      {
+        title: "Overnight Stay in Kathmandu:",
+        description: "Relax and unwind in a comfortable 4-star hotel, preparing for the exciting adventures ahead."
+      },
+
+      // Day 2
+      {
+        title: "Journey to Pokhara:",
+        description: "Travel to Pokhara by scenic drive or a 25-minute flight, enjoying stunning landscape views."
+      },
+      {
+        title: "Pokhara Tour & Sightseeing:",
+        description: "Explore Phewa Lake with a boat ride, visit Davis Falls, Gupteshwor Cave, and enjoy a Himalayan sunset at the World Peace Pagoda."
+      },
+      {
+        title: "Luxury Lakeside Stay:",
+        description: "Check into a 4-star lakeside hotel, relax, and enjoy the peaceful ambiance with views of Phewa Lake."
+      },
+      // Day 3
+      {
+        title: "Optional Adventure Activities:",
+        description: "Experience the thrill of paragliding over Phewa Lake, an ultralight flight, a 75m bungee jump into a gorge, or one of the world’s steepest zip-lines for an adrenaline-pumping adventure."
+      },
+      {
+        title: "Evening at Lakeside Street:",
+        description: "Unwind at Pokhara’s vibrant Lakeside Street, enjoying cozy cafés, live music, and a relaxing lakeside atmosphere."
+      },
+      {
+        title: "Overnight Stay in Pokhara:",
+        description: "Stay overnight at a 4-star lakeside hotel, recharging for the next day’s adventure."
+      },
+
+      // Day 4
+      {
+        title: "Travel to Chitwan & Check-in:",
+        description: "Take a scenic 4-5 hour drive or a short flight to Chitwan, then check into a luxury jungle lodge for a serene stay."
+      },
+      {
+        title: "Tharu Cultural Experience:",
+        description: "Visit the Tharu Cultural Village to explore indigenous traditions, followed by a lively Tharu dance show with welcome drinks."
+      },
+      {
+        title: "Overnight in Luxury Jungle Resort:",
+        description: "Enjoy a peaceful overnight stay in a luxury resort inside the jungle, surrounded by nature."
+      },
+
+      // Day 5
+      {
+        title: "Wildlife Safari & Canoeing:",
+        description: "Embark on a thrilling jeep safari to spot rhinos, tigers, and elephants, followed by a peaceful canoe ride on the Rapti River to see crocodiles and exotic birds."
+      },
+      {
+        title: "Elephant Breeding Center & Sunset View:",
+        description: "Visit the Elephant Breeding Center to learn about conservation efforts, then relax by the riverbank while enjoying a stunning sunset."
+      },
+      {
+        title: "Overnight in Luxury Jungle Resort:",
+        description: "Unwind in a luxury resort inside the jungle, surrounded by the sights and sounds of nature."
+      },
+
+      // Day 6
+      {
+        title: "Journey to Lumbini & Check-in:",
+        description: "Take a scenic 3-4 hour drive to Lumbini and check into a boutique hotel near the sacred Maya Devi Temple."
+      },
+      {
+        title: "Lumbini Sightseeing Tour:",
+        description: "Explore the Maya Devi Temple, the historic Ashoka Pillar, and various monasteries built by countries like China, Japan, Myanmar, and Germany."
+      },
+      {
+        title: "Overnight Stay in Lumbini:",
+        description: "Relax and unwind at a 4-star hotel, enjoying the peaceful ambiance of this sacred Buddhist site."
+      },
+
+      // Day 7
+      {
+        title: "Journey to Bardia & Check-in:",
+        description: "Travel to Bardia National Park with a scenic 5-6 hour drive or a short flight, then check into a luxury jungle lodge."
+      },
+      {
+        title: "Tharu Village Experience & Bonfire:",
+        description: "Visit a local Tharu village to learn about their culture, followed by a cozy bonfire with storytelling by locals."
+      },
+      {
+        title: "Overnight Stay in Bardia:",
+        description: "Stay overnight in a luxury jungle resort, surrounded by the peaceful wilderness of Bardia National Park."
+      },
+
+      // Day 8
+      {
+        title: "Morning Jeep Safari & Nature Walk:",
+        description: "Take a thrilling jeep safari to spot Bengal tigers and wild elephants, followed by a nature walk with expert naturalists to explore the local wildlife."
+      },
+      {
+        title: "Optional River Rafting:",
+        description: "Opt for a river rafting adventure in the Karnali River to spot crocodiles and enjoy the scenic surroundings."
+      },
+      {
+        title: "Evening Relaxation & Overnight Stay:",
+        description: "Unwind at the lodge with a BBQ dinner and campfire, then relax for the night in a luxury resort inside Bardia National Park."
+      },
+
+      // Day 9
+      {
+        title: "Morning Flight to Kathmandu:",
+        description: "Take a morning flight back to Kathmandu, enjoying the views of the Himalayas from the sky."
+      },
+      {
+        title: "Free Time & Optional Everest Flight:",
+        description: "Spend some free time for shopping and relaxation, or opt for a 1-hour Everest Scenic Flight for breathtaking views of the Himalayan range."
+      },
+      {
+        title: "Farewell Dinner & Overnight Stay:",
+        description: "Enjoy a farewell dinner at a fine dining restaurant, followed by an overnight stay in a 4-star hotel in Kathmandu."
+      },
+
+      // Day 10
+      {
+        title: "Breakfast & Airport Drop-off:",
+        description: "Enjoy a final breakfast before being transferred to the airport for your departure."
+      },
+      {
+        title: "End of Adventure:",
+        description: "Conclude your unforgettable journey, cherishing the memories of an incredible Nepal adventure."
+      },
+    ],
+    price: "Price (Tax included): ",
+    cost: "$1,200",
+  },
+
+  {
+    id: 794432732601,
+    src: plans9,
+    title: "Adventure Safari Package (5 Days / 4 Nights)",
+    description: "Experience thrilling activities like jeep safaris, jungle walks, birdwatching, and canoeing, all while staying in luxury jungle resorts. Enjoy hassle-free transportation with private vehicles or domestic flights. Starting at $450 per person, this package offers a perfect blend of adventure and relaxation.",
+    keywords: [
+      "5 Day Jungle Safari",
+      "jungle adventure",
+      "wildlife exploration",
+      "guided jungle walk",
+      "canoe ride",
+      "elephant breeding center",
+      "eco-tourism",
+      "Chitwan day tour",
+      "nature trip",
+      "day safari package",
+    ],
+    day1: "Day 1: Arrival in Chitwan National Park – The Rhino Kingdom",
+    day2: "Day 2: Chitwan – Jungle Safari & Canoeing",
+    day3: "Day 3: Chitwan to Bardia National Park",
+    day4: "Day 4: Bardia & Parsa National Park Safari",
+    day5: "Day 5: Koshi Tappu Wildlife Reserve & Departure",
+    
+    activities: [
+      {
+        title: "Journey to Chitwan & Check-in",
+        description: "Drive (5-6 hours) or fly from Kathmandu to Chitwan, then check in at a luxury jungle resort, greeted with welcome drinks."
+      },
+      {
+        title: "Afternoon Activities in Chitwan",
+        description: "Tour the Tharu Cultural Village to learn about the indigenous Tharu lifestyle, followed by a relaxing sunset at Rapti River with stunning views."
+      },
+      {
+        title: "Tharu Cultural Dance & Bonfire",
+        description: "Enjoy a vibrant Tharu cultural dance show around a cozy bonfire, immersing yourself in local traditions."
+      },
+      {
+        title: "Overnight Stay in Chitwan",
+        description: "Stay overnight at a luxury resort within Chitwan National Park, surrounded by nature and wildlife."
+      },
+
+      // Day 2
+      {
+        title: "Morning Jeep Safari & Canoeing",
+        description: "Spot wildlife like rhinos, tigers, and elephants on a jeep safari, followed by a canoe ride to see crocodiles and gharials."
+      },
+      {
+        title: "Elephant Breeding Center & Nature Walk",
+        description: "Visit the Elephant Breeding Center and enjoy birdwatching and a nature walk with expert naturalists."
+      },
+      {
+        title: "Overnight in Luxury Resort",
+        description: "Relax overnight in a luxury resort within Chitwan National Park, surrounded by nature."
+      },
+
+      // Day 3
+      {
+        title: "Journey to Bardia & Check-in",
+        description: "Arrive in Bardia, check in at a luxury jungle lodge, and refresh."
+      },
+      {
+        title: "Tharu Village & Sunset Relaxation",
+        description: "Explore a Tharu village and unwind with a riverside sunset view."
+      },
+      {
+        title: "Bonfire, BBQ & Overnight Stay",
+        description: "Enjoy a bonfire and BBQ, then relax overnight in the luxury lodge."
+      },
+
+      // Day 4
+      {
+        title: "Morning Jeep Safari & Jungle Walk",
+        description: "Start the day with a jeep safari to spot Bengal tigers, followed by a jungle walk with an expert naturalist for close wildlife encounters."
+      },
+      {
+        title: "Optional Rafting & Evening Relaxation",
+        description: "Optional rafting in the Karnali River to spot crocodiles and dolphins, then relax at the resort with dinner and drinks."
+      },
+      {
+        title: "Overnight in Bardia",
+        description: "Stay overnight in a luxury lodge inside Bardia National Park, surrounded by nature."
+      },
+
+      // Day 5
+      {
+        title: "Travel to Koshi Tappu",
+        description: "Take a morning flight or drive to Koshi Tappu, a prime wildlife sanctuary."
+      },
+      {
+        title: "Boat Safari & Nature Walk",
+        description: "Enjoy a boat safari to spot wild water buffalo, crocodiles, and rare birds, followed by a guided nature walk at Nepal's top birdwatching spot."
+      },
+      {
+        title: "Return to Kathmandu / Pokhara",
+        description: "In the afternoon, travel back to Kathmandu or Pokhara for your departure."
+      },
+    ],
+    price: "Price (Tax included): ",
+    cost: "$450",
+  },
   {
     id: 874539028348,
     src: plans1,

@@ -37,23 +37,35 @@ import travel2 from "assets/gallery/gallery-20.png";
 // import review1 from "assets/review1.jpg";
 
 // hotel and food
-import hotel6 from "assets/hotel & food/hotel6.png";
-import hotel9 from "assets/hotel & food/hotel9.png";
-import hotel10 from "assets/hotel & food/hotel10.png";
-import hotel11 from "assets/hotel & food/hotel11.png";
-import hotel14 from "assets/hotel & food/hotel14.png";
-import hotel16 from "assets/hotel & food/hotel16.png";
-import hotel18 from "assets/hotel & food/hotel18.png";
-import hotel20 from "assets/hotel & food/hotel20.png";
-import hotel21 from "assets/hotel & food/hotel21.png";
-import hotel22 from "assets/hotel & food/hotel22.png";
-import hotel25 from "assets/hotel & food/hotel25.png";
-import hotel26 from "assets/hotel & food/hotel26.png";
-import hotel29 from "assets/hotel & food/hotel29.png";
-import hotel30 from "assets/hotel & food/hotel30.png";
-import hotel33 from "assets/hotel & food/hotel33.png";
-import hotel34 from "assets/hotel & food/hotel34.png";
-import hotel37 from "assets/hotel & food/hotel37.png";
+import hotel1 from "assets/new/hotel1.png";
+import hotel2 from "assets/new/hotel2.png";
+import hotel3 from "assets/new/hotel3.png";
+import hotel4 from "assets/new/hotel4.png";
+import hotel5 from "assets/new/hotel5.png";
+import hotel6 from "assets/new/hotel6.png";
+import hotel7 from "assets/new/hotel7.png";
+import hotel8 from "assets/new/hotel8.png";
+import hotel9 from "assets/new/hotel9.png";
+import hotel10 from "assets/new/hotel10.png";
+import hotel11 from "assets/new/hotel11.png";
+import hotel12 from "assets/new/hotel12.png";
+import hotel13 from "assets/new/hotel13.png";
+import hotel14 from "assets/new/hotel14.png";
+import hotel15 from "assets/new/hotel15.png";
+import hotel16 from "assets/new/hotel16.png";
+import hotel17 from "assets/new/hotel17.png";
+import hotel18 from "assets/new/hotel18.png";
+import hotel19 from "assets/new/hotel19.png";
+import hotel20 from "assets/new/hotel20.png";
+import hotel21 from "assets/new/hotel21.png";
+import hotel22 from "assets/new/hotel22.png";
+import hotel23 from "assets/new/hotel23.png";
+import hotel24 from "assets/new/hotel24.png";
+import hotel25 from "assets/new/hotel25.png";
+import hotel26 from "assets/new/hotel26.png";
+import hotel27 from "assets/new/hotel27.png";
+import hotel28 from "assets/new/hotel28.png";
+import hotel29 from "assets/new/hotel29.png";
 
 import roundedGuide from "../../public/home/guide.png";
 // import roundedTourist from "../../public/home/tourist1.png";
@@ -108,10 +120,6 @@ const reviews = [
 ];
 
 export default function Homepage() {
-  const plugin = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false })
-  );
-
   const [isExpanded, setIsExpanded] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const [confetti, setConfetti] = useState(false);
@@ -297,71 +305,119 @@ export default function Homepage() {
     const hotels = [
       {
         id: 1,
-        image: hotel16,
+        image: hotel1,
       },
       {
         id: 2,
-        image: hotel10,
+        image: hotel2,
       },
       {
         id: 3,
-        image: hotel11,
+        image: hotel3,
       },
       {
         id: 4,
-        image: hotel37,
+        image: hotel4,
       },
       {
         id: 5,
-        image: hotel6,
+        image: hotel5,
       },
       {
         id: 6,
-        image: hotel14,
+        image: hotel6,
       },
       {
         id: 7,
-        image: hotel34,
+        image: hotel7,
       },
       {
         id: 8,
-        image: hotel18,
+        image: hotel8,
       },
       {
         id: 9,
-        image: hotel25,
+        image: hotel9,
       },
       {
         id: 10,
-        image: hotel22,
+        image: hotel10,
       },
       {
         id: 11,
-        image: hotel26,
+        image: hotel11,
       },
       {
         id: 12,
-        image: hotel29,
+        image: hotel12,
       },
       {
         id: 13,
-        image: hotel21,
+        image: hotel13,
       },
       {
         id: 14,
-        image: hotel30,
+        image: hotel14,
       },
       {
         id: 15,
-        image: hotel33,
+        image: hotel15,
       },
       {
         id: 16,
-        image: hotel20,
+        image: hotel16,
       },
       {
         id: 17,
-        image: hotel9,
+        image: hotel17,
+      },
+      {
+        id: 18,
+        image: hotel18,
+      },
+      {
+        id: 19,
+        image: hotel19,
+      },
+      {
+        id: 20,
+        image: hotel20,
+      },
+      {
+        id: 21,
+        image: hotel21,
+      },
+      {
+        id: 22,
+        image: hotel22,
+      },
+      {
+        id: 23,
+        image: hotel23,
+      },
+      {
+        id: 24,
+        image: hotel24,
+      },
+      {
+        id: 25,
+        image: hotel25,
+      },
+      {
+        id: 26,
+        image: hotel26,
+      },
+      {
+        id: 27,
+        image: hotel27,
+      },
+      {
+        id: 28,
+        image: hotel28,
+      },
+      {
+        id: 29,
+        image: hotel29,
       },
     ];
 
@@ -441,7 +497,7 @@ export default function Homepage() {
         </div>
 
         <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container">
-          <Carousel plugins={[plugin.current]} loop={true}>
+        <Carousel plugins={[Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: false })]} loop={true}>
             <CarouselContent>
               {sliders.map((slider) => (
                 <CarouselItem
@@ -745,7 +801,7 @@ export default function Homepage() {
 
         {/* Hotel and food carousel */}
         <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container">
-          <Carousel plugins={[plugin.current]} loop={true}>
+        <Carousel plugins={[Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: false })]} loop={true}>
             <CarouselContent>
               {hotels.map((hotel) => (
                 <CarouselItem

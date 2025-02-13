@@ -89,6 +89,9 @@ export default function page() {
                 className="w-full border-2 rounded-md p-2 mb-4" value={selectedPackage} onChange={(e)=> setSelectedPackage(e.target.value)}
               >
                 <option value="">Select your package</option>
+                <option value="14-day">Ultimate Nepal Tours (14 Days/13 Nights) (1,800 USD)</option>
+                <option value="10-day">Adventure & Wildlife Tour (10 Days / 9 Nights) (1,200 USD)</option>
+                <option value="5-day">Adventure Safari Package (5 Days / 4 Nights) (450 USD)</option>
                 <option value="1-day">1 Day Jungle Safari (7000 NRS)</option>
                 <option value="2-days-1-night">2 Nights, 3 Days (25000 NRS)</option>
                 <option value="3-days-2-nights">3 Nights, 4 Days (65000 NRS)</option>
