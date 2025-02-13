@@ -72,7 +72,73 @@ const ItemDetails = ({ item }) => (
         <strong>{item.day4}</strong>
       </p>
       <ul className="list-disc ps-7 pt-4">
-        {item.activities?.slice(10).map((activity, i) => (
+        {item.activities?.slice(10,13).map((activity, i) => (
+          <li key={i}>
+            <strong>{activity.title}</strong> {activity.description}
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-10">
+        <strong>{item.day5}</strong>
+      </p>
+      <ul className="list-disc ps-7 pt-4">
+        {item.activities?.slice(13,16).map((activity, i) => (
+          <li key={i}>
+            <strong>{activity.title}</strong> {activity.description}
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-10">
+        <strong>{item.day6}</strong>
+      </p>
+      <ul className="list-disc ps-7 pt-4">
+        {item.activities?.slice(16,19).map((activity, i) => (
+          <li key={i}>
+            <strong>{activity.title}</strong> {activity.description}
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-10">
+        <strong>{item.day7}</strong>
+      </p>
+      <ul className="list-disc ps-7 pt-4">
+        {item.activities?.slice(19,22).map((activity, i) => (
+          <li key={i}>
+            <strong>{activity.title}</strong> {activity.description}
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-10">
+        <strong>{item.day8}</strong>
+      </p>
+      <ul className="list-disc ps-7 pt-4">
+        {item.activities?.slice(22,25).map((activity, i) => (
+          <li key={i}>
+            <strong>{activity.title}</strong> {activity.description}
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-10">
+        <strong>{item.day9}</strong>
+      </p>
+      <ul className="list-disc ps-7 pt-4">
+        {item.activities?.slice(25,28).map((activity, i) => (
+          <li key={i}>
+            <strong>{activity.title}</strong> {activity.description}
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-10">
+        <strong>{item.day10}</strong>
+      </p>
+      <ul className="list-disc ps-7 pt-4">
+        {item.activities?.slice(28).map((activity, i) => (
           <li key={i}>
             <strong>{activity.title}</strong> {activity.description}
           </li>
