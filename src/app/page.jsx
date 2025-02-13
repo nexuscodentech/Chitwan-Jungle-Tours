@@ -725,20 +725,21 @@ export default function Homepage() {
           </div>
         </div>
 
-        <section className="lg:hidden block bg-gray-200 py-16 px-6 md:px-10">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 items-center">
+        <section className=" bg-gray-200 py-10 md:py-16 md:px-10">
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Image Section */}
-            <div className="relative flex justify-center">
+            <div className="flex justify-center">
               <Image
-                className="bg-cover rounded-xl shadow-lg w-full h-auto"
+                className="w-full h-auto bg-cover rounded-xl shadow-lg"
+                style={{ width: "100%", height: "auto" }}
                 src={guide}
                 alt="Our Services"
               />
             </div>
 
             {/* Content Section */}
-            <div className="bg-white rounded-xl shadow-md px-6 py-8 md:px-10 md:py-10 text-gray-700">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-[#4A8F60]">
+            <div className="bg-white rounded-3xl shadow-md p-6 md:p-8 text-gray-700">
+              <h2 className="text-[#2E8B57] text-2xl md:text-4xl font-semibold mt-8 mb-4 text-center lg:text-left">
                 Our Services
               </h2>
               <ul className="list-disc space-y-4 text-base md:text-lg leading-relaxed font-Poppins text-black pl-6">
@@ -750,6 +751,7 @@ export default function Homepage() {
             </div>
           </div>
         </section>
+
         <section className="bg-[#f0f8f0] py-10 md:py-16 md:px-10">
           {/* Eco-Friendly Tourism and Insurance Section */}
           <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
