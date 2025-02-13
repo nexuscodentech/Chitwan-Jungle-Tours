@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Confetti from "react-confetti";
-import guide from "assets/j8.jpg";
+import guide from "assets/danphe.jpg";
 import fule from "assets/fule.png";
 import guide1 from "assets/faqbanner.jpg";
 import tourist from "assets/aboutcnp.png";

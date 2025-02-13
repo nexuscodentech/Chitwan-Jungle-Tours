@@ -13,7 +13,7 @@ const items = [
     id: 245397399213,
     src: plans7,
     title: "Ultimate Nepal Tours (14 Days/13 Nights)",
-    description: "Experience the best of Nepal with this luxury 14-day tour, covering Kathmandu, Nagarkot, Pokhara, Chitwan, Lumbini, and Bardia, along with a scenic Everest flight. ",
+    description: "Experience the best of Nepal with this luxury 14-day tour, covering Kathmandu - Nagarkot - Pokhara - Chitwan - Lumbini - Bardia, along with a scenic Everest flight. ",
     keywords: [
       "14 Day Jungle Safari",
       "jungle adventure",
@@ -133,13 +133,13 @@ const items = [
       },
     ],
     price: "Price (Tax included): ",
-    cost: "$1,800",
+    cost: "Above $250",
   },
   {
     id: 843973627326,
     src: plans8,
     title: "Adventure & Wildlife Tour (10 Days / 9 Nights)",
-    description: "Enjoy jungle safaris, rafting, paragliding, bungee jumping, and cultural exploration, while staying in 4-star hotels and luxury jungle resorts. Travel comfortably with private vehicles and domestic flights for a seamless adventure.",
+    description: "Begin on an exhilarating 10-day journey through Kathmandu - Pokhara - Chitwan - Lumbini - Bardia blending thrill and nature. ",
     keywords: [
       "10 Day Jungle Safari",
       "jungle adventure",
@@ -303,14 +303,14 @@ const items = [
       },
     ],
     price: "Price (Tax included): ",
-    cost: "$1,200",
+    cost: "Above $200",
   },
 
   {
     id: 794432732601,
     src: plans9,
     title: "Adventure Safari Package (5 Days / 4 Nights)",
-    description: "Experience thrilling activities like jeep safaris, jungle walks, birdwatching, and canoeing, all while staying in luxury jungle resorts. Enjoy hassle-free transportation with private vehicles or domestic flights. Starting at $450 per person, this package offers a perfect blend of adventure and relaxation.",
+    description: "Explore the wild with our 5-day Adventure Safari Package! Visit Chitwan - Bardia - Koshi Tappu for an unforgettable adventure. Experience thrilling activities like jeep safaris, jungle walks, birdwatching, and canoeing, all while staying in luxury jungle resorts.",
     keywords: [
       "5 Day Jungle Safari",
       "jungle adventure",
@@ -404,7 +404,7 @@ const items = [
       },
     ],
     price: "Price (Tax included): ",
-    cost: "$450",
+    cost: "Above $100",
   },
   {
     id: 874539028348,

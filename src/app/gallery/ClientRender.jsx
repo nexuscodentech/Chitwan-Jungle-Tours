@@ -197,6 +197,7 @@ export default function Gallery() {
   const [currentVideoPage, setCurrentVideoPage]= useState(1);
   const [showPhotos, setShowPhotos] = useState(true);
   const videoRefs=useRef([]);
+  const [selectedImage, setSelectedImage]=useState(null);
 
   const itemsPerPage = 6;
 
@@ -277,14 +278,14 @@ export default function Gallery() {
         {showPhotos ? (
           <div className="my-10 mx-8 gap-8 grid grid-cols-2 max-sm:gap-4 md:grid-cols-3">
             {paginatedPhotos.map((item, index) => (
-              <div className="image-container rounded-[2rem] overflow-hidden" key={index}>
+              <div className="image-container rounded-[2rem] overflow-hidden" key={index} onClick={()=> setSelectedImage(item.src)}>
                 <Image
                   src={item.src}
                   alt={item.alt}
                   width={300}
                   height={200}
                   layout="fixed"
-                  className="w-full sm:size-[4rem] md:size-[15rem] lg:size-[17rem] xl:size-[19rem] 2xl:size-[21rem] object-cover  cursor-pointer transition ease-in"
+                  className="w-full sm:size-[4rem] md:size-[15rem] lg:size-[17rem] xl:size-[19rem] 2xl:size-[21rem] object-cover cursor-pointer transition ease-in"
                 />
 
                 <span className="text-black font-bold w-full text-md sm:text-base md:text-lg lg:text-xl my-[1rem] font-MuseoModerno text-center cursor-pointer">
@@ -315,6 +316,22 @@ export default function Gallery() {
         </div>
         )}
         </div>
+
+        {selectedImage &&(
+          <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50" onClick={()=> setSelectedImage(null)}>
+            <div className="relative max-w-4xl">
+              <Image
+              src={selectedImage}
+              alt="Fullscreen Image"
+              layout="intrinsic"
+              width={800}
+              height={600}
+              className="rounded-lg"
+              />
+              <button className="absolute top-4 right-4 text-white bg-gray-700 px-4 py-2 rounded-full" onClick={()=>setSelectedImage(null)}>X</button>
+            </div>
+            </div>
+        )}
       </div>
 
       {showPhotos ? (
