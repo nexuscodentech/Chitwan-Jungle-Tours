@@ -36,11 +36,15 @@ const cursive = Cedarville_Cursive({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://chitwan-jungle-tours.com'),
-  title: "Chitwan Jungle Tours",
+  metadataBase: new URL('https://chitwantour.com'),
+  title: "Chitwan Tour",
   description: "Discover thrilling Jungle Tours in Sauraha, Chitwan, Nepal, featuring safaris, wildlife encounters, and cultural experiences in Chitwan National Park.",
   keywords: [
     "Chitwan Jungle Tours",
+    "Chitwan",
+    "Chitwan Jungle",
+    "Chitwan Tour",
+    "Chitwan Tours",
     "Wildlife Safari Chitwan",
     "Chitwan National Park safaris",
     "Jungle safari in Nepal",
@@ -74,7 +78,7 @@ export const metadata = {
     icon: "/global/tours.png",
   },
   openGraph: {
-    title: 'Chitwan Jungle Tours',
+    title: 'Chitwan Tour',
     description: 'Explore exciting Jungle Tours in Sauraha, Chitwan, Nepal, offering thrilling safaris, wildlife encounters, and rich cultural experiences in the heart of Chitwan National Park. Book your unforgettable adventure today!',
     url: '/',
     siteName: '/sitemap.xml',
