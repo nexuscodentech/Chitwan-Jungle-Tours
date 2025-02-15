@@ -219,7 +219,7 @@ export default function page() {
 
         <div className="w-full md:w-1/2 relative overflow-hidden hidden md:block">
           <img
-            src="assets/contactSide.jpg"
+            src="assets/tiger.png"
             className="w-full h-full object-cover rounded-lg"
             alt="Contact Scenery"
           />
