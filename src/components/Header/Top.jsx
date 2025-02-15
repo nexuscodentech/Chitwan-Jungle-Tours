@@ -27,7 +27,7 @@ export default function () {
               href="mailto:chitwanjungletours@gmail.com"
               className="hover:underline"
             >
-              chitwanjungletours@gmail.com
+              chitwantour@gmail.com
             </a>
 
             <div className="space-x-2">
@@ -102,7 +102,7 @@ export default function () {
           <div className="md:block hidden">
             <Link href="/">
               <Image
-                src={"/global/tours.png"}
+                src={"/global/logo1111.png"}
                 height={65}
                 width={65}
                 priority={true}
@@ -113,7 +113,7 @@ export default function () {
           <div className="md:hidden">
             <Link href="/">
               <Image
-                src={"/global/tours.png"}
+                src={"/global/logo1111.png"}
                 height={50}
                 width={50}
                 priority={true}

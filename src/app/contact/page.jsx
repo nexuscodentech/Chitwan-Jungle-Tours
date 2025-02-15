@@ -60,7 +60,7 @@ export default function page() {
 
       <div className="main-contact-image relative w-full h-64 md:h-96 lg:h-128">
         <img
-          src="assets/backgroundImage11.jpg"
+          src="assets/contactBack.jpg"
           alt="Mountain Shrine"
           className="w-full h-full object-cover"
         />
@@ -89,9 +89,10 @@ export default function page() {
                 className="w-full border-2 rounded-md p-2 mb-4" value={selectedPackage} onChange={(e)=> setSelectedPackage(e.target.value)}
               >
                 <option value="">Select your package</option>
-                <option value="14-day">Ultimate Nepal Tours (14 Days/13 Nights) (1,800 USD)</option>
-                <option value="10-day">Adventure & Wildlife Tour (10 Days / 9 Nights) (1,200 USD)</option>
-                <option value="5-day">Adventure Safari Package (5 Days / 4 Nights) (450 USD)</option>
+                <option value="14-day">Ultimate Nepal Tours (14 Days/13 Nights) (Above 250 USD)</option>
+                <option value="10-day">Adventure & Wildlife Tour (10 Days / 9 Nights) (Above 200 USD)</option>
+                <option value="5-day">Adventure Safari Package (5 Days / 4 Nights) (Above 100 USD)</option>
+                <option value="3-day">Uperdangadhi & Siraichuli Hill Adventure (3 Days, 2 Nights) (260 USD)</option>
                 <option value="1-day">1 Day Jungle Safari (7000 NRS)</option>
                 <option value="2-days-1-night">2 Nights, 3 Days (25000 NRS)</option>
                 <option value="3-days-2-nights">3 Nights, 4 Days (65000 NRS)</option>
@@ -218,7 +219,7 @@ export default function page() {
 
         <div className="w-full md:w-1/2 relative overflow-hidden hidden md:block">
           <img
-            src="assets/j4.jpg"
+            src="assets/contactSide.jpg"
             className="w-full h-full object-cover rounded-lg"
             alt="Contact Scenery"
           />

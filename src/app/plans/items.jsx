@@ -7,6 +7,7 @@ import plans6 from "assets/Canoing.jpg";
 import plans7 from "assets/ultima.png";
 import plans8 from "assets/gallery-36.png";
 import plans9 from "assets/adventure.jpeg";
+import plans10 from "assets/uper.png";
 
 const items = [
   {
@@ -406,6 +407,81 @@ const items = [
     price: "Price (Tax included): ",
     cost: "Above $100",
   },
+
+  {
+    id: 443266732600,
+    src: plans10,
+    title: "Uperdangadhi & Siraichuli Hill Adventure (3 Days, 2 Nights)",
+    description: "Begin on a thrilling 3-day adventure to Uperdangadhi & Siraichuli Hill in Chitwan, Nepal. This trek offers breathtaking panoramic views, rich cultural encounters, and historical exploration.",
+    keywords: [
+      "3 Day Jungle Safari",
+      "Hill",
+      "Chitwan hill",
+      "jungle adventure",
+      "wildlife exploration",
+      "guided jungle walk",
+      "canoe ride",
+      "elephant breeding center",
+      "eco-tourism",
+      "Chitwan day tour",
+      "nature trip",
+      "day safari package",
+    ],
+    day1: "Day 1: Drive to Shaktikhor & Trek to Uperdangadhi",
+    day2: "Day 2: Siraichuli Sunrise & Birdwatching Expedition",
+    day3: "Day 3: Village Exploration & Return",
+    
+    activities: [
+      {
+        title: "Scenic Drive & Chepang Museum Visit",
+        description: "Depart early morning from Kathmandu, Pokhara, or Chitwan. Enjoy a scenic drive to Shaktikhor and visit the Chepang Museum to learn about the indigenous Chepang culture. Lunch at a local restaurant."
+      },
+      {
+        title: "Trek to Uperdangadhi & Cultural Experience",
+        description: "Hike for 3 hours to the historic Uperdangadhi Fort. Explore the fort ruins, enjoy panoramic views, and spot diverse bird species. In the evening, experience traditional Chepang music, dance, and a homestay dinner."
+      },
+      {
+        title: "Sunrise Hike to Siraichuli Hill",
+        description: "Early morning trek to Siraichuli, the highest hill in Chitwan, for a breathtaking sunrise with views of the Himalayas and the Terai plains."
+      },
+      {
+        title: "Descent & Return Journey",
+        description: "Trek back to Shaktikhor through lush forests and Chepang villages. After lunch, drive back to Kathmandu, Pokhara, or Chitwan, concluding the adventure."
+      },
+
+      // Day 2
+      {
+        title: "Sunrise Hike & Birdwatching at Siraichuli",
+        description: "Trek 2.5 hours to Siraichuli Hill for a breathtaking sunrise over the Himalayas. Enjoy birdwatching, spotting species like the Great Hornbill and Red-headed Trogon, while exploring the scenic forests and grasslands."
+      },
+      {
+        title: "Descent & Shaktikhor Exploration",
+        description: "Trek back to Uperdangadhi for lunch, then descend to Shaktikhor. Visit waterfalls, caves, and nature trails, experiencing the region’s natural beauty."
+      },
+      {
+        title: "Cultural Evening & Homestay in Hattibang",
+        description: "Drive to Hattibang, a charming Chepang village, for an overnight homestay. Enjoy a traditional dinner with cultural storytelling by the locals."
+      },
+
+      // Day 3
+      {
+        title: "Cultural Immersion in Hattibang",
+        description: "Explore Hattibang village, interact with locals, and learn about the Chepang lifestyle. Visit organic farms and enjoy a traditional breakfast."
+      },
+      {
+        title: "Nature Walk & Wildlife Observation",
+        description: "Take a short nature walk around Hattibang, observing local wildlife and bird species in their natural habitat."
+      },
+      {
+        title: "Return Journey",
+        description: "Drive back to Chitwan, Kathmandu, or Pokhara with a drop-off at your preferred location, concluding the adventure."
+      },
+
+    ],
+    price: "Price (Tax included): ",
+    cost: "$260",
+  },
+
   {
     id: 874539028348,
     src: plans1,
@@ -462,7 +538,7 @@ const items = [
   {
     id: 948120184936,
     src: plans2,
-    title: "2 Nights, 3 Days",
+    title: "2 Nights, 3 Days Package",
     description: "A 2-night, 3-day Chitwan tour with canoe rides, jungle walks, Tharu performances, and stunning sunsets.",
     keywords: [
       "Chitwan tour",
@@ -529,7 +605,7 @@ const items = [
   {
     id: 183730284334,
     src: plans3,
-    title: "3 Nights, 4 Days",
+    title: "3 Nights, 4 Days Package",
     description: "Discover Chitwan with this 3-night, 4-day tour featuring jungle safaris, canoe rides, cultural shows, and serene sunsets.",
     keywords: [
       "Chitwan tour",
@@ -732,7 +808,7 @@ const items = [
   {
     id: 283928374013,
     src: plans6,
-    title: "1 Night Package",
+    title: "1 Day Package",
     description: "1-Night Jungle Adventure with Jeep Safari, Canoe Ride, and Birdwatching",
     "keywords": [
       "Jungle adventure",
