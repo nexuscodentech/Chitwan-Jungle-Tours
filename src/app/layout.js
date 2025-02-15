@@ -9,7 +9,7 @@ import {
 import Footer from "@/components/Footer";
 import Header from "@/components/Header/Top";
 import "./globals.css";
-import homeimage from "assets/home.jpg"
+import homeimage from "assets/homehome.png"
 
 import { Analytics } from '@vercel/analytics/next';
 
