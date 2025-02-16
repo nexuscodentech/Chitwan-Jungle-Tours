@@ -3,11 +3,20 @@ import hotel from "assets/plansBanner.png";
 
 export function generateMetadata() {
   return {
-    metadataBase: new URL('https://chitwan-jungle-tours.com'),
+    metadataBase: new URL('https://chitwantour.com'),
     title: "Plans & Packages - Chitwan Jungle Tours",
     description: "Explore custom Plans & Packages for Chitwan Jungle Safari. Choose from tailored wildlife tours, jungle safaris, and cultural experiences in Chitwan National Park, Nepal. Book your unforgettable adventure today!",
     images: [hotel.src],
     keywords: [
+      "Chitwan Jungle Tour",
+      "Holiday Plan",
+      "Holiday in Chitwan",
+      "Homestay Chitwan",
+      "Homestay",
+      "Holiday",
+      "Chitwan National Park",
+      "Plans and Packages",
+      "Jungle Safari Package",
       "Nepal tour packages",
       "Nepal vacation packages",
       "Nepal wildlife tour",

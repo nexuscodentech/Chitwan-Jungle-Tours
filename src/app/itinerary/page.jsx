@@ -280,11 +280,16 @@ export default function Itinerary() {
 
 export function generateMetadata() {
   return {
-    metadataBase: new URL('https://chitwan-jungle-tours.com'),
+    metadataBase: new URL('https://chitwantour.com'),
     title: "Itinerary",
     description: "This is a 12-day itinerary offering a mix of cultural exploration, nature, and wildlife experiences across Nepal.Day 1: Arrival - Airport pickup & hotel transfer. | Day 2: Visit UNESCO World Heritage Sites. | Day 3: Drive to Pokhara; explore lakeside in the evening. | Day 4: Drive to Kande; hike to Australian Camp; overnight stay. | Day 5: Drive to Chitwan; evening river sightseeing & dinner. | Day 6: Canoe ride (40 mins); jungle walk (15 km); overnight at Ghatgain. | Day 7: Full jungle walk with picnic lunch; overnight in Madi Valley (homestay). | Day 8: Jeep safari; picnic lunch; return to Sauraha for dinner. | Day 9: Elephant safari; evening tower night with packed dinner. | Day 10: Drive back to Kathmandu. | Day 11: Leisure day in Kathmandu; local lifestyle observation. | Day 12: Departure - Fly back home.",
 
     keywords: [
+      "Chitwan Tour",
+      "Chitwan Tours",
+      "Jungle Safari",
+      "Chitwan Tour Plans",
+      "Chitwan Tours and Travels",
       "Nepal Itinerary",
       "12-day Nepal tour",
       "Cultural exploration Nepal",
@@ -314,7 +319,6 @@ export function generateMetadata() {
       "Nepal hiking tours",
       "Cultural heritage sites Nepal",
       "Best Nepal tour package",
-      // New keywords
       "Nepal Tour",
       "Nepal Vacation",
       "Nepal Holiday",
