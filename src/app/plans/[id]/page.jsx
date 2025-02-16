@@ -12,8 +12,8 @@ export function generateMetadata({ params }) {
     };
   }
   return {
-    metadataBase: new URL('https://chitwan-jungle-tours.com'),
-    title: item.title + " - Chitwan Jungle Tours",
+    metadataBase: new URL('https://chitwantour.com'),
+    title: item.title + " - Chitwan Tour",
     description: item.description,
     images: [item.src],
     keywords: item.keywords,
