@@ -21,8 +21,8 @@ export default function sitemap() {
     return [
         {
             url: base_url,
-            lastModified: new Date()
-            // images: [homepage]
+            lastModified: new Date(),
+            images: [homepage].map(i=>base_url+"/"+i.src)
 
         },
         {
