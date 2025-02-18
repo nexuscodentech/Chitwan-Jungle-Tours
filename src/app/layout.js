@@ -44,11 +44,8 @@ export const metadata = {
     "Chitwan",
     "Chitwan Jungle",
     "Chitwan Tour",
-    "chitwan tour",
     "chitwan jungle",
-    "chitwan",
     "chitwan jungle tour",
-    "chitwan jungle tours",
     "Chitwan Tours",
     "Wildlife Safari Chitwan",
     "Chitwan National Park safaris",
@@ -80,7 +77,7 @@ export const metadata = {
     "Tour of Nepal"
   ],
   icons: {
-    icon: "/global/tours.png",
+    icon: "/global/logo1111.png",
   },
   openGraph: {
     title: 'Chitwan Tour',
