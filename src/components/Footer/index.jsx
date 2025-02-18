@@ -17,13 +17,13 @@ export default function () {
           />
         </div>
         
-        <iframe
+        {/* <iframe
           className="w-full h-[50vh]"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1696.898961640204!2d84.49389529999999!3d27.576496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994eee38a5fad93%3A0x3b069bdfb22b20e6!2sRoyal%20Park%20Hotel%20P.%20Ltd.!5e1!3m2!1sen!2snp!4v1737172124776!5m2!1sen!2snp"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Sauraha Location"
-        ></iframe>
+        ></iframe> */}
         <div className="bg-[#401A33] h-[25rem] lg:text-lg lg:h-[30rem] relative [clip-path:polygon(100%0%,50%10%,0%0%,0%80%,50%100%,100%80%)] lg:[clip-path:polygon(100%0%,50%10%,0%0%,0%85%,50%100%,100%85%)]  -translate-y-[14%] -mt-[1.5px]">
           <div className="grid grid-flow-col-dense items-center gap-2 h-[60%]">
             <div className=" font-heading hidden lg:block text-white space-y-4 text-center">

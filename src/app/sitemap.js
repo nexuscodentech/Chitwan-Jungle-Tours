@@ -9,7 +9,7 @@ import img6 from "assets/i10.jpg";
 import img7 from "assets/j6.jpg";
 import img8 from "assets/i8.jpg";
 import img9 from "assets/j9.jpg";
-import homepage from "assets/homehome.png"
+// import homepage from "assets/homehome.png"
 
 export default function sitemap() {
     const base_url = "https://chitwantour.com"
@@ -18,11 +18,11 @@ export default function sitemap() {
         lastModified: new Date()
     }))
 
+
     return [
         {
             url: base_url,
             lastModified: new Date(),
-            images: [homepage].map(i=>base_url+"/"+i.src)
 
         },
         {

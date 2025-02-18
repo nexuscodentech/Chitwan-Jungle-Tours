@@ -110,7 +110,7 @@ export default function Itinerary() {
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 9</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Elephant safari; evening tower night with packed dinner.
+                      Cycling; evening tower night with packed dinner.
                     </td>
                   </tr>
                   <tr>
