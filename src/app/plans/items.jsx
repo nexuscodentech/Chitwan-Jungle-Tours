@@ -26,6 +26,8 @@ const items = [
       "Chitwan day tour",
       "nature trip",
       "day safari package",
+      "chitwan tour",
+      "chitwantour",
     ],
     day1: "Day 1: Arrival in Kathmandu",
     day2: "Day 2: Bhaktapur & Nagarkot Excursion",
@@ -152,6 +154,8 @@ const items = [
       "Chitwan day tour",
       "nature trip",
       "day safari package",
+      "chitwan tour",
+      "chitwantour",
     ],
     day1: "Day 1: Arrival in Kathmandu & Cultural Tour",
     day2: "Day 2: Kathmandu to Pokhara – The City of Adventure",
@@ -323,6 +327,8 @@ const items = [
       "Chitwan day tour",
       "nature trip",
       "day safari package",
+      "chitwan tour",
+      "chitwantour",
     ],
     day1: "Day 1: Arrival in Chitwan National Park – The Rhino Kingdom",
     day2: "Day 2: Chitwan – Jungle Safari & Canoeing",
@@ -426,6 +432,8 @@ const items = [
       "Chitwan day tour",
       "nature trip",
       "day safari package",
+      "chitwan tour",
+      "chitwantour",
     ],
     day1: "Day 1: Drive to Shaktikhor & Trek to Uperdangadhi",
     day2: "Day 2: Siraichuli Sunrise & Birdwatching Expedition",
@@ -498,6 +506,8 @@ const items = [
       "Chitwan day tour",
       "nature trip",
       "day safari package",
+      "chitwan tour",
+      "chitwantour",
     ],
     day1: "Day 1: Jungle Safari",
     activities: [
@@ -550,6 +560,8 @@ const items = [
       "wildlife experience",
       "sunset point",
       "Chitwan safari package",
+      "chitwan tour",
+      "chitwantour",
     ],
     day1: "Day 1: Arrival in Hotel",
     day2: "Day 2: Jungle Adventure",
@@ -616,6 +628,8 @@ const items = [
       "Tharu culture",
       "nature exploration",
       "Chitwan safari package",
+      "chitwan tour",
+      "chitwantour",
     ],
     day1: "Day 1: Arrival and Relaxation",
     day2: "Day 2: Jungle Activities",
@@ -714,6 +728,8 @@ const items = [
       "jungle adventure",
       "local culture",
       "Tharu culture",
+      "chitwan tour",
+      "chitwantour",
     ],
     activities: [
       {
@@ -767,6 +783,8 @@ const items = [
       "jungle adventure",
       "local culture",
       "Tharu culture",
+      "chitwan tour",
+      "chitwantour",
     ],
     activities: [
     {
@@ -834,7 +852,9 @@ const items = [
       "local culture",
       "eco-tourism package",
       "Chitwan holiday",
-      "river activities"
+      "river activities",
+      "chitwan tour",
+      "chitwantour",
     ],
     "activities": [
       {
