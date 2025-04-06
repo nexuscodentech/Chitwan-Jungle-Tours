@@ -1,10 +1,11 @@
 import "../plans.css";
 import items from "../items";
 import ClientPage from "./ClientPage";
+import slugify from "slugify";
 
-export function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
   const {id}=params;
-  const item = items.find((item) => item.id == id);
+  const item = items.find((item) => slugify(item.title,{lower:true}) === params.id);
   if (!item) {
     return {
       title: "Not Found",
@@ -25,8 +26,8 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Page({ params: { id } }) {
-  const item = items.find((item) => item.id == id);
+export default function Page({ params }) {
+  const item = items.find((item) => slugify(item.title,{lower:true}) === params.id);
 
   if (!item) {
     return <p>Item not found</p>;
