@@ -85,7 +85,7 @@ export default function () {
         </div>
       </div>
 
-      <div className="sticky top-8 bg-white max-sm:font-bold flex w-full max-sm:gap-2 p-2 font-Poppins h-16 max-md:text-[11px] items-center justify-between lg:justify-evenly shadow-md lg:-space-x-14 xl:-space-x-20 z-40">
+      <div className="sticky top-8 bg-white max-sm:font-bold flex w-full max-sm:gap-2 p-2 font-Poppins h-16 max-md:text-[12px] items-center justify-between lg:justify-evenly shadow-md lg:-space-x-14 xl:-space-x-20 z-40">
         
           <Link href="/" className={`font-bold hover:text-[#00B300] hover:scale-105 ${isActive("/") ? "text-[#00B300] font-bold scale-105 transform" : ""}`}>
             Home
