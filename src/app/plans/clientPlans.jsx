@@ -14,6 +14,8 @@ import {
 import items from "./items";
 import hotel from "assets/plansBanner.png";
 import "./plans.css";
+import slugify from "slugify"; // Add at the top
+
 
 const itemsPerPage = 6;
 
@@ -62,7 +64,7 @@ export default function Plans() {
                                 <hr />
 
                                 <div className="flex items-center gap-2 mt-4 justify-center">
-                                    <Link href={`/plans/${item.id}`} key={item.id}>
+                                    <Link href={`/plans/${slugify(item.title,{lower:true})}`} key={item.id}>
                                         <span className="border-2 border-[#55e6a5] px-[2rem] bg-gray-200 transition-all duration-200 py-[0.5rem] text-[15px] font-bold uppercase hover:bg-[#55e6a5] text-black flex items-center justify-center space-x-2 rounded-full button">
                                             <p className="tracking-widest">View Details</p>
                                         </span>
