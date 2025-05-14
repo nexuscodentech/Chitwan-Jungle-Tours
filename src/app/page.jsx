@@ -163,8 +163,9 @@ export default function Homepage() {
       access_key: "4a7f6b18-f55c-42aa-8d4c-3b08f209ec88",
       subject: "New Review",
       name: userName,
+      email: `${userName}@noemail.com`, 
+      message: userReview,
       rating: userRating,
-      review: userReview,
       image_url: imageUrl,
     }),
     });
