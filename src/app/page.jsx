@@ -140,18 +140,23 @@ export default function Homepage() {
 
     let imageUrl = "No Image";
     if(photoFile){
-      const formData = new FormData();
-      formData.append("image",photoFile);
-      formData.append("key","2b2c172d63555cad8ca5437e3bffa4a6")
+      try{
+        const formData = new FormData();
+        formData.append("image",photoFile);
+        formData.append("key","2b2c172d63555cad8ca5437e3bffa4a6");
 
 
-      const imgbbRes = await fetch("https://api.imgbb.com/1/upload",{
-        method: "POST",
-        body: formData,
-      });
+        const imgbbRes = await fetch("https://api.imgbb.com/1/upload",{
+          method: "POST",
+          body: formData,
+        });
 
-      const imgbbData = await imgbbRes.json();
-      imageUrl = imgbbData?.data?.url || "Upload Failed";
+        const imgbbData = await imgbbRes.json();
+        imageUrl = imgbbData?.data?.url || "Upload Failed";
+      } catch (error) {
+        console.error("Error uploading image:", error);
+        imageUrl = "Upload Failed";
+      }
     }
     const response = await fetch("https://api.web3forms.com/submit",{
       method: "POST",
@@ -178,6 +183,7 @@ export default function Homepage() {
       setPhotoFile(null);
     }
     else{
+      console.error("Submission failed:", result);
       alert("Failed to submit review. Please try again.");
     }
   };
