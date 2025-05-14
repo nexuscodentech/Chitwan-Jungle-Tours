@@ -128,9 +128,32 @@ export default function Homepage() {
   const [dim, setDim] = useState({});
 
   // for New reviews from client
+  const [userReview, setUserReview] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userRating, setUserRating] = useState(5);
+  const [photoFile, setPhotoFile] = useState(null);
+
+
   const handleReviewSubmit = async (e) => {
     e.preventDefault();
     if (!userName || !userReview) return;
+
+    let imageUrl = "No Image";
+    if(photoFile){
+      const formData = new FormData();
+      formData.append("image",photoFile);
+      formData.append("key",)
+
+      const imgbbRes = await fetch("key","2b2c172d63555cad8ca5437e3bffa4a6");
+
+      const imgbbRes = await fetch("https://api.imgbb.com/1/upload",{
+        method: "POST",
+        body: formData,
+      });
+
+      const imgbbData = await imgbbRes.json();
+      imageUrl = imgbbData?.data?.url || "Upload Failed";
+    }
     const response = await fetch("https://api.web3forms.com/submit",{
       method: "POST",
       headers: {
@@ -143,6 +166,7 @@ export default function Homepage() {
       name: userName,
       rating: userRating,
       review: userReview,
+      image_url: imageUrl,
     }),
     });
     const result = await response.json();
@@ -151,6 +175,7 @@ export default function Homepage() {
       setUserReview("");
       setUserName("");
       setUserRating(5);
+      setPhotoFile(null);
     }
     else{
       alert("Failed to submit review. Please try again.");
@@ -1200,6 +1225,13 @@ export default function Homepage() {
                   placeholder="Your Name"
                   className="w-full px-4 py-2 border rounded" required
                 />
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => setPhotoFile(e.target.files[0])}
+                  className="w-full px-4 py-2 border rounded"
+                />
+
                 <textarea
                   value={userReview}
                   onChange={(e) => setUserReview(e.target.value)}
