@@ -142,9 +142,8 @@ export default function Homepage() {
     if(photoFile){
       const formData = new FormData();
       formData.append("image",photoFile);
-      formData.append("key",)
+      formData.append("key","2b2c172d63555cad8ca5437e3bffa4a6")
 
-      const imgbbRes = await fetch("key","2b2c172d63555cad8ca5437e3bffa4a6");
 
       const imgbbRes = await fetch("https://api.imgbb.com/1/upload",{
         method: "POST",
