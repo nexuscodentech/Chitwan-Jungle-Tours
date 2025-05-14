@@ -127,25 +127,34 @@ export default function Homepage() {
   const footerRef = useRef(null);
   const [dim, setDim] = useState({});
 
-  // for reviews
-  const [userReview, setUserReview] = useState("");
-  const [userName, setUserName] = useState("");
-  const [userRating, setUserRating] = useState(5);
-  const [customReviews, setCustomReviews] = useState([]);
-
-  const handleReviewSubmit = () => {
+  // for New reviews from client
+  const handleReviewSubmit = async (e) => {
+    e.preventDefault();
     if (!userName || !userReview) return;
-    const newReview = {
-      id: Date.now(),
+    const response = await fetch("https://api.web3forms.com/submit",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+    },
+    body: JSON.stringify({
+      access_key: "4a7f6b18-f55c-42aa-8d4c-3b08f209ec88",
+      subject: "New Review",
       name: userName,
-      avatar: "/assets/default-user.png", // placeholder image
       rating: userRating,
-      text: userReview,
-    };
-    setCustomReviews([newReview, ...customReviews]);
-    setUserReview("");
-    setUserName("");
-    setUserRating(5);
+      review: userReview,
+    }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      alert("Review submitted successfully!");
+      setUserReview("");
+      setUserName("");
+      setUserRating(5);
+    }
+    else{
+      alert("Failed to submit review. Please try again.");
+    }
   };
 
   const toggleExpand = () => {
@@ -1183,20 +1192,20 @@ export default function Homepage() {
               <h2 className="text-3xl font-bold text-center text-green-700 mb-6">
                 Write a Review
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg space-y-4">
+              <form onSubmit={handleReviewSubmit}  className="bg-white p-6 rounded-lg shadow-lg space-y-4">
                 <input
                   type="text"
                   value={userName}
                   onChange={(e) => setUserName(e.target.value)}
                   placeholder="Your Name"
-                  className="w-full px-4 py-2 border rounded"
+                  className="w-full px-4 py-2 border rounded" required
                 />
                 <textarea
                   value={userReview}
                   onChange={(e) => setUserReview(e.target.value)}
                   placeholder="Write your review..."
                   rows={4}
-                  className="w-full px-4 py-2 border rounded"
+                  className="w-full px-4 py-2 border rounded" required
                 ></textarea>
                 <label className="block font-medium">Rating:</label>
                 <select
@@ -1210,29 +1219,14 @@ export default function Homepage() {
                     </option>
                   ))}
                 </select>
-                <button
-                  onClick={handleReviewSubmit}
+                <button type="submit"
                   className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
                 >
                   Submit Review
                 </button>
-              </div>
+              </form>
             </div>
           </section>
-
-          {/* Custom Reviews Display */}
-          {customReviews.length > 0 && (
-            <div className="my-10 px-4 md:px-20">
-              <h3 className="text-2xl font-semibold text-center text-[#2E8B57] mb-6">
-                Recent User Reviews
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {customReviews.map((review) => (
-                  <ReviewCard key={review.id} review={review} />
-                ))}
-              </div>
-            </div>
-          )}
 
           <h2 className="font-MuseoModerno text-3xl font-bold text-center mb-8 text-[#333] underline mt-20">
             Reviews from our clients
