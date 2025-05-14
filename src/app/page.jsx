@@ -126,6 +126,28 @@ export default function Homepage() {
   const stickyButtonRef = useRef(null);
   const footerRef = useRef(null);
   const [dim, setDim] = useState({});
+
+  // for reviews
+  const [userReview, setUserReview] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userRating, setUserRating] = useState(5);
+  const [customReviews, setCustomReviews] = useState([]);
+
+  const handleReviewSubmit = () => {
+    if (!userName || !userReview) return;
+    const newReview = {
+      id: Date.now(),
+      name: userName,
+      avatar: "/assets/default-user.png", // placeholder image
+      rating: userRating,
+      text: userReview,
+    };
+    setCustomReviews([newReview, ...customReviews]);
+    setUserReview("");
+    setUserName("");
+    setUserRating(5);
+  };
+
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
@@ -301,148 +323,148 @@ export default function Homepage() {
     </div>
   );
 
-    // hotel and food carousel
-    const hotels = [
-      {
-        id: 1,
-        image: hotel1,
-      },
-      {
-        id: 2,
-        image: hotel2,
-      },
-      {
-        id: 3,
-        image: hotel3,
-      },
-      {
-        id: 4,
-        image: hotel4,
-      },
-      {
-        id: 5,
-        image: hotel5,
-      },
-      {
-        id: 6,
-        image: hotel6,
-      },
-      {
-        id: 7,
-        image: hotel7,
-      },
-      {
-        id: 8,
-        image: hotel8,
-      },
-      {
-        id: 9,
-        image: hotel9,
-      },
-      {
-        id: 10,
-        image: hotel10,
-      },
-      {
-        id: 11,
-        image: hotel11,
-      },
-      {
-        id: 12,
-        image: hotel12,
-      },
-      {
-        id: 13,
-        image: hotel13,
-      },
-      {
-        id: 14,
-        image: hotel14,
-      },
-      {
-        id: 15,
-        image: hotel15,
-      },
-      {
-        id: 16,
-        image: hotel16,
-      },
-      {
-        id: 17,
-        image: hotel17,
-      },
-      {
-        id: 18,
-        image: hotel18,
-      },
-      {
-        id: 19,
-        image: hotel19,
-      },
-      {
-        id: 20,
-        image: hotel20,
-      },
-      {
-        id: 21,
-        image: hotel21,
-      },
-      {
-        id: 22,
-        image: hotel22,
-      },
-      {
-        id: 23,
-        image: hotel23,
-      },
-      {
-        id: 24,
-        image: hotel24,
-      },
-      {
-        id: 25,
-        image: hotel25,
-      },
-      {
-        id: 26,
-        image: hotel26,
-      },
-      {
-        id: 27,
-        image: hotel27,
-      },
-      {
-        id: 28,
-        image: hotel28,
-      },
-      {
-        id: 29,
-        image: hotel29,
-      },
-    ];
+  // hotel and food carousel
+  const hotels = [
+    {
+      id: 1,
+      image: hotel1,
+    },
+    {
+      id: 2,
+      image: hotel2,
+    },
+    {
+      id: 3,
+      image: hotel3,
+    },
+    {
+      id: 4,
+      image: hotel4,
+    },
+    {
+      id: 5,
+      image: hotel5,
+    },
+    {
+      id: 6,
+      image: hotel6,
+    },
+    {
+      id: 7,
+      image: hotel7,
+    },
+    {
+      id: 8,
+      image: hotel8,
+    },
+    {
+      id: 9,
+      image: hotel9,
+    },
+    {
+      id: 10,
+      image: hotel10,
+    },
+    {
+      id: 11,
+      image: hotel11,
+    },
+    {
+      id: 12,
+      image: hotel12,
+    },
+    {
+      id: 13,
+      image: hotel13,
+    },
+    {
+      id: 14,
+      image: hotel14,
+    },
+    {
+      id: 15,
+      image: hotel15,
+    },
+    {
+      id: 16,
+      image: hotel16,
+    },
+    {
+      id: 17,
+      image: hotel17,
+    },
+    {
+      id: 18,
+      image: hotel18,
+    },
+    {
+      id: 19,
+      image: hotel19,
+    },
+    {
+      id: 20,
+      image: hotel20,
+    },
+    {
+      id: 21,
+      image: hotel21,
+    },
+    {
+      id: 22,
+      image: hotel22,
+    },
+    {
+      id: 23,
+      image: hotel23,
+    },
+    {
+      id: 24,
+      image: hotel24,
+    },
+    {
+      id: 25,
+      image: hotel25,
+    },
+    {
+      id: 26,
+      image: hotel26,
+    },
+    {
+      id: 27,
+      image: hotel27,
+    },
+    {
+      id: 28,
+      image: hotel28,
+    },
+    {
+      id: 29,
+      image: hotel29,
+    },
+  ];
 
-    // <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
-    const Hotel = ({ hotel }) => (
-      <div
-        key={hotel.id}
-        className="relative h-auto md:h-auto group flex items-center justify-center"
-      >
-        {/* <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
+  // <div className="mx-auto px-4 lg:px-10 lg:justify-evenly lg:flex grid grid-cols-2 "></div>
+  const Hotel = ({ hotel }) => (
+    <div
+      key={hotel.id}
+      className="relative h-auto md:h-auto group flex items-center justify-center"
+    >
+      {/* <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
           {hotel.title}
         </h2> */}
-        <Image
-          src={hotel.image}
-          alt="hotel & food"
-          // alt={hotel.title}
-          className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
-        />
-  
-        {/* <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-11/12 mx-auto">
+      <Image
+        src={hotel.image}
+        alt="hotel & food"
+        // alt={hotel.title}
+        className="h-auto md:h-96 object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
+      />
+
+      {/* <div className="absolute inset-0 bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-tr-[4rem] rounded-bl-[4rem] rounded-md w-11/12 mx-auto">
           <p className="font-Poppins text-white text-lg md:text-xl text-center">
             {hotel.text}
           </p>
         </div> */}
-      </div>
+    </div>
   );
 
   return (
@@ -497,7 +519,16 @@ export default function Homepage() {
         </div>
 
         <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container">
-        <Carousel plugins={[Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: false })]} loop={true}>
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 1000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
+              }),
+            ]}
+            loop={true}
+          >
             <CarouselContent>
               {sliders.map((slider) => (
                 <CarouselItem
@@ -698,7 +729,7 @@ export default function Homepage() {
               {/* Text Content */}
               <div className="bg-white rounded-3xl shadow-md p-8 text-gray-700 max-w-3xl mb-6 lg:mb-0 lg:mr-8">
                 <div className="text-[#2E8B57] text-2xl md:text-4xl font-semibold mb-4">
-                Best Experience in Chitwan
+                  Best Experience in Chitwan
                 </div>
                 <p className="text-base md:text-lg leading-relaxed font-Poppins">
                   Chitwan is renowned for its exceptional experiences centered
@@ -800,10 +831,18 @@ export default function Homepage() {
           </div>
         </section>
 
-
         {/* Hotel and food carousel */}
         <div className="py-10 mx-auto px-4 lg:px-10 lg:flex container">
-        <Carousel plugins={[Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: false })]} loop={true}>
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 1000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
+              }),
+            ]}
+            loop={true}
+          >
             <CarouselContent>
               {hotels.map((hotel) => (
                 <CarouselItem
@@ -845,7 +884,8 @@ export default function Homepage() {
                   aid.
                 </li>
                 <li>
-                Kindly note that if any guidelines are not followed, guests will be responsible for any unforeseen incidents.
+                  Kindly note that if any guidelines are not followed, guests
+                  will be responsible for any unforeseen incidents.
                 </li>
                 <li>
                   Our vehicles and equipment are regularly inspected for safety.
@@ -1136,6 +1176,63 @@ export default function Homepage() {
               </Link>
             </div>
           </div>
+
+          {/* Review Form Section */}
+          <section className="py-10 bg-gray-100">
+            <div className="container mx-auto px-4 max-w-2xl">
+              <h2 className="text-3xl font-bold text-center text-green-700 mb-6">
+                Write a Review
+              </h2>
+              <div className="bg-white p-6 rounded-lg shadow-lg space-y-4">
+                <input
+                  type="text"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                  placeholder="Your Name"
+                  className="w-full px-4 py-2 border rounded"
+                />
+                <textarea
+                  value={userReview}
+                  onChange={(e) => setUserReview(e.target.value)}
+                  placeholder="Write your review..."
+                  rows={4}
+                  className="w-full px-4 py-2 border rounded"
+                ></textarea>
+                <label className="block font-medium">Rating:</label>
+                <select
+                  value={userRating}
+                  onChange={(e) => setUserRating(Number(e.target.value))}
+                  className="w-full px-4 py-2 border rounded"
+                >
+                  {[5, 4, 3, 2, 1].map((r) => (
+                    <option key={r} value={r}>
+                      {r} Star{r > 1 && "s"}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  onClick={handleReviewSubmit}
+                  className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+          </section>
+
+          {/* Custom Reviews Display */}
+          {customReviews.length > 0 && (
+            <div className="my-10 px-4 md:px-20">
+              <h3 className="text-2xl font-semibold text-center text-[#2E8B57] mb-6">
+                Recent User Reviews
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {customReviews.map((review) => (
+                  <ReviewCard key={review.id} review={review} />
+                ))}
+              </div>
+            </div>
+          )}
 
           <h2 className="font-MuseoModerno text-3xl font-bold text-center mb-8 text-[#333] underline mt-20">
             Reviews from our clients
